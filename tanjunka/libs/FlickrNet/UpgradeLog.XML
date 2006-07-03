@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?>
+<UpgradeLog>
+<Properties><Property Name="Solution" Value="FlickrNet">
+</Property><Property Name="Solution File" Value="E:\temp\trash\xmlrpc\FlickrNet\FlickrNet.sln">
+</Property><Property Name="User Options File" Value="E:\temp\trash\xmlrpc\FlickrNet\FlickrNet.suo">
+</Property><Property Name="Date" Value="Friday, February 11, 2005">
+</Property><Property Name="Time" Value="9:54 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="FlickrNet.sln" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.sln">
+</Event><Event ErrorLevel="0" Project="" Source="FlickrNet.suo" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.suo">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="FlickrNet.csproj" Description="Project file successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="AssemblyInfo.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="Blogs.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="Cache.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="Categories.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="Contacts.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="Flickr.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="FlickrException.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="Groups.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="Licenses.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="OnlineUsers.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="Person.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="PhotoCounts.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="PhotoInfo.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="Photos.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="PhotoSets.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="Response.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="Sizes.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="Uploader.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="User.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="Utils.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="FlickrNet.ndoc" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="FlickrNet.snk" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="License.txt" Description="File successfully backed up as E:\temp\trash\xmlrpc\FlickrNet\Backup\FlickrNet.csproj">
+</Event><Event ErrorLevel="0" Project="FlickrNet" Source="FlickrNet.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="FlickrNet" Source="FlickrNet.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="FlickrNet.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="FlickrNet.sln" Description="Converted">
+</Event></UpgradeLog>

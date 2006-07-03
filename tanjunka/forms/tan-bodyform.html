@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<link rel="stylesheet" href="bodyform.css" type="text/css" />
+<link rel="stylesheet" href="tan-edit.css" type="text/css" />
+<script language="javascript" type="text/javascript" src="tanjunka_edit.js"></script>
+<script LANGUAGE="JavaScript">
+<!--
+function HandleDrop()
+{
+  var oTarg = window.event.srcElement;
+  var oData = window.event.dataTransfer;
+
+  // Cancel default action.
+
+  // Set the content of the oTarget to the information stored
+  //  in the data transfer object in the desired format.
+  // oTarg.innerText += oData.getData("text");
+  ShowResults();
+  logPrintn ("text:" + oData.getData("text"));
+  logPrintn (" url:" + oData.getData("URL"));
+//  logPrintn ("file:" + oData.getData("file"));
+}
+
+function tanDragStart(msg)
+{
+   logPrintn("dragstart:" + msg);
+}
+function tanDragEnter(msg)
+{
+   logPrintn("dragenter:" + msg);
+   window.event.returnValue = false;
+}
+function tanDrop(msg)
+{
+//   logPrintn("dragdrop text:" + window.event.dataTransfer.getData("text"));
+//   logPrintn("dragdrop url:" + window.event.dataTransfer.getData("url"));
+//   logPrintn("dragdrop html:" + window.event.dataTransfer.getData("html"));
+//   window.event.returnValue = false;
+//   window.external.genericCallbackI(1);
+}
+//window.document.onkeypress = "ShowResults()";
+//window.onunload = "ShowResults()";
+//window.ondragstart="tanDragStart('window')";
+//window.ondragenter="tanDragEnter('window')";
+//window.document.ondragstart="tanDragStart('doc')";
+//window.document.ondragenter="tanDragEnter('doc')";
+tanInitEditForm();
+// -->
+</script>
+<style>
+.gmantest {
+    float: right;
+    border: 1px dashed red;
+    padding: 10px;
+}
+</style>
+</head>
+<body style="margin: 0px;"
+>
+
+<div id="content"><div class="blog">
+<div class="blogtitle"
+    contentEditable
+    id="posttitle"
+    name="posttitle"
+    style="overflow: auto; height: 100%;"
+    >Enter a Title</div>
+<div class="blogbody"
+    contentEditable
+    id="postbody"
+    name="postbody"
+    gonbeforepaste="tanOnPaste()"
+    style="overflow: auto; height: 100%;"
+    >Type an Entry Here Or Drag and Drop Some Images</div>
+</div></div>
+$include(tan-contextmenu.html)
+</body></html>

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>New Page 1</title>
+<link rel="stylesheet" href="optionstyles.css">
+<script language="javascript" type="text/javascript" src="tanjunka_edit.js"></script>
+<script language="javascript">
+function additem(checked, title, userid, date)
+{
+    var tbodyElem = document.getElementById("listtbody");
+    var trElem, tdElem, txtNode;
+    var onOrOff;
+    var rowNdx;
+
+    onOrOff = "";
+    if (checked != 0)
+    {
+      onOrOff = "CHECKED";
+    }
+
+    rowNdx = tbodyElem.rows.length;
+    trElem = tbodyElem.insertRow(rowNdx);
+    trElem.className = "row" + (rowNdx % 2);
+
+    tdElem = trElem.insertCell(trElem.cells.length);
+    tdElem.className = "col1";
+    tdElem.innerHTML = '<input onclick="sendcheck()" type="checkbox" id="postset4_' + rowNdx + '" ' + onOrOff + ' />';
+
+    tdElem = trElem.insertCell(trElem.cells.length);
+    tdElem.className = "col2";
+    tdElem.innerText = title;
+    tdElem.onclick = editsomething;
+    tdElem.id      = "postset0_" + rowNdx;
+
+    tdElem = trElem.insertCell(trElem.cells.length);
+    tdElem.className = "col3";
+    tdElem.innerText = userid;
+    tdElem.onclick = editsomething;
+    tdElem.id      = "postset1_" + rowNdx;
+
+    tdElem = trElem.insertCell(trElem.cells.length);
+    tdElem.className = "col4";
+    tdElem.innerText = date;
+    tdElem.onclick = editsomething;
+    tdElem.id      = "postset2_" + rowNdx;
+}
+
+function updatepostset()
+{
+    var sel = document.getElementById("selectlist");
+    window.external.genericCallbackII(10, sel.selectedIndex);
+}
+</script>
+</head>
+<body>
+<div>$PostSet<select id="selectlist" onchange="updatepostset();">
+    <option>my blog</option>
+    <option>your blog</option>
+</select></div>
+<div style="text-align:right;">
+<table width="" class="buttons"><tr>
+  <td >
+    <input class="button" type="button" name="update" value="$LabelUpdate" onclick="window.external.genericCallbackI(1)" />
+  </td>
+  <!--
+  <td >
+    <input class="button" type="button" name="delposts" value="Delete..." onclick="window.external.genericCallbackI(2)" />
+  </td>
+  -->
+</tr></table>
+</div>
+<table id="listtable">
+<col class="col1">
+<col class="col2">
+<col class="col3">
+<col class="col4">
+    <tbody id="listtbody">
+<tr><td class="col1"><input type="checkbox" name="service0001" value="OFF"  /></td><td class="col2" onclick="foo();">Something new</td><td class="col3">gman</td></tr>
+<tr><td class="col1"><input type="checkbox" name="service0001" value="OFF"  /></td><td class="col2" onclick="foo();">Something new</td><td class="col3">gman</td></tr>
+<tr><td class="col1"><input type="checkbox" name="service0001" value="OFF"  /></td><td class="col2" onclick="foo();">Something new</td><td class="col3">gman</td></tr>
+    </tbody>
+</table>
+
+
+<table class="buttons" width="100%"><tr>
+  <td width="15%">
+    <input class="button" type="button" name="update" value="$PostsGetMore" onclick="window.external.genericCallbackI(3)" />
+  </td>
+</tr></table>
+
+</body>
+
+</html>

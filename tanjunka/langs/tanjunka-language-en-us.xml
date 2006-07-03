@@ -1,0 +1,974 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Gregg Tavares</Author>
+  <LastAuthor>Gregg Tavares</LastAuthor>
+  <Created>2005-04-16T10:16:05Z</Created>
+  <LastSaved>2005-04-17T14:53:03Z</LastSaved>
+  <Company>Greggman</Company>
+  <Version>10.6714</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <DownloadComponents/>
+  <LocationOfComponents HRef="file:///\\"/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>12525</WindowHeight>
+  <WindowWidth>15195</WindowWidth>
+  <WindowTopX>480</WindowTopX>
+  <WindowTopY>120</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s21">
+   <Alignment ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#CCCCFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s22">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Protection ss:Protected="0"/>
+  </Style>
+  <Style ss:ID="s23">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#CCCCFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s24">
+   <Protection ss:Protected="0"/>
+  </Style>
+  <Style ss:ID="s25">
+   <Interior ss:Color="#CCCCFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s26">
+   <Alignment ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font x:Family="Swiss" ss:Bold="1"/>
+   <Interior ss:Color="#CCCCFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s27">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font x:Family="Swiss" ss:Bold="1"/>
+   <Interior ss:Color="#CCCCFF" ss:Pattern="Solid"/>
+   <Protection ss:Protected="0"/>
+  </Style>
+  <Style ss:ID="s28">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font x:Family="Swiss" ss:Bold="1"/>
+   <Interior ss:Color="#CCCCFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s29">
+   <Interior ss:Color="#CCCCFF" ss:Pattern="Solid"/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Tanjunka">
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="237" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:StyleID="s21" ss:AutoFitWidth="0" ss:Width="150"/>
+   <Column ss:StyleID="s22" ss:AutoFitWidth="0" ss:Width="259.5"/>
+   <Column ss:StyleID="s23" ss:AutoFitWidth="0" ss:Width="175.5"/>
+   <Column ss:StyleID="s24" ss:AutoFitWidth="0" ss:Width="154.5"/>
+   <Row ss:StyleID="s25">
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Name</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">Text</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Notes</Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">Translator Comments</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LanguageLabel</Data></Cell>
+    <Cell><Data ss:Type="String">English (United States)</Data></Cell>
+    <Cell><Data ss:Type="String">Name of this Language</Data></Cell>
+   </Row>
+   <Row ss:Height="25.5">
+    <Cell><Data ss:Type="String">LanguageID</Data></Cell>
+    <Cell><Data ss:Type="String">en-us</Data></Cell>
+    <Cell><Data ss:Type="String">used to figure out default language based on user's OS settings</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LanguageAbout</Data></Cell>
+    <Cell><Data ss:Type="String">Created by Gregg Tavares</Data></Cell>
+    <Cell><Data ss:Type="String">Appears in About page</Data></Cell>
+   </Row>
+   <Row ss:Index="6">
+    <Cell><Data ss:Type="String">LabelOkay</Data></Cell>
+    <Cell><Data ss:Type="String">Okay</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelCancel</Data></Cell>
+    <Cell><Data ss:Type="String">Cancel</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelYes</Data></Cell>
+    <Cell><Data ss:Type="String">Yes</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelNo</Data></Cell>
+    <Cell><Data ss:Type="String">No</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelUpdate</Data></Cell>
+    <Cell><Data ss:Type="String">Update</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelAdd</Data></Cell>
+    <Cell><Data ss:Type="String">Add…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelDelete</Data></Cell>
+    <Cell><Data ss:Type="String">Delete…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelClose</Data></Cell>
+    <Cell><Data ss:Type="String">Close</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelBrowse</Data></Cell>
+    <Cell><Data ss:Type="String">Browse…</Data></Cell>
+    <Cell><Data ss:Type="String">For Selecting a file</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelOops</Data></Cell>
+    <Cell><Data ss:Type="String">Oops</Data></Cell>
+    <Cell><Data ss:Type="String">User Error</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelConfirmation</Data></Cell>
+    <Cell><Data ss:Type="String">Confirmation...</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelUhOh</Data></Cell>
+    <Cell><Data ss:Type="String">Uh-Oh</Data></Cell>
+    <Cell><Data ss:Type="String">Something unexpected happened</Data></Cell>
+   </Row>
+   <Row ss:Index="19">
+    <Cell><Data ss:Type="String">MainNewPostButton</Data></Cell>
+    <Cell><Data ss:Type="String">New Post</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MainRepostButton</Data></Cell>
+    <Cell><Data ss:Type="String">Re-post</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MainPostButton</Data></Cell>
+    <Cell><Data ss:Type="String">Post</Data></Cell>
+   </Row>
+   <Row ss:Index="23">
+    <Cell><Data ss:Type="String">ToolStripNew</Data></Cell>
+    <Cell><Data ss:Type="String">New</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripOpen</Data></Cell>
+    <Cell><Data ss:Type="String">Open</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripSave</Data></Cell>
+    <Cell><Data ss:Type="String">Save</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripCut</Data></Cell>
+    <Cell><Data ss:Type="String">Cut</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripCopy</Data></Cell>
+    <Cell><Data ss:Type="String">Copy</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripPaste</Data></Cell>
+    <Cell><Data ss:Type="String">Paste</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripNoPostsets</Data></Cell>
+    <Cell><Data ss:Type="String">*no postsets*</Data></Cell>
+    <Cell><Data ss:Type="String">Used when there are no post sets</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripImage</Data></Cell>
+    <Cell><Data ss:Type="String">Image</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripLink</Data></Cell>
+    <Cell><Data ss:Type="String">Link</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripBold</Data></Cell>
+    <Cell><Data ss:Type="String">Bold</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripItalics</Data></Cell>
+    <Cell><Data ss:Type="String">Italics</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripUnderline</Data></Cell>
+    <Cell><Data ss:Type="String">Underline</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripLeft</Data></Cell>
+    <Cell><Data ss:Type="String">Left</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Center</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripRight</Data></Cell>
+    <Cell><Data ss:Type="String">Right</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripJustify</Data></Cell>
+    <Cell><Data ss:Type="String">Justify</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripOrderedList</Data></Cell>
+    <Cell><Data ss:Type="String">Ordered List</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripUnorderedList</Data></Cell>
+    <Cell><Data ss:Type="String">Unordered List</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripOutdent</Data></Cell>
+    <Cell><Data ss:Type="String">Outdent</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripIndent</Data></Cell>
+    <Cell><Data ss:Type="String">Indent</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripHighlight</Data></Cell>
+    <Cell><Data ss:Type="String">Highlight Color</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripFontColor</Data></Cell>
+    <Cell><Data ss:Type="String">Font Color</Data></Cell>
+   </Row>
+   <Row ss:Index="46">
+    <Cell><Data ss:Type="String">MenuFile</Data></Cell>
+    <Cell><Data ss:Type="String">File</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuFileNew</Data></Cell>
+    <Cell><Data ss:Type="String">New</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuFileOpen</Data></Cell>
+    <Cell><Data ss:Type="String">Open…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuFileSave</Data></Cell>
+    <Cell><Data ss:Type="String">Save</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuFileSaveAs</Data></Cell>
+    <Cell><Data ss:Type="String">Save As…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuFileGetEntry</Data></Cell>
+    <Cell><Data ss:Type="String">Get Entry…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuFileExit</Data></Cell>
+    <Cell><Data ss:Type="String">Exit</Data></Cell>
+   </Row>
+   <Row ss:Index="54">
+    <Cell><Data ss:Type="String">MenuEdit</Data></Cell>
+    <Cell><Data ss:Type="String">Edit</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuEditUndo</Data></Cell>
+    <Cell><Data ss:Type="String">Undo</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuEditRedo</Data></Cell>
+    <Cell><Data ss:Type="String">Redo</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuEditCut</Data></Cell>
+    <Cell><Data ss:Type="String">Cut</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuEditCopy</Data></Cell>
+    <Cell><Data ss:Type="String">Copy</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuEditPaste</Data></Cell>
+    <Cell><Data ss:Type="String">Paste</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuEditSelectAll</Data></Cell>
+    <Cell><Data ss:Type="String">SelectAll</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuEditFind</Data></Cell>
+    <Cell><Data ss:Type="String">Find and Replace…</Data></Cell>
+   </Row>
+   <Row ss:Index="63">
+    <Cell><Data ss:Type="String">MenuInsert</Data></Cell>
+    <Cell><Data ss:Type="String">Insert</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuInsertImage</Data></Cell>
+    <Cell><Data ss:Type="String">Image / Photo…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuInsertClip</Data></Cell>
+    <Cell><Data ss:Type="String">Clip…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuInserTime</Data></Cell>
+    <Cell><Data ss:Type="String">Time</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuInsertDate</Data></Cell>
+    <Cell><Data ss:Type="String">Date</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuInsertSymbol</Data></Cell>
+    <Cell><Data ss:Type="String">Symbol…</Data></Cell>
+   </Row>
+   <Row ss:Index="70">
+    <Cell><Data ss:Type="String">MenuPost</Data></Cell>
+    <Cell><Data ss:Type="String">Post</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuPostPost</Data></Cell>
+    <Cell><Data ss:Type="String">Post…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuPostPostSets</Data></Cell>
+    <Cell><Data ss:Type="String">Post Sets…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuPostServices</Data></Cell>
+    <Cell><Data ss:Type="String">Services…</Data></Cell>
+   </Row>
+   <Row ss:Index="75">
+    <Cell><Data ss:Type="String">MenuTools</Data></Cell>
+    <Cell><Data ss:Type="String">Tools</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuToolsSpellCheck</Data></Cell>
+    <Cell><Data ss:Type="String">Spell Check…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuToolsUpdate</Data></Cell>
+    <Cell><Data ss:Type="String">Update…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuToolsPrefs</Data></Cell>
+    <Cell><Data ss:Type="String">Preferences…</Data></Cell>
+   </Row>
+   <Row ss:Index="80">
+    <Cell><Data ss:Type="String">MenuHelp</Data></Cell>
+    <Cell><Data ss:Type="String">Help</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuHelpHelp</Data></Cell>
+    <Cell><Data ss:Type="String">Help…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuHelpWebpage</Data></Cell>
+    <Cell><Data ss:Type="String">Webpage…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuHelpForum</Data></Cell>
+    <Cell><Data ss:Type="String">Forum…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuHelpAbout</Data></Cell>
+    <Cell><Data ss:Type="String">About…</Data></Cell>
+   </Row>
+   <Row ss:Index="86">
+    <Cell><Data ss:Type="String">MenuDebug</Data></Cell>
+    <Cell><Data ss:Type="String">Debug</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuDebugReload</Data></Cell>
+    <Cell><Data ss:Type="String">Reload Editform</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuDebugShowInfo</Data></Cell>
+    <Cell><Data ss:Type="String">Show Blog Info Form</Data></Cell>
+   </Row>
+   <Row ss:Index="90">
+    <Cell><Data ss:Type="String">TabBody</Data></Cell>
+    <Cell><Data ss:Type="String">Body</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TabExtra</Data></Cell>
+    <Cell><Data ss:Type="String">Extra</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TabPhoto</Data></Cell>
+    <Cell><Data ss:Type="String">Photo</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TabOptions</Data></Cell>
+    <Cell><Data ss:Type="String">Options</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TabBodyHTML</Data></Cell>
+    <Cell><Data ss:Type="String">Body HTML</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TabExtraHTML</Data></Cell>
+    <Cell><Data ss:Type="String">Extra HTML</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TabLog</Data></Cell>
+    <Cell><Data ss:Type="String">Log</Data></Cell>
+   </Row>
+   <Row ss:Index="98">
+    <Cell><Data ss:Type="String">PhotoRevert</Data></Cell>
+    <Cell><Data ss:Type="String">Revert</Data></Cell>
+    <Cell><Data ss:Type="String">Photo Bottom Buttons</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoUndo</Data></Cell>
+    <Cell><Data ss:Type="String">Undo</Data></Cell>
+    <Cell><Data ss:Type="String">Photo Bottom Buttons</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoRedo</Data></Cell>
+    <Cell><Data ss:Type="String">Redo</Data></Cell>
+    <Cell><Data ss:Type="String">Photo Bottom Buttons</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoTabCrop</Data></Cell>
+    <Cell><Data ss:Type="String">Rotate/Crop</Data></Cell>
+    <Cell><Data ss:Type="String">Photo Tab</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoTabBright</Data></Cell>
+    <Cell><Data ss:Type="String">Brightness</Data></Cell>
+    <Cell><Data ss:Type="String">Photo Tab</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoTabHue</Data></Cell>
+    <Cell><Data ss:Type="String">Hue/Saturation</Data></Cell>
+    <Cell><Data ss:Type="String">Photo Tab</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoContrast</Data></Cell>
+    <Cell><Data ss:Type="String">Contrast</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoBright</Data></Cell>
+    <Cell><Data ss:Type="String">Brightness</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoHue</Data></Cell>
+    <Cell><Data ss:Type="String">Hue</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoSaturation</Data></Cell>
+    <Cell><Data ss:Type="String">Saturation</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoLightness</Data></Cell>
+    <Cell><Data ss:Type="String">Lightness</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoTintHue</Data></Cell>
+    <Cell><Data ss:Type="String">Tint Hue</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoTintAmount</Data></Cell>
+    <Cell><Data ss:Type="String">Tint Amount</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoGamma</Data></Cell>
+    <Cell><Data ss:Type="String">Gamma</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoRotate</Data></Cell>
+    <Cell><Data ss:Type="String">Rotate/Flip</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoCrop</Data></Cell>
+    <Cell><Data ss:Type="String">Crop</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoReset</Data></Cell>
+    <Cell><Data ss:Type="String">Reset</Data></Cell>
+    <Cell><Data ss:Type="String">Reset crop</Data></Cell>
+   </Row>
+   <Row ss:Index="116">
+    <Cell><Data ss:Type="String">PostOptionsFor</Data></Cell>
+    <Cell><Data ss:Type="String">Post Options For</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsOn</Data></Cell>
+    <Cell><Data ss:Type="String">Post to this Set</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsShared</Data></Cell>
+    <Cell><Data ss:Type="String">Shared</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsKeywords</Data></Cell>
+    <Cell><Data ss:Type="String">Keywords:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsExcerpt</Data></Cell>
+    <Cell><Data ss:Type="String">Excerpt:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsAuthoredOn</Data></Cell>
+    <Cell><Data ss:Type="String">Authored On (Date):</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsPublish</Data></Cell>
+    <Cell><Data ss:Type="String">Publish:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsAllowComments</Data></Cell>
+    <Cell><Data ss:Type="String">Allow Comments:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsAcceptTrackbacks</Data></Cell>
+    <Cell><Data ss:Type="String">Accept Trackbacks:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsURLsToPing</Data></Cell>
+    <Cell><Data ss:Type="String">URLs to Ping:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsCategory</Data></Cell>
+    <Cell><Data ss:Type="String">Category:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsCategories</Data></Cell>
+    <Cell><Data ss:Type="String">Categories:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsMainCategory</Data></Cell>
+    <Cell><Data ss:Type="String">main category</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsIcon</Data></Cell>
+    <Cell><Data ss:Type="String">Icon:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsNoOptions</Data></Cell>
+    <Cell><Data ss:Type="String">no options for this service</Data></Cell>
+   </Row>
+   <Row ss:Index="132">
+    <Cell><Data ss:Type="String">Prefs</Data></Cell>
+    <Cell><Data ss:Type="String">Tanjunka Preferences</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsImageOptions</Data></Cell>
+    <Cell><Data ss:Type="String">Image Options:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsMaxWidth</Data></Cell>
+    <Cell><Data ss:Type="String">Max Width:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsMaxHeight</Data></Cell>
+    <Cell><Data ss:Type="String">Max Height:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsCopyImagesLocal</Data></Cell>
+    <Cell><Data ss:Type="String">Copy Images from pasted HTML locally:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsAutoImageNames</Data></Cell>
+    <Cell><Data ss:Type="String">Auto Generate Image Filenames:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsLanguage</Data></Cell>
+    <Cell><Data ss:Type="String">Language</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsOptions</Data></Cell>
+    <Cell><Data ss:Type="String">Options:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsShowHTML</Data></Cell>
+    <Cell><Data ss:Type="String">Show HTML:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsConnection</Data></Cell>
+    <Cell><Data ss:Type="String">Connection:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsUseProxy</Data></Cell>
+    <Cell><Data ss:Type="String">Use Proxy:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsProxyAddress</Data></Cell>
+    <Cell><Data ss:Type="String">Proxy Address:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsUseAuthentication</Data></Cell>
+    <Cell><Data ss:Type="String">Use Authentication:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsProxyUsername</Data></Cell>
+    <Cell><Data ss:Type="String">Username:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsProxyPassword</Data></Cell>
+    <Cell><Data ss:Type="String">Password:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsDebug</Data></Cell>
+    <Cell><Data ss:Type="String">Debug:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsShowLog</Data></Cell>
+    <Cell><Data ss:Type="String">Show Log:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsShowDebugMenu</Data></Cell>
+    <Cell><Data ss:Type="String">Show Debug Menu:</Data></Cell>
+   </Row>
+   <Row ss:Index="151">
+    <Cell><Data ss:Type="String">ContextImageEdit</Data></Cell>
+    <Cell><Data ss:Type="String">Edit…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ContextImageResize</Data></Cell>
+    <Cell><Data ss:Type="String">Resize…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ContextImageProperties</Data></Cell>
+    <Cell><Data ss:Type="String">Properties…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ContextImageFloatLeft</Data></Cell>
+    <Cell><Data ss:Type="String">Float Left</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ContextImageFloatRight</Data></Cell>
+    <Cell><Data ss:Type="String">Float Right</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ContextImageNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Normal</Data></Cell>
+   </Row>
+   <Row ss:Index="158">
+    <Cell><Data ss:Type="String">PostSetTitle</Data></Cell>
+    <Cell><Data ss:Type="String">Edit Post Set</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostSet</Data></Cell>
+    <Cell><Data ss:Type="String">Post Set:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostSetName</Data></Cell>
+    <Cell><Data ss:Type="String">Name:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostSetBlogService</Data></Cell>
+    <Cell><Data ss:Type="String">Blog Service:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostSetPhotoService</Data></Cell>
+    <Cell><Data ss:Type="String">Photo Service:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostSetFileService</Data></Cell>
+    <Cell><Data ss:Type="String">File Service:</Data></Cell>
+   </Row>
+   <Row ss:Index="165">
+    <Cell><Data ss:Type="String">PostsTitle</Data></Cell>
+    <Cell><Data ss:Type="String">Download/Edit Online Entry</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostsGetMore</Data></Cell>
+    <Cell><Data ss:Type="String">Get More</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostsNoPosts</Data></Cell>
+    <Cell><Data ss:Type="String">This type of service does not support getting posts online</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostsSorry</Data></Cell>
+    <Cell><Data ss:Type="String">Sorry</Data></Cell>
+   </Row>
+   <Row ss:Index="170">
+    <Cell><Data ss:Type="String">PublishTitle</Data></Cell>
+    <Cell><Data ss:Type="String">Post Sets</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PublishPostTo</Data></Cell>
+    <Cell><Data ss:Type="String">Post To</Data></Cell>
+   </Row>
+   <Row ss:Index="173">
+    <Cell><Data ss:Type="String">ServicesTitle</Data></Cell>
+    <Cell><Data ss:Type="String">Services</Data></Cell>
+   </Row>
+   <Row ss:Index="175">
+    <Cell><Data ss:Type="String">ServiceTypeTitle</Data></Cell>
+    <Cell><Data ss:Type="String">Service Type</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ServiceTypePrompt</Data></Cell>
+    <Cell><Data ss:Type="String">Select a Service Type</Data></Cell>
+   </Row>
+   <Row ss:Index="178">
+    <Cell><Data ss:Type="String">AboutTitle</Data></Cell>
+    <Cell><Data ss:Type="String">About Tanjunka</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AboutCreatedBy</Data></Cell>
+    <Cell><Data ss:Type="String">Created by:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AboutCopyright</Data></Cell>
+    <Cell><Data ss:Type="String">Copyright:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AboutVersion</Data></Cell>
+    <Cell><Data ss:Type="String">Version:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AboutMoreInfo</Data></Cell>
+    <Cell><Data ss:Type="String">For more info please visit the</Data></Cell>
+   </Row>
+   <Row ss:Index="184">
+    <Cell><Data ss:Type="String">SettingsName</Data></Cell>
+    <Cell><Data ss:Type="String">Name:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsUserInfo</Data></Cell>
+    <Cell><Data ss:Type="String">User Info</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsEmail</Data></Cell>
+    <Cell><Data ss:Type="String">E-Mail:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsUsername</Data></Cell>
+    <Cell><Data ss:Type="String">Username:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsPassword</Data></Cell>
+    <Cell><Data ss:Type="String">Password:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsPaths</Data></Cell>
+    <Cell><Data ss:Type="String">Paths</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsImagePath</Data></Cell>
+    <Cell><Data ss:Type="String">Image Path:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsXMLRPCURL</Data></Cell>
+    <Cell><Data ss:Type="String">XML-RPC URL:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsDefaults</Data></Cell>
+    <Cell><Data ss:Type="String">Defaults</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsBlog</Data></Cell>
+    <Cell><Data ss:Type="String">Blog</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsPublish</Data></Cell>
+    <Cell><Data ss:Type="String">Publish</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsAllowComments</Data></Cell>
+    <Cell><Data ss:Type="String">Allow Comments</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsAllowTrackback</Data></Cell>
+    <Cell><Data ss:Type="String">Allow Trackback</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsAdvanced</Data></Cell>
+    <Cell><Data ss:Type="String">Advanced</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsEncoding</Data></Cell>
+    <Cell><Data ss:Type="String">Encoding:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsStyleSheet</Data></Cell>
+    <Cell><Data ss:Type="String">Style Sheet:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsUseStyleSheet</Data></Cell>
+    <Cell><Data ss:Type="String">Use Style Sheet</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsCSSFile</Data></Cell>
+    <Cell><Data ss:Type="String">CSS File:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsForms</Data></Cell>
+    <Cell><Data ss:Type="String">Forms:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsUseCustomForms</Data></Cell>
+    <Cell><Data ss:Type="String">Use Custom Forms</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsBodyForm</Data></Cell>
+    <Cell><Data ss:Type="String">Body Form:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsExtraForm</Data></Cell>
+    <Cell><Data ss:Type="String">Extra Form:</Data></Cell>
+   </Row>
+   <Row ss:Index="207">
+    <Cell><Data ss:Type="String">ErrorNoPostSetsDefined</Data></Cell>
+    <Cell><Data ss:Type="String">You have no postsets defined</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ErrorNoPostSetsSelected</Data></Cell>
+    <Cell><Data ss:Type="String">You have no postsets selected</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ErrorTroubleReadingEntry</Data></Cell>
+    <Cell><Data ss:Type="String">Trouble reading the entry</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">ErrorNoBlogServices</Data></Cell>
+    <Cell><Data ss:Type="String">There are no blog services setup, only photo services.  Please setup a blog service</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ErrorGetCategoryList</Data></Cell>
+    <Cell><Data ss:Type="String">Trouble getting the category list</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">ErrorServiceInUse</Data></Cell>
+    <Cell><Data ss:Type="String">These services are being used by your Postsets. Please edit or delete the Postset before deleting the services</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ErrorNoServicesSelected</Data></Cell>
+    <Cell><Data ss:Type="String">No services selected</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">ErrorBadSettings</Data></Cell>
+    <Cell><Data ss:Type="String">Unfortunately I could not read your settings. I'll have to reset them. Sorry</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ErrorCantGetPosts</Data></Cell>
+    <Cell><Data ss:Type="String">this service can not get posts online</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">ErrorCantPostPhoto</Data></Cell>
+    <Cell><Data ss:Type="String">could not post image [{0}] to [{1}]</Data></Cell>
+    <Cell><Data ss:Type="String">{0} is image filename, {1} is service name</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ErrorCantPostEntry</Data></Cell>
+    <Cell><Data ss:Type="String">could not post entry to [{0}]</Data></Cell>
+    <Cell><Data ss:Type="String">{0} service name</Data></Cell>
+   </Row>
+   <Row ss:Index="225" ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">PromptClearIt</Data></Cell>
+    <Cell><Data ss:Type="String">The current entry is not saved, Are you sure you want to clear it?</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">PromptGetEntry</Data></Cell>
+    <Cell><Data ss:Type="String">The current entry is not saved. Are you sure you want to get an entry?</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">PromptLoadEntry</Data></Cell>
+    <Cell><Data ss:Type="String">The current entry is not saved. Are you sure you want to load a new entry?</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">PromptQuit</Data></Cell>
+    <Cell><Data ss:Type="String">The current entry is not saved.  Are you sure you want to quit?</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">PromptDeletePostsets</Data></Cell>
+    <Cell><Data ss:Type="String">Delete {0} selected Postset(s)?</Data></Cell>
+    <Cell><Data ss:Type="String">{0} is replaced by the count of postsets</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">PromptDeleteServices</Data></Cell>
+    <Cell><Data ss:Type="String">Delete {0} selected Service(s)?</Data></Cell>
+    <Cell><Data ss:Type="String">{0} is replaced by the count of services</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PromptTitle</Data></Cell>
+    <Cell><Data ss:Type="String">Enter a Title</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PromptHtml</Data></Cell>
+    <Cell><Data ss:Type="String">Type an Entry Here Or Drag and Drop Some Images</Data></Cell>
+   </Row>
+   <Row ss:Index="236">
+    <Cell><Data ss:Type="String">SpellCheck</Data></Cell>
+    <Cell><Data ss:Type="String">Spell Check</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SpellCheckComplete</Data></Cell>
+    <Cell><Data ss:Type="String">Spell Check Complete.</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>-4</HorizontalResolution>
+    <VerticalResolution>0</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>2</ActiveRow>
+     <RangeSelection>R3:R4</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

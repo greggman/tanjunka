@@ -1,0 +1,11 @@
+bin\Release\NetSpell.SpellChecker.dll
+bin\Release\NetSpell.SpellChecker.xml
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\NetSpell.SpellChecker.Dictionary.Dictionary.bmp
+obj\Release\NetSpell.SpellChecker.Spelling.bmp
+obj\Release\NetSpell.SpellChecker.Dictionary.WordDictionary.resources
+obj\Release\NetSpell.SpellChecker.Forms.OptionForm.resources
+obj\Release\NetSpell.SpellChecker.Forms.SuggestionForm.resources
+obj\Release\NetSpell.SpellChecker.Spelling.resources
+obj\Release\NetSpell.SpellChecker.csproj.GenerateResource.Cache
+obj\Release\NetSpell.SpellChecker.dll

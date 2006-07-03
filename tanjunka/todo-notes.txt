@@ -1,0 +1,436 @@
+=== PRIORITIES ===
+
+-----------0.1--------
+
+O add "paste as text"
+O try to make "ctrl-k" not go to top of page
+O make atom use postextra
+O make it save window sizes, positions
+O add list of insert macros
+O fix spell checking options so you can pick dictionary
+O add -remove- color
+O add -remove- highlight
+O add list of local images (smilies)
+O add FTP photo service
+O add j-title, j-body
+O find and replace
+x localize it
+O per-service image regex
+
+O add file uploading.  Insert file (or drag and drop).
+    If file using insert file OR if file is not jpg, jpeg, png, gif
+    then add to list to upload and upload with newMedia or FTP
+    * Add File Service (in addition to Blog Service and Photo Service)
+    * Add FTP
+    * Add File Path to all dialogs
+
+O add time
+x fix so src is updated as well
+O add realtime option (because updating colors is too slow)
+O add zoom to image
+O show image actual size
+O make it only edit picture so big (big as screen)
+O check "ping-urls" across services
+
+O add a check all, check none button to postsets
+x (not going to do) make it delete old posts
+x make it add a new post to the posts list for that bps
+O add copy service
+x make default name of new postset a copy of blogservicename
+  make a postset whenever a blogservice is added
+x make the toolbar post set go to the correct post set on a new post
+x uncheck all other post sets if getting an old post
+x add edit previous
+  x update updates current list (20 entries) and changes to "get more" after
+x fix pasting HTML / HTML images
+x make sure if you cut and paste gif from web it does the right thing
+x make sure we own the file when scaling/right clicking
+  (ie, you can't edit a file that's not local...although it should make it local
+   if it's not!)
+O right click images to
+  O resize
+  x edit
+  O set to have original link
+  O picture properties
+x make tjpic return original and track both because,
+  use might rescale and then pick undo.  We won't know what got undone
+O make sure maxwidth/maxheight are ints and > 0
+O docs
+ O help
+x webpage
+O change to set styles (title, body, content)
+O fix shortcuts
+  F5
+  Ctrl-N
+  Ctrl-P
+
+  onbeforeunload does not work for F5 :-(
+  onkeypresshandler works for Ctrl-N but nothing else
+  onbeforeprint does not work for printing
+  .hta does not run
+
+        function onkeypresshandler()
+        {
+            var keyCode = window.event.keyCode;
+            var ctrlKey = window.event.ctrlKey;
+
+            logPrintn("keydown: " + keyCode + " ctrl: " + ctrlKey);
+
+            if (ctrlKey)
+            {
+                if (keyCode == 80  || // p  - print
+                    keyCode == 78  || // n  - new window
+                    keyCode == 115 || // F5 - refresh
+                    false)
+                {
+                    window.event.returnValue = false;
+                }
+            }
+        }
+
+-----------0.2--------
+
+O add progress bar to all online things
+O maybe we should not rescale gifs?
+
+0 handle png,gif,bmp
+ ! if 8bit convert do not allow resize.  Convert to jpg if re-sized (confirm)
+   ! make it changed to allow resize but to not recompress image.
+   O change to if animated gif then keep 8bit unless converted to jpeg
+     0 option to convert to jpg
+
+
+O support               -api-  -tested-   -name-                   -url-
+        Nucleus 3.0     mt
+        Wordpress       mt
+        SquareSpace     meta              greggman.squarespace.com http://www.squarespace.com/do/process/external/PostInterceptor
+        b2evolution,    blogger+
+        Blog:CMS        mt
+        UBlog
+        .Text
+        BlogWare
+        Xaraya
+        DearDiary.Net
+        pMachine        blogger api
+        TypePad         mt
+        YACS
+        Blojsom         mt, atom
+        RollerWeblogger
+        Lotus Domino (with blog API)
+        Drupal
+        Manilla
+
+O make it load double clicked files
+O fix so when entering text, droping image, default text disappears
+
+
+-----------0.3--------
+
+x edit images
+  x crop
+  x HSV
+  O levels
+  O sharpen
+
+O toolbar/menu buttons must check that we are on body/extra tab
+O update toolbar to reflect current cursor position
+O make status bar work
+O limit resize to no larger than original
+  (option)
+O make extra be part of each service
+O store images in a more local location (not temp? app data?)
+O option to upload original image as well?
+
+O localize it
+  O store text in xml file AND
+  O I should check the date of the lang file and if it's newer than an html
+    file I should load that html file, replace the text and cache it!
+    also if the original html file is newer then the cache.
+  O load forms from folders (ja, fr, etc)
+    Note: does the browser already do this? can use <span lang="ja"> NO!
+
+--------someday-------
+
+O make check for new-version
+O when drag and droping HTML copy images local
+O make "copy" service
+O make image table page with options
+O drag and drop images to the correct place
+O per service img regex
+  O per service generic regex?
+O batch change (make interface like WMP, multiple select?)
+
+---------done--------
+
+x find bug where file is local
+x icon
+x make uploaded image have ext of temp
+x must make progress dialog work
+x must check abort
+x make "need to save" dialog work correctly
+x make prefs
+  x proxy support!
+  x show HTML tabs
+  x show log/debug menu
+  x make default text disappear?
+  x global image size
+  x option to autogen upload names (set to default)
+    (problem is many people have camera set to DSC00001 everytime)
+    so unless we make our own names they will upload over old pics
+x about
+ x show version
+x splash
+x check if imagepath is used
+x remove test from flickr form
+x make publish, allow comments and allow trackback on by default
+x menu undo,redo,cut,copy,paste, select all,
+x make copy, paste to other program, work
+
+x edit images
+  x resize
+
+
+x fix paste html javascript error
+x fix align="right" becoming align="right/"
+
+x make Log.Printn a virtual function:
+  When posting, make everything go through delegate
+
+x get originalwidth, height from prog, not HTML
+x make flickr put in links
+x must check execptions
+x must make "publish" change to "re-post"
+x "publish" should take you to postset box if more than one postset
+x make it do the right thing for the "Type entry " stuff
+x when pasting HTML, copy the images local
+  (option to leave them)
+x make "publish" go to PublishForm if there is more than one postset.
+
+x delete postsets
+x delete services
+  (walk postsets and remove references to service)
+x service extras (category, allow comments)
+x add postset selection on toolbar to change visible stuff
+x make postoptions be part of each service
+x fix resizing bug
+
+x change "publish" to "post"
+x size image for real
+  x while uploading
+  x option to do just after resizing
+
+x edit
+x save checkmarks
+x lookup blogIDs
+
+
+x color dropdowns
+x paste image
+
+x each blogphotoservice needs an ID.  We can't use the name because if the user
+  changes the name the data for that service will get lost
+x post to MT
+x post images
+x remove title from form, put in bottom
+x load/save entries
+x save images with entry
+x html tab
+
+x blogger
+x flickr
+x make bloggerAPI service separate from a blogger service (blogger service has no XMLRPC link and might use different api)
+  x same for MoveableType, make it the metaWeblog API service
+    x new moveabletype version might need to check for Atom
+x check size of image on way out and re-adjust
+x set default size
+x copy and paste from photoshop
+x clear uploaded flag for pic if it's changed/been edited
+x save/load entries
+x when reposting, post images if they have been edited
+  (means when you store you need to save size/etc or
+   when editing you need to mark for re-upload)
+
+* Here's latest the idea
+
+  Just like we copy data to/from the HTML forms we can copy data to/from
+  the various blog posting forms so if in publish we have 1 service
+  showing there will be 1 body tab, if 2 services then 2 body tabs?
+
+  OR
+
+  On the toolbar there will be a drop down list for the services.
+  You can pick any one to change the appearence of the body
+
+
+
+----------------------------------
+
+* list of blog sets
+  * name, blog service, image service
+  * list of services
+    * per service, for blogs, for images
+
+
+
+
+
+* crosspost,  mt, livejourual, 1up,
+* allow editing of title in place (on both more and body)
+* insert javascript and other parts into user forms
+  * check for required form parts and functions (can just use C# to check DOM)
+* right click image or select and pick "edit image" to edit image
+* have list of blogs
+* have list of past entries
+* when editing
+   * crop
+   * resize
+   * level
+   * auto-level
+   * hue,sat,value
+   * sharpen
+* open html
+* right click image (or select menu) "properties"
+   * set upload name
+   * set to copy or site (or not)
+   * allow off-resizeing
+   * allow non-resampleing
+   * allow streching larger than original
+   * option make link to larger size
+   * set larger size
+* re-layout options for multiple pictures
+* allow img template
+* have two templates, one for body, one for extra
+* allow editing post date inline
+* add post line
+* use MT keywords <$MTAuthor$>
+* attempt to figure out blog info
+  * get blog URL, read page
+    * guess XMLRPC place
+    * guess CSS
+  * allow copying css file from net (option to update)
+  * allow separate edit forms (advanced)
+
+
+* list of blogs
+  Add Blog
+  Delete Blog(s)
+
+* per blog
+  Name
+
+  username
+  password
+  xml-path
+  image-path
+  http-image-header
+
+  blogname (id) [update]
+  publish
+  allow_comments
+  allow_pings
+
+  character set
+  style sheet
+    [x] cache locally
+    [update now]
+
+X make installer
+x what to do when body has images but there is no photo upload service?
+x fix version crap
+
+
+x fix when you have no blog selected in mt settings
+x fix no prefs
+x add form images to installer
+
+x fix date so you don't need one
+x fix date so it works
+x add option to check for new version
+x add spell checking
+
+---------revisions---------
+
+<ul><li>0.2.1933 : 2005/04/19<ul>
+<li>fixed: postset combo box drop down width
+<li>added: restoring window positions
+<li>fixed: atom API to support GET
+</ul></ul>
+
+<ul><li>0.2.1932 : 2005/04/19<ul>
+<li>fixed: pasting unicodetext (eg. copying text from a form in the browser)
+<li>added: Added Atom API (get entry doesn't work, nor re-post yet AFAIK)
+<li>fixed: cropping and rotation bugs
+<li>fixed: dictionary is chosen by prefs or culture if not selected
+<li>added: language version about info
+</ul></ul>
+
+<ul><li>0.2.1931 : 2005/04/17<ul>
+<li>added: japanese language file
+<li>added: localization system
+<li>fixed: date setting
+</ul></ul>
+
+<ul><li>0.2.1930 : 2005/04/14<ul>
+<li>fixed: extra tab bugs
+</ul></ul>
+
+<ul><li>0.2.1929 : 2005/04/13<ul>
+<li>fixed: gman service bug with images
+<li>added: update, forum and website menu items
+<li>added: spell checking 0.1 :-p
+</ul></ul>
+
+<ul><li>0.2.1928 : 2005/04/11<ul>
+<li>fixed: missing &lt;httpWebRequest useUnsafeHeaderParsing = "true" /&gt;
+<li>fixed: image path error
+</ul></ul>
+
+<ul><li>0.2.1927 : 2005/04/11<ul>
+<li>fixed: undo bug in photos
+<li>added: gman service
+<li>added: update options to installer
+</ul></ul>
+
+<ul><li>0.2.1925 : 2005/04/07<ul>
+<li>added: ".jpeg"
+<li>fixed: bug when exiting preferences
+<li>fixed: editing gif issues
+<li>fixed: not marking edited images as edited so they get re-uploaded
+<li>fixed: not noticed picture has NOT been edited
+</ul></ul>
+
+<ul><li>0.2.1923 : 2005/04/06<ul>
+<li>fixed: revert button now works
+<li>fixed: right click on image and pick edit works (more or less)
+<li>fixed: undo, redo buttons for photos not being enabled sometimes
+<li>added: docs for editing photos
+</ul></ul>
+
+<ul><li>0.2.1922 : 2005/04/05<ul>
+<li>fixed: help, should appear now
+<li>fixed: MovabletypeAPI service settings script bugs, missing encoding on form
+</ul></ul>
+
+<ul><li>0.2.1921 : 2005/04/05<ul>
+<li>added: image editing
+<li>hacked: added check for null for main tab control GotFocus()
+<li>fixed: Added help files to installer. DOH!
+<li>added: wordpress (tested with wordpress 1.5)
+<li>fixed: Date bug if Windows date format set to Japanese wareki mode
+<li>fixed: load/save bug. You couldn't load if you had any pictures. DOH!
+<li>added: typepad, blojsom, wordpress, nucleus (but have not tested)
+<li>added: movabletype separate from movabletype API
+<li>changed: adding a blog service by default adds a postset of the same name
+</ul></ul>
+
+<ul><li>0.1.1911 : 2005/03/26<ul>
+<li>fixed: cursor up/down at end of document do not lose focus
+<li>fixed: control-k lost focus after edit
+<li>changed: default style to remove funky styles
+</ul></ul>
+
+<ul><li>0.1.1910 : 2005/03/25<ul>
+<li>fixed: hopefully fixed bug where clipboard returns end marker past the data actually in the clipboard
+<li>changed: default style has no width limit
+</ul></ul>
+

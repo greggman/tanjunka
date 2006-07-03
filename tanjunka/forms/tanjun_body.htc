@@ -1,0 +1,19 @@
+<PUBLIC:COMPONENT>
+<PUBLIC:ATTACH EVENT="onkeydown" ONEVENT="tanCheckKeys()" />
+<SCRIPT LANGUAGE="JScript">
+function tanCheckKeys()
+{
+//  logPrintn("keycode=" + window.event.keyCode);
+    if (window.event.ctrlKey == true)
+    {
+        if (window.event.keyCode == 75) // ctrl-k
+        {
+            var src = window.event.srcElement;
+            window.event.returnValue = false;
+            window.document.execCommand("CreateLink", true);
+            src.focus(); // because the normal ctrl-k lost the focus
+        }
+    }
+}
+</SCRIPT>
+</PUBLIC:COMPONENT>

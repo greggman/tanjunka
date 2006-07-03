@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?>
+<UpgradeLog>
+<Properties><Property Name="Solution" Value="Atomizer">
+</Property><Property Name="Solution File" Value="D:\work\tanjunka\XMLRPCTest\Atomizer\Atomizer.sln">
+</Property><Property Name="User Options File" Value="D:\work\tanjunka\XMLRPCTest\Atomizer\Atomizer.suo">
+</Property><Property Name="Date" Value="Friday, April 08, 2005">
+</Property><Property Name="Time" Value="1:56 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Atomizer.sln" Description="File successfully backed up as D:\work\tanjunka\XMLRPCTest\Atomizer\Backup\Atomizer.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Atomizer.suo" Description="File successfully backed up as D:\work\tanjunka\XMLRPCTest\Atomizer\Backup\Atomizer.suo">
+</Event><Event ErrorLevel="0" Project="Atomizer" Source="Atomizer.csproj" Description="Project file successfully backed up as D:\work\tanjunka\XMLRPCTest\Atomizer\Backup\Atomizer.csproj">
+</Event><Event ErrorLevel="0" Project="Atomizer" Source="AssemblyInfo.cs" Description="File successfully backed up as D:\work\tanjunka\XMLRPCTest\Atomizer\Backup\Atomizer.csproj">
+</Event><Event ErrorLevel="0" Project="Atomizer" Source="AtomAPI.cs" Description="File successfully backed up as D:\work\tanjunka\XMLRPCTest\Atomizer\Backup\Atomizer.csproj">
+</Event><Event ErrorLevel="0" Project="Atomizer" Source="atomkey.snk" Description="File successfully backed up as D:\work\tanjunka\XMLRPCTest\Atomizer\Backup\Atomizer.csproj">
+</Event><Event ErrorLevel="0" Project="Atomizer" Source="Atomizer.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Atomizer" Source="Atomizer.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="AtomizerSample" Source="Sample\AtomizerSample.csproj" Description="Project file successfully backed up as D:\work\tanjunka\XMLRPCTest\Atomizer\Backup\Sample\AtomizerSample.csproj">
+</Event><Event ErrorLevel="0" Project="AtomizerSample" Source="Sample\AssemblyInfo.cs" Description="File successfully backed up as D:\work\tanjunka\XMLRPCTest\Atomizer\Backup\Sample\AtomizerSample.csproj">
+</Event><Event ErrorLevel="0" Project="AtomizerSample" Source="Sample\Class1.cs" Description="File successfully backed up as D:\work\tanjunka\XMLRPCTest\Atomizer\Backup\Sample\AtomizerSample.csproj">
+</Event><Event ErrorLevel="0" Project="AtomizerSample" Source="Sample\App.ico" Description="File successfully backed up as D:\work\tanjunka\XMLRPCTest\Atomizer\Backup\Sample\AtomizerSample.csproj">
+</Event><Event ErrorLevel="0" Project="AtomizerSample" Source="Sample\AtomizerSample.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="AtomizerSample" Source="Sample\AtomizerSample.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Atomizer.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Atomizer.sln" Description="Converted">
+</Event></UpgradeLog>

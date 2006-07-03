@@ -1,0 +1,5 @@
+<auto-update-program version="1.0">
+  <program new-version="0.3.1932" name="tanjunka">
+    <download-url value="http://tanjunka.com/tan/downloads/tanjunka.installer0.3.1932.exe" />
+  </program>
+</auto-update-program>

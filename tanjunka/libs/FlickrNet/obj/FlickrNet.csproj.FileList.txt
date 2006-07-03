@@ -1,0 +1,4 @@
+bin\Release\FlickrNet.dll
+bin\Release\FlickrNet.XML
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\FlickrNet.dll

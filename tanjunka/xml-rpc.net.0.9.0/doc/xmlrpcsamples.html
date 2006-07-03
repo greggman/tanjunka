@@ -1,0 +1,282 @@
+<html>
+<head>
+<title>XML-RPC.Net Samples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<style type="text/css">
+pre {
+	font-family:monospace, arial, verdana;
+	font-size: 100%;
+	color:black;
+    background: #d9e3e9;
+    border: 1px black solid ;
+    padding: 5px;
+}
+
+<!--
+body {
+  font-size: 93%; /* for IE/Win */
+  font-family:  "Lucida Grande", "Trebuchet MS", Verdana, Geneva, Lucida, Helvetica, sans-serif;
+}
+-->
+body {
+	font-size: 93%; /* for IE/Win */
+	font-family:verdana, arial, sans-serif;
+}
+html>body {
+  font-size: 100%; /* for Opera */
+}
+H1, H2, H3, H4 {
+	font-family:verdana, arial, sans-serif;
+}
+H1 {
+  font-size: 30px;
+}
+H2 {
+  font-size: 110%;
+}
+H3, H4 {
+  font-size: 100%;
+}
+</style>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<table width="100%" border="0">
+  <tr> 
+    <td width="64%"> 
+      <h1>XML-RPC.NET Samples</h1>
+    </td>
+    <td width="36%"> 
+      <h3 align="center"><a href="http://www.cookcomputing.com">Cook Computing</a></h3>
+    </td>
+  </tr>
+</table>
+<h2>.NET Remoting Samples</h2>
+<h3>StateNameServer</h3>
+<p>This example builds three assemblies.</p>
+<h4>IStateName.dll</h4>
+<p>This assembly contains the definition of the interface to be used by both client 
+  and server.</p>
+<pre>public struct StateStructRequest    
+{ 
+  public int state1; 
+  public int state2; 
+  public int state3; 
+} 
+   
+public interface IStateName 
+{ 
+  [XmlRpcMethod("examples.getStateName")] 
+  string GetStateName(int stateNumber); 
+
+  [XmlRpcMethod("examples.getStateStruct")]
+  string GetStateNames(StateStructRequest request);
+}</pre>
+<h4>ServerStateServer.exe</h4>
+<p>This assembly contains the implementation of the IStateName interface and also 
+  an entry point for when the assembly is used as a standalone server (it can 
+  also be used in IIS).</p>
+<p>The class implementing the server's functionality inherits from MarshalByRefObject 
+  so that it can be used with .NET Remoting and of course the interface that the 
+  client will use.</p>
+<pre>public class StateNameServer : MarshalByRefObject, IStateName 
+{ 
+  [XmlRpcMethod("examples.getStateName")] 
+  public string GetStateName(int stateNumber) 
+  { 
+    // implementation
+  } 
+ 
+  [XmlRpcMethod("examples.getStateStruct")] 
+  public string GetStateNames(StateStructRequest request) 
+  {
+    // implementation
+  }<br>}
+</pre>
+<p>The Main function configures Remoting via a config file (to specify that both 
+  XML-RPC and SOAP are supported) and then registers the server class, specifying 
+  a URL and the mode under which the server will operate.</p>
+<pre>class _
+{ 
+  static void Main(string[] args) 
+  { 
+    RemotingConfiguration.Configure("StateNameServer.exe.config");  
+    RemotingConfiguration.RegisterWellKnownServiceType(<br>      typeof(StateNameServer),  "statename.rem",
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WellKnownObjectMode.Singleton);  
+    Console.WriteLine("Press <enter> to shutdown"); 
+    Console.ReadLine(); 
+  } 
+}</pre>
+<p>The config file is named StateNameServer.exe.config and is placed in the same 
+  directory as the executable assembly. The file specifies both XML-RPC and SOAP 
+  support by including two formatter elements under the serverProviders element 
+  of the channel element. The channel is specified as http and the port on which 
+  the server will listen as 5678.</p>
+<pre>&lt;configuration&gt; 
+  &lt;system.runtime.remoting&gt; 
+    &lt;application&gt; 
+      &lt;channels&gt; 
+        &lt;channel ref="http" port="5678"&gt;    
+          &lt;serverProviders&gt;
+            &lt;formatter
+  type="CookComputing.XmlRpc.XmlRpcServerFormatterSinkProvider, CookComputing.XmlRpc" /&gt; 
+            &lt;formatter ref="soap" /&gt; 
+          &lt;/serverProviders&gt;    
+        &lt;/channel&gt; 
+      &lt;/channels&gt; 
+    &lt;/application&gt; 
+  &lt;/system.runtime.remoting&gt; 
+&lt;/configuration&gt;</pre>
+<h4>StateNameClient.exe</h4>
+<p>This assembly contains the client. A command line argument is used to specify 
+  whether the request to the server will be via the SOAP or XML-RPC protocol. 
+  In the case of SOAP a default instance of HttpChannel is used but for XML-RPC 
+  the instance of HttpChannel is configured to use the XML-RPC formatter sink 
+  instead.</p>
+<p>The Activator is used to create a Transparent Proxy bound to the required URL 
+  and the call to the server is made via this proxy.</p>
+<pre>class _ 
+{ 
+  static void Main(string[] args)  
+  { 
+    bool bUseSoap = false; 
+    if (args.Length > 0 && args[0] == "SOAP") 
+      bUseSoap = true; 
+    HttpChannel chnl; 
+    if (bUseSoap) 
+      chnl = new HttpChannel(); 
+    else 
+      chnl = new HttpChannel(null, 
+        new XmlRpcClientFormatterSinkProvider(), null); 
+    ChannelServices.RegisterChannel(chnl); 
+    IStateName svr = (IStateName)Activator.GetObject(
+      typeof(IStateName),
+      "http://localhost:5678/statename.rem"); 
+   &nbsp;int stateNumber = 1; 
+    string ret = svr.GetStateName(stateNumber); 
+    Console.WriteLine("statename ({0}) is {1}", stateNumber, ret); 
+  } 
+}</pre>
+<h4>Running Under IIS</h4>
+<p>Depending on requirements Remoting server classes may be run under IIS. A virtual 
+  directory is created and the assemblies placed in its bin directory. The config 
+  file is called web.config in this case and specifies two aspects of the server: 
+  the service element specifies the server class and its URL, and the channels 
+  element specifies that two formatters are supported, the default SOAP formatter 
+  and the XML-RPC formatter.</p>
+<pre>&lt;configuration&gt; 
+  &lt;system.runtime.remoting&gt; 
+    &lt;application&gt; 
+      &lt;service&gt; 
+        &lt;wellknown mode="Singleton" 
+          type="StateNameServer, StateNameServer" 
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; objectUri="statename.rem" /&gt; 
+      &lt;/service&gt; 
+      &lt;channels&gt; 
+        &lt;channel ref="http"&gt; 
+          &lt;serverProviders&gt;    
+            &lt;formatter    
+  type="CookComputing.XmlRpc.XmlRpcServerFormatterSinkProvider, CookComputing.XmlRpc" /&gt; 
+            &lt;formatter ref="soap" /&gt; 
+          &lt;/serverProviders&gt;    
+        &lt;/channel&gt; 
+      &lt;/channels&gt; 
+    &lt;/application&gt; 
+  &lt;/system.runtime.remoting&gt; 
+&lt;/configuration&gt;</pre>
+<p>Obviously the URL used by the client should be changed to connect to IIS, for 
+  example:</p>
+<pre>IStateName svr = (IStateName)Activator.GetObject(typeof(IStateName),    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    "http://localhost/statename/statename.rem");</pre>
+<h2>Client Samples</h2>
+<h3>BettyApp</h3>
+<p>This is a WinForms application which connects to the sample XML-RPC server 
+  at betty.userland.com.It calls both <i>examples.getStateName</i> and <i>examples.getStateStruct</i>. 
+  In the case of the latter function it only allows 3 state numbers to be specified 
+  even though the struct passed in the XML-RPC call can contain any number of 
+  state numbers. </p>
+<p><img src="BettyApp.jpg" width="270" height="322"></p>
+<p>Note that if you need to connect to external HTTP servers via a proxy server, 
+  if this is configured correctly in Internet Explorer XML-RPC.NET will use the 
+  proxy server.</p>
+<h3>AsyncBettyApp</h3>
+<p>This WinForms sample illustrates how to make asynchronous XML-RPC calls using 
+  XML-RPC.NET. . </p>
+<p><img src="AsyncBettyApp.jpg" width="270" height="322"></p>
+<p>By using a separate instance of a proxy class derived from XmlRpcClientProtocol 
+  it is possible to send multiple requests concurrently. As the response to each 
+  request is received the result is displayed in the list box, along with any 
+  exceptions. </p>
+<h3>MathApp</h3>
+<p>This is a WinForms application which connects to an instance of the MathService 
+  XML-RPC server (see below for description of service). It calls the methods 
+  <i>math.Add</i>, <i>math.Subtract</i>, <i>math.Multiply</i>, and <i>math.Divide</i>.</p>
+<p><img src="MathApp.jpg" width="320" height="264"></p>
+<p>This sample illustrates the use of the XmlRpcClientProtocol component within 
+  Visual Studio. The component has been added to the Toolbox and then dragged 
+  onto the design-template of the form. Because the component is not GUI-based 
+  it appears in a separate window below the template.</p>
+<p><img src="MathAppVS.jpg" width="610" height="550"></p>
+<p>Each method of the service is represented by a proxy function in the form class:</p>
+<pre>[XmlRpcMethod("math.Add")] 
+public int Add(int a, int b) 
+{ 
+  return (int)xmlRpcClient.Invoke(this, "Add", new object[] {a,b});  
+}</pre>
+<p>The methods are called as follows:</p>
+<pre>private void butAdd_Click(object sender, System.EventArgs e)
+{ 
+  Cursor = Cursors.WaitCursor; 
+  try 
+  {
+    labResult.Text = ""; 
+    int a = Convert.ToInt32(txtArg1.Text); 
+    int b = Convert.ToInt32(txtArg2.Text); 
+    int result = Add(a, b); 
+    labResult.Text = txtArg1.Text + " + " + txtArg2.Text    
+      + " = " + result.ToString(); 
+  } 
+  catch (Exception ex) 
+  { 
+    HandleException(ex); 
+  }
+  Cursor = Cursors.Default; 
+} </pre>
+<h2>Service Samples</h2>
+<h3>MathService</h3>
+<p>This sample exposes 4 XML-RPC methods - <i>math.Add</i>, <i>math.Subtract</i>, 
+  <i>math.Multiply</i>, and <i>math.Divide</i> - each of which takes two integer 
+  parameters. An XML-RPC fault response is returned if divide-by-zero is attempted.</p>
+<p>To install MathService, create a virtual directory in IIS and place MathService.dll 
+  and CookComputing.XmlRpc.dll in a sub-directory called <i>bin</i>. In the virtual 
+  directory create a file called <i>web.config</i> with this content:</p>
+<pre>&lt;configuration&gt;
+  &lt;system.web&gt; 
+    &lt;httpHandlers&gt;
+      &lt;add verb=&quot;*&quot; path=&quot;math.rem&quot;    
+   &nbsp;&nbsp;&nbsp;  type=&quot;MathService.MathService,  MathService&quot; /&gt;
+    &lt;/httpHandlers&gt;
+  &lt;/system.web&gt; 
+&lt;/configuration&gt;
+</pre>
+The URL for the service will be of the form:
+<pre>http://servername/virtual_directory/math.aspx</pre>
+<h2>Demo Services</h2>
+<p>Please check this <a href="http://www.xml-rpc.net/doc/xmlrpcdemos.html">page</a> 
+  for URLs of currently available demo XML-RPC Services.</p>
+<p>&nbsp;</p>
+<table width="100%" border="0">
+  <tr> 
+    <td><i><font face="Georgia, Times New Roman, Times, serif" size="1">© Charles 
+      Cook, 2001,2002, 2003 All Rights Reserved.</font></i></td>
+    <td> 
+      <div align="right"><font face="Georgia, Times New Roman, Times, serif" size="1"><i>5 
+        January 2003</i></font></div>
+    </td>
+  </tr>
+</table>
+<p align="center"><i></i></p>
+</body>
+</html>

@@ -1,0 +1,69 @@
+
+img {
+ behavior: url(tanjun_img.htc);
+ }
+
+body {
+ behavior: url(tanjun_body.htc);
+ }
+
+.blogbody {
+ behavior: url(tanjun_html.htc);
+ }
+
+.title {
+  border: 0;
+  width: 100%;
+  }
+
+/* -- popup menu -- */
+.tanpicmenu  {
+    position: absolute;
+    width: 100px;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    border: 2px solid black;
+    padding: 2px solid red;
+    z-index: 5;
+    background-color: light-blue;
+    background-image: url(menuback.jpg);
+
+}
+.tanmenuitem {
+    padding: 2px 4px 2px 4px;
+    color: black;
+    background-color: light-blue;
+    text-decoration: none;
+    font-family: ms sans serif;
+    font-size: 11px;
+    font-weight: normal;
+    display: block;
+    behavior: url(tanjun_menuitem.htc);
+    width: 100%;
+}
+.tanseperator {
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #eeeeee;
+    background-color: light-blue;
+    margin: 2px;
+}
+a.tanmenuitem {
+    color: black;
+    background-color: light-blue;
+}
+a.tanmenuitem:active {
+    color: black;
+    background-color: light-blue;
+}
+a.tanmenuitem:visited {
+    color: black;
+    background-color: light-blue;
+}
+a.tanmenuitem:hover {
+    color: white;
+    background-color: blue;
+}
+
+
+

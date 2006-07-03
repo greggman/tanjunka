@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?>
+<UpgradeLog>
+<Properties><Property Name="Solution" Value="Demo.WinForm.Csharp">
+</Property><Property Name="Solution File" Value="E:\temp\trash\xmlrpc\NetSpell.2.1.7\demo\Demo.WinForm.CSharp\Demo.WinForm.Csharp.sln">
+</Property><Property Name="User Options File" Value="E:\temp\trash\xmlrpc\NetSpell.2.1.7\demo\Demo.WinForm.CSharp\Demo.WinForm.Csharp.suo">
+</Property><Property Name="Date" Value="Tuesday, April 12, 2005">
+</Property><Property Name="Time" Value="22:18 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Demo.WinForm.Csharp.sln" Description="File successfully backed up as E:\temp\trash\xmlrpc\NetSpell.2.1.7\demo\Demo.WinForm.CSharp\Backup\Demo.WinForm.Csharp.sln">
+</Event><Event ErrorLevel="2" Project="" Source="Demo.WinForm.Csharp.suo" Description="Error creating backup file: E:\temp\trash\xmlrpc\NetSpell.2.1.7\demo\Demo.WinForm.CSharp\Backup\Demo.WinForm.Csharp.suo">
+</Event><Event ErrorLevel="0" Project="Demo.WinForm.Csharp" Source="Demo.WinForm.Csharp.csproj" Description="Project file successfully backed up as E:\temp\trash\xmlrpc\NetSpell.2.1.7\demo\Demo.WinForm.CSharp\Backup\Demo.WinForm.Csharp.csproj">
+</Event><Event ErrorLevel="0" Project="Demo.WinForm.Csharp" Source="AssemblyInfo.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\NetSpell.2.1.7\demo\Demo.WinForm.CSharp\Backup\Demo.WinForm.Csharp.csproj">
+</Event><Event ErrorLevel="0" Project="Demo.WinForm.Csharp" Source="DemoForm.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\NetSpell.2.1.7\demo\Demo.WinForm.CSharp\Backup\Demo.WinForm.Csharp.csproj">
+</Event><Event ErrorLevel="0" Project="Demo.WinForm.Csharp" Source="app.config" Description="File successfully backed up as E:\temp\trash\xmlrpc\NetSpell.2.1.7\demo\Demo.WinForm.CSharp\Backup\Demo.WinForm.Csharp.csproj">
+</Event><Event ErrorLevel="0" Project="Demo.WinForm.Csharp" Source="App.ico" Description="File successfully backed up as E:\temp\trash\xmlrpc\NetSpell.2.1.7\demo\Demo.WinForm.CSharp\Backup\Demo.WinForm.Csharp.csproj">
+</Event><Event ErrorLevel="0" Project="Demo.WinForm.Csharp" Source="DemoForm.resx" Description="File successfully backed up as E:\temp\trash\xmlrpc\NetSpell.2.1.7\demo\Demo.WinForm.CSharp\Backup\Demo.WinForm.Csharp.csproj">
+</Event><Event ErrorLevel="0" Project="Demo.WinForm.Csharp" Source="Demo.WinForm.Csharp.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Demo.WinForm.Csharp" Source="Demo.WinForm.Csharp.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Demo.WinForm.Csharp.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Demo.WinForm.Csharp.sln" Description="Converted">
+</Event></UpgradeLog>

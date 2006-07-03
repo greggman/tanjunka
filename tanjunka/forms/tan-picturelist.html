@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>New Page 1</title>
+<link rel="stylesheet" href="optionstyles.css">
+<script language="javascript" type="text/javascript" src="tanjunka_edit.js"></script>
+<script language="javascript">
+function additem(checked, setname, blogservice, photoservice)
+{
+    var tbodyElem = document.getElementById("listtbody");
+    var trElem, tdElem, txtNode;
+    var onOrOff;
+    var rowNdx;
+
+    onOrOff = "";
+    if (checked != 0)
+    {
+      onOrOff = "CHECKED";
+    }
+
+    rowNdx = tbodyElem.rows.length;
+    trElem = tbodyElem.insertRow(rowNdx);
+    trElem.className = "row" + (rowNdx % 2);
+
+    tdElem = trElem.insertCell(trElem.cells.length);
+    tdElem.className = "col1";
+    tdElem.innerHTML = '<input onclick="sendcheck()" type="checkbox" id="postset4_' + rowNdx + '" ' + onOrOff + ' />';
+
+    tdElem = trElem.insertCell(trElem.cells.length);
+    tdElem.className = "col2";
+    tdElem.innerText = setname;
+    tdElem.onclick = editsomething;
+    tdElem.id      = "postset0_" + rowNdx;
+
+    tdElem = trElem.insertCell(trElem.cells.length);
+    tdElem.className = "col3";
+    tdElem.innerText = blogservice;
+    tdElem.onclick = editsomething;
+    tdElem.id      = "postset1_" + rowNdx;
+
+    tdElem = trElem.insertCell(trElem.cells.length);
+    tdElem.className = "col4";
+    tdElem.innerText = photoservice;
+    tdElem.onclick = editsomething;
+    tdElem.id      = "postset2_" + rowNdx;
+}
+
+</script>
+</head>
+<body>
+<table class="buttons" width="100%"><tr>
+  <td><input class="button" type="button" name="publish" value="Publish To" onclick="window.external.genericCallbackI(0)" /></td>
+  <td align="right" nowrap>
+    <input class="button" type="button" name="addservice" value="Add" onclick="window.external.genericCallbackI(1)" />
+    <input class="button" type="button" name="delservice" value="Delete" onclick="window.external.genericCallbackI(2)" />
+  </td>
+</tr></table>
+
+<table id="listtable">
+<col class="col1">
+<col class="col2">
+<col class="col3">
+<col class="col4">
+<col class="col5">
+<col class="col6">
+    <thead><TH>img</TH><TH style="text-align: left;">orig-name</TH><TH>orig-size</TH><TH>new-size</TH><TH>upload big</TH><TH>upload size</TH></THEAD>
+    <tbody id="listtbody">
+<tr><td class="col1"><img src="placeholder.jpg" width="64" height="48"/></td><td class="col2">dsc12345.jpg</td><td class="col3" onclick="foo();">1600x1200</td><td class="col4">400x300</td><td class="col5"><input type="checkbox" name="service0002" value="OFF" /></td><td class="col6">400x300</td></tr>
+<tr><td class="col1"><img src="placeholder.jpg" width="64" height="48"/></td><td class="col2">dsc12345.jpg</td><td class="col3" onclick="foo();">1600x1200</td><td class="col4">400x300</td><td class="col5"><input type="checkbox" name="service0002" value="OFF" /></td><td class="col6">400x300</td></tr>
+<tr><td class="col1"><img src="placeholder.jpg" width="64" height="48"/></td><td class="col2">dsc12345.jpg</td><td class="col3" onclick="foo();">1600x1200</td><td class="col4">400x300</td><td class="col5"><input type="checkbox" name="service0002" value="OFF" /></td><td class="col6">400x300</td></tr>
+<tr><td class="col1"><img src="placeholder.jpg" width="64" height="48"/></td><td class="col2">dsc12345.jpg</td><td class="col3" onclick="foo();">1600x1200</td><td class="col4">400x300</td><td class="col5"><input type="checkbox" name="service0002" value="OFF" /></td><td class="col6">400x300</td></tr>
+    </tbody>
+</table>
+
+
+</html>
+

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncBettyApplication", "AsyncBettyApplication.csproj", "{47C8D059-8A35-42D2-8F63-559A788A5695}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{47C8D059-8A35-42D2-8F63-559A788A5695}.Debug.ActiveCfg = Debug|.NET
+		{47C8D059-8A35-42D2-8F63-559A788A5695}.Debug.Build.0 = Debug|.NET
+		{47C8D059-8A35-42D2-8F63-559A788A5695}.Release.ActiveCfg = Release|.NET
+		{47C8D059-8A35-42D2-8F63-559A788A5695}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

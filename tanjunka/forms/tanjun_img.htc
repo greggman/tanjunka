@@ -1,0 +1,350 @@
+<PUBLIC:COMPONENT>
+<PUBLIC:ATTACH EVENT="onresizestart" ONEVENT="tResizeStart()" />
+<PUBLIC:ATTACH EVENT="onresize"  ONEVENT="tResize()" />
+<PUBLIC:ATTACH EVENT="onresizeend"  ONEVENT="tResizeEnd()" />
+<PUBLIC:ATTACH EVENT="oncontextmenu"  ONEVENT="tContextMenu()" />
+<PUBLIC:ATTACH EVENT="ondblclick"  ONEVENT="tEditImage()" />
+<SCRIPT LANGUAGE="JScript">
+var tanResizeFlag;
+var tanResizeStartFlag;
+var tanOrigWidth;
+var tanOrigHeight;
+var tanCurWidth;
+var tanCurHeight;
+var tanNewWidth;
+var tanNewHeight;
+var tanHandleID;
+var origPaddingL;
+var origPaddingR;
+var origPaddingT;
+var origPaddingB;
+
+// tanHandleID
+// 1--2--3
+// |     |
+// 4     5
+// |     |
+// 6--7--8
+//
+function tCompHandleID()
+{
+    var e = window.event;
+
+    logPrintn ("offxy : " + e.offsetX + "," + e.offsetY);
+    logPrintn ("runwh : " + element.width + "," + element.height);
+
+    if (e.offsetX < 8)
+    {
+        // it's on left edge
+        if (e.offsetY < 8)
+        {
+            tanHandleID = 1;
+        }
+        else if ((element.height - e.offsetY) < 8)
+        {
+            tanHandleID = 6;
+        }
+        else
+        {
+            tanHandleID = 4;
+        }
+    }
+    else if ((element.width - e.offsetX) < 8)
+    {
+        // right edge
+        if (e.offsetY < 8)
+        {
+            tanHandleID = 3;
+        }
+        else if ((element.height - e.offsetY) < 8)
+        {
+            tanHandleID = 8;
+        }
+        else
+        {
+            tanHandleID = 5;
+        }
+    }
+    else
+    {
+        // middle
+        if (e.offsetY < 8)
+        {
+            tanHandleID = 2;
+        }
+        else
+        {
+            tanHandleID = 7;
+        }
+    }
+    logPrintn("tanHandleID : " + tanHandleID);
+}
+
+function tResizeStart()
+{
+    tanResizeFlag = true;
+    tanResizeStartFlag = true;
+//    if (element.tanorigwidth == null || element.tanorigheight == null)
+    var wh = window.external.genericCallbackISS_S(1, element.src, "");
+    if (wh.length == 0)
+    {
+        tanOrigWidth  = element.width;
+        tanOrigHeight = element.height;
+    }
+    else
+    {
+        tanOrigWidth  = parseInt(wh.substring(0, 9), 10);
+        tanOrigHeight = parseInt(wh.substring(10, 19), 10);
+    }
+    tanNewWidth   = element.width;
+    tanNewHeight  = element.height;
+    tanCurWidth   = element.width;
+    tanCurHeight  = element.height;
+    origMarginL   = element.style.marginLeft;
+    origMarginR   = element.style.marginRight;
+    origMarginT   = element.style.marginTop;
+    origMarginB   = element.style.marginBottom;
+
+    //tanscaleimg.runtimeStyle.display = "block";
+    //tanscaleimg.src    = element.src;
+    //tanscaleimg.width  = element.width;
+    //tanscaleimg.height = element.height;
+    //tanscaleimg.left   = element.left;
+    //tanscaleimg.top    = element.top;
+
+    tCompHandleID();
+
+    /*
+    if (tanHandleID == 1 ||
+        tanHandleID == 2 ||
+        tanHandleID == 3 ||
+        tanHandleID == 4 ||
+        tanHandleID == 6
+       )
+    {
+        window.event.returnValue = false;;
+    }
+    */
+}
+
+function tResizeByWidth(newWidth)
+{
+    if (newWidth < 8)
+    {
+        newWidth = 8;
+    }
+    tanNewHeight = newWidth * tanOrigHeight / tanOrigWidth;
+    tanNewWidth  = newWidth;
+}
+function tResizeByHeight(newHeight)
+{
+    if (newHeight < 8)
+    {
+        newHeight = 8;
+    }
+    tanNewWidth  = newHeight * tanOrigWidth / tanOrigHeight;
+    tanNewHeight = newHeight;
+}
+function tResizeFromLeft()
+{
+    var e = window.event;
+    tResizeByWidth(tanCurWidth - e.offsetX);
+}
+function tResizeFromRight()
+{
+    var e = window.event;
+    tResizeByWidth(e.offsetX);
+}
+function tResizeFromTop()
+{
+    var e = window.event;
+    tResizeByHeight(tanCurHeight - e.offsetY);
+}
+function tResizeFromBottom()
+{
+    var e = window.event;
+    tResizeByHeight(e.offsetY);
+}
+function tResize()
+{
+    if (tanResizeStartFlag == true)
+    {
+        tanResizeStartFlag = false;
+
+    }
+    if (tanResizeFlag == true)
+    {
+        var e = window.event;
+        var bChange = false;
+
+        if (tanHandleID == 1)
+        {
+            // bChange = true;
+            if (e.offsetX / e.offsetY > tanOrigWidth / tanOrigHeight)
+            {
+                tResizeFromTop();
+            }
+            else
+            {
+                tResizeFromLeft();
+            }
+        }
+        else if (tanHandleID == 2)
+        {
+            //bChange = true;
+            tResizeFromTop();
+
+            /*
+            {
+                tanNewWidth  = (tanOrigHeight - e.offsetY) * tanOrigWidth / tanOrigHeight;
+                tanNewHeight = (tanOrigHeight - e.offsetY);
+                if (tanNewHeight < tanOrigHeight)
+                {
+                    element.runtimeStyle.marginTop = tanOrigHeight - tanNewHeight;
+                }
+                else
+                {
+                    element.runtimeStyle.marginTop = origMarginT;
+                }
+            }
+            */
+        }
+        else if (tanHandleID == 3)
+        {
+            if (e.offsetX / e.offsetY > tanOrigWidth / tanOrigHeight)
+            {
+                tResizeFromTop();
+            }
+            else
+            {
+                tResizeFromRight();
+            }
+        }
+        else if (tanHandleID == 4)
+        {
+            //bChange = true;
+            tResizeFromLeft();
+        }
+        else if (tanHandleID == 5)
+        {
+            bChange = true;
+            tResizeFromRight();
+        }
+        else if (tanHandleID == 6)
+        {
+            if (e.offsetX / e.offsetY > tanOrigWidth / tanOrigHeight)
+            {
+                tResizeFromBottom();
+            }
+            else
+            {
+                tResizeFromLeft();
+            }
+        }
+        else if (tanHandleID == 7)
+        {
+            bChange = true;
+            tResizeFromBottom();
+        }
+        else if (tanHandleID == 8)
+        {
+            bChange = true;
+            if (e.offsetX / e.offsetY > tanOrigWidth / tanOrigHeight)
+            {
+                tResizeFromBottom();
+            }
+            else
+            {
+                tResizeFromRight();
+            }
+        }
+
+        if (bChange)
+        {
+            element.runtimeStyle.width  = tanNewWidth;
+            element.runtimeStyle.height = tanNewHeight;
+        }
+    }
+}
+function tResizeEnd()
+{
+    tanResizeFlag = false;
+    element.width  = tanNewWidth;
+    element.height = tanNewHeight;
+    element.style.width  = null;
+    element.style.height = null;
+    element.runtimeStyle.width  = null;
+    element.runtimeStyle.height = null;
+
+//   element.style.width  = tanNewWidth;
+//   element.style.height = tanNewHeight;
+//   element.runtimeStyle.width  = tanNewWidth;
+//   element.runtimeStyle.height = tanNewHeight;
+    element.runtimeStyle.marginLeft =   origMarginL;
+    element.runtimeStyle.marginRight =  origMarginR;
+    element.runtimeStyle.marginTop =    origMarginT;
+    element.runtimeStyle.marginBottom = origMarginB;
+    element.style.marginLeft =   origMarginL;
+    element.style.marginRight =  origMarginR;
+    element.style.marginTop =    origMarginT;
+    element.style.marginBottom = origMarginB;
+
+    //tanscaleimg.runtimeStyle.display = "none";
+    var newPath = window.external.genericCallbackISII_S(1, element.src, tanNewWidth, tanNewHeight);
+    if (newPath.length > 0)
+    {
+        element.src = newPath;
+    }
+    else
+    {
+        element.src = element.src;  // will this refresh the image?
+    }
+}
+
+function tContextMenu()
+{
+    var x,y,el,pageW,pageH;
+
+    logPrintn("contextmenu:");
+    window.document.tanCurPic = window.event.srcElement;
+
+/*
+    var is8bit = parseInt(window.external.genericCallbackISS_S(2, window.document.tanCurPic.src, ""));
+    var tanconv = window.document.getElementById("tanconvert2jpg");
+    if (is8bit == 0)
+    {
+        tanconv.disabled = true;
+    }
+    else
+    {
+        tanconv.disabled = false;
+    }
+*/
+
+    pageW   = window.document.body.offsetWidth;
+    pageH   = window.document.body.offsetHeight;
+    x       = event.clientX;
+    y       = event.clientY;
+    el      = window.document.getElementById("tanpicmenu");
+    {
+        if ((x + parseInt(el.offsetWidth)) >= pageW)
+        {
+            x     = parseInt(el.offsetWidth);
+            y     = parseInt(el.offsetHeight);
+        }
+        el.style.top  = y + "px";
+        el.style.left = x + "px";
+        el.style.visibility = 'visible';
+        return false;
+    }
+}
+
+function tEditImage()
+{
+    window.document.tanCurPic = window.event.srcElement;
+    window.external.genericCallbackISII_S(3, window.document.tanCurPic.src, 0, 0);
+
+}
+
+</SCRIPT>
+</PUBLIC:COMPONENT>

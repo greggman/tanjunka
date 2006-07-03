@@ -1,0 +1,8 @@
+bin\Release\NetSpell.WinForm.Test.exe.config
+bin\Release\NetSpell.WinForm.Test.exe
+bin\Release\\NetSpell.SpellChecker.dll
+bin\Release\\NetSpell.SpellChecker.xml
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\NetSpell.WinForm.Test.DemoForm.resources
+obj\Release\NetSpell.WinForm.Test.csproj.GenerateResource.Cache
+obj\Release\NetSpell.WinForm.Test.exe

@@ -1,0 +1,310 @@
+<aiw2project project-file-version="6">
+  <cs-general>
+    <application-name value="tanjunka" />
+    <application-version value="0.3.1932" />
+    <company-name value="Greggman" />
+    <install-path value="&lt;ProgramFiles&gt;\&lt;AppName&gt;" reg-root-key="2" reg-path="Software\&lt;CompanyName&gt;\&lt;AppName&gt;" read-from-registry="1" reg-value="Directory" />
+    <shortcut-path value="&lt;AppName&gt;" all-users-start-menu="0" />
+    <update-installation value="1" />
+    <allow-clean-install value="1" />
+    <prompt-before-running value="0" />
+    <silent-installation value="0" />
+  </cs-general>
+  <cs-dialogs>
+    <dialog selected="0" title="Language" project-relative-path="0" display-once="0" template="Themes\Tanjunka Theme\Language.adt" />
+    <dialog selected="1" title="Welcome" project-relative-path="0" display-once="0" template="Themes\Windows XP Theme\Welcome.adt" />
+    <dialog selected="0" title="License agreement" project-relative-path="0" display-once="0" template="Themes\Tanjunka Theme\License.adt" />
+    <dialog selected="0" title="Readme" project-relative-path="0" display-once="0" template="Themes\Tanjunka Theme\Readme.adt" />
+    <dialog selected="0" title="System information" project-relative-path="0" display-once="0" template="Themes\Tanjunka Theme\Sysinfo.adt" />
+    <dialog selected="0" title="User information" project-relative-path="0" display-once="0" template="Themes\Tanjunka Theme\Userinfo.adt" />
+    <dialog selected="1" title="Select destination directory" project-relative-path="0" display-once="0" template="Themes\Windows XP Theme\Destdir.adt" />
+    <dialog selected="1" title="Select shortcut folder" project-relative-path="0" display-once="0" template="Themes\Windows XP Theme\Shortcutdir.adt" />
+    <dialog selected="0" title="Installation type" project-relative-path="0" display-once="0" template="Themes\Tanjunka Theme\Installtype.adt" />
+    <dialog selected="0" title="Options" project-relative-path="0" display-once="0" template="Themes\Tanjunka Theme\Options.adt" />
+    <dialog selected="1" title="Summary" project-relative-path="0" display-once="0" template="Themes\Windows XP Theme\Summary.adt" />
+    <dialog selected="1" title="Installing" project-relative-path="0" display-once="0" template="Themes\Windows XP Theme\Installing.adt" />
+    <dialog selected="1" title="Finished" project-relative-path="0" display-once="0" template="Themes\Windows XP Theme\Finished.adt" />
+    <dialog selected="1" title="Uninstall" project-relative-path="0" display-once="0" template="Themes\Windows XP Theme\Uninstall.adt" />
+    <scale value="1" />
+  </cs-dialogs>
+  <cs-dialogs-language>
+    <language project-relative-path="0" filename="LanguageSets\lang_eng.als" />
+    <default-language value="0" />
+    <dialog-title value="Select language" />
+    <dialog-text value="Please select the language that you would like to use during the installation." />
+    <use-dialog-strings value="0" />
+  </cs-dialogs-language>
+  <cs-dialogs-readme>
+    <text value="" language="0" />
+    <text value="" language="1" />
+  </cs-dialogs-readme>
+  <cs-dialogs-license>
+    <text value="" language="0" />
+    <text value="" language="1" />
+    <direct-approval value="0" />
+    <prohibit-silent-installation value="0" />
+  </cs-dialogs-license>
+  <cs-dialogs-sysinfo>
+    <item selected="1" index="0" />
+    <item selected="1" index="1" />
+    <item selected="1" index="2" />
+    <item selected="1" index="3" />
+    <item selected="1" index="4" />
+    <item selected="1" index="5" />
+    <item selected="1" index="6" />
+    <item selected="1" index="7" />
+    <item selected="1" index="8" />
+    <item selected="1" index="9" />
+    <item selected="1" index="10" />
+    <item selected="1" index="11" />
+    <item selected="1" index="12" />
+    <item selected="1" index="13" />
+    <tentative value="0" />
+  </cs-dialogs-sysinfo>
+  <cs-dialogs-userinfo>
+    <user-name selected="0" required="0" />
+    <company-name selected="0" required="0" />
+    <serial selected="0" required="0" />
+    <show-confirmation selected="0" />
+    <delimited-style selected="0" field1="4" field2="4" field3="4" />
+    <serial-codes value="" />
+  </cs-dialogs-userinfo>
+  <cs-dialogs-options>
+    <show-lines-at-tree-root selected="0" />
+    <show-sub-process-progress selected="0" />
+    <show-restart-computer selected="0" force="0" />
+    <show-launch-program selected="1" file="&lt;InstallDir&gt;\Tanjunka.exe" default="1" />
+    <show-open-readme selected="0" file="" default="0" />
+  </cs-dialogs-options>
+  <cs-dialogs-uninstall>
+    <add-remove-dialog comments="" selected="1" publisher="&lt;CompanyName&gt;" title="&lt;AppName&gt;" publisher-url="" support-url="" version="&lt;AppVersion&gt;" update-url="" icon="" />
+    <custom-uninstaller command-line="" file="" />
+    <uninstaller-name value="&lt;WindowsDir&gt;\&lt;AppNameInFileNameFormat&gt; Uninstaller.exe" />
+    <no-uninstallation selected="0" />
+  </cs-dialogs-uninstall>
+  <cs-files>
+    <installation-item name="Application files" description="Minimum files required for the application to run." flags="1">
+      <files>
+        <folder value="dic" relative="1" expanded="1">
+          <file-set flat="0" dynamic="0" destination="&lt;InstallDir&gt;\dic" mask="*.*" recursive="1" exclude-mask="0" expanded="0">
+            <file runtime-location="" name="en-US.dic" destination-modified="0" destination="&lt;InstallDir&gt;\dic" reg-priority="1" overwrite-mode="0" attributes="97" />
+          </file-set>
+        </folder>
+        <folder value="forms" relative="1" expanded="1">
+          <file-set flat="0" dynamic="1" destination="&lt;InstallDir&gt;\forms" mask="*.*" recursive="1" exclude-mask="0" expanded="0">
+            <file runtime-location="" name="bodyform.css" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="calendar.htm" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="menuback.jpg" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="optionstyles.css" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="placeholder.jpg" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="postoptions-atomapi.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="postoptions-blogger.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="postoptions-gman.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="postoptions-livejournal.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="postoptions-movabletype.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="settings-AtomAPIForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="settings-BloggerAPIForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="settings-BloggerForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="settings-BlojsomForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="settings-common.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="settings-FlickrForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="settings-GManForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="settings-LiveJournalForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="settings-MovabletypeAPIForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="settings-MovabletypeForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="settings-NucleusForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="settings-TypePadForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="settings-WordPressForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tan-AboutForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tan-bodyform.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tan-contextmenu.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tan-edit.css" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tan-logo.jpg" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tan-moreform.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tan-nooptions.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tan-picturelist.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tan-PostSetForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tan-PostsForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tan-PrefsForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tan-PublishForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tan-ServicesForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tan-ServiceTypeForm.html" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tanjunka_edit.js" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tanjun_body.htc" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tanjun_html.htc" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tanjun_img.htc" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tanjun_menuitem.htc" destination-modified="0" destination="&lt;InstallDir&gt;\forms" reg-priority="1" overwrite-mode="0" attributes="97" />
+          </file-set>
+        </folder>
+        <folder value="help" relative="1" expanded="1">
+          <file-set flat="0" dynamic="1" destination="&lt;InstallDir&gt;\help" mask="*.*" recursive="1" exclude-mask="0" expanded="0">
+            <file runtime-location="" name="drag-n-drop.jpg" destination-modified="0" destination="&lt;InstallDir&gt;\help" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="edit-bright.gif" destination-modified="0" destination="&lt;InstallDir&gt;\help" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="edit-crop.gif" destination-modified="0" destination="&lt;InstallDir&gt;\help" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="edit-hue.gif" destination-modified="0" destination="&lt;InstallDir&gt;\help" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="edit-screenshot.jpg" destination-modified="0" destination="&lt;InstallDir&gt;\help" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="edit-tint.gif" destination-modified="0" destination="&lt;InstallDir&gt;\help" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="edit-undo.gif" destination-modified="0" destination="&lt;InstallDir&gt;\help" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="index.html" destination-modified="0" destination="&lt;InstallDir&gt;\help" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="screenshot.gif" destination-modified="0" destination="&lt;InstallDir&gt;\help" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="top-left.gif" destination-modified="0" destination="&lt;InstallDir&gt;\help" reg-priority="1" overwrite-mode="0" attributes="97" />
+          </file-set>
+        </folder>
+        <folder value="langs" relative="1" expanded="1">
+          <file-set flat="0" dynamic="1" destination="&lt;InstallDir&gt;\langs" mask="*.*" recursive="1" exclude-mask="0" expanded="0">
+            <file runtime-location="" name="readme.html" destination-modified="0" destination="&lt;InstallDir&gt;\langs" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tanjunka-language-en-us.xls" destination-modified="0" destination="&lt;InstallDir&gt;\langs" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tanjunka-language-en-us.xml" destination-modified="0" destination="&lt;InstallDir&gt;\langs" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tanjunka-language-ja.xls" destination-modified="0" destination="&lt;InstallDir&gt;\langs" reg-priority="1" overwrite-mode="0" attributes="97" />
+            <file runtime-location="" name="tanjunka-language-ja.xml" destination-modified="0" destination="&lt;InstallDir&gt;\langs" reg-priority="1" overwrite-mode="0" attributes="97" />
+          </file-set>
+        </folder>
+        <folder value="bin\Release" relative="1" expanded="1">
+          <file runtime-location="" name="Tanjunka.exe" destination-modified="0" destination="&lt;InstallDir&gt;" reg-priority="1" overwrite-mode="0" attributes="97" />
+          <file runtime-location="" name="Tanjunka.exe.config" destination-modified="0" destination="&lt;InstallDir&gt;" reg-priority="1" overwrite-mode="0" attributes="97" />
+        </folder>
+        <folder value="libs\NetSpell.2.1.7\bin" relative="1" expanded="1">
+          <file runtime-location="" name="NetSpell.SpellChecker.dll" destination-modified="0" destination="&lt;InstallDir&gt;" reg-priority="1" overwrite-mode="0" attributes="97" />
+        </folder>
+        <folder value="libs\Atomizer\bin\Release" relative="1" expanded="1">
+          <file runtime-location="" name="Atomizer.dll" destination-modified="0" destination="&lt;InstallDir&gt;" reg-priority="1" overwrite-mode="0" attributes="97" />
+        </folder>
+        <folder value="libs\FlickrNet\bin\Release" relative="1" expanded="1">
+          <file runtime-location="" name="FlickrNet.dll" destination-modified="0" destination="&lt;InstallDir&gt;" reg-priority="1" overwrite-mode="0" attributes="97" />
+        </folder>
+      </files>
+    </installation-item>
+  </cs-files>
+  <cs-syschanges>
+    <require-admin selected="0" />
+  </cs-syschanges>
+  <cs-syschanges-registry>
+    <root key="0">
+      <key name="tanjunka" uninstall-type="0">
+        <value value="URL:Tanjunka Protocol" name="" type="2" uninstall-type="0" />
+        <value value="" name="URL Protocol" type="2" uninstall-type="0" />
+        <key name="DefaultIcon" uninstall-type="0">
+          <value value="tanjunka.exe" name="" type="2" uninstall-type="0" />
+        </key>
+        <key name="shell" uninstall-type="0">
+          <key name="open" uninstall-type="0">
+            <key name="command" uninstall-type="0">
+              <value value="&lt;InstallDir&gt;\Tanjunka.exe" name="" type="2" uninstall-type="0" />
+            </key>
+          </key>
+        </key>
+      </key>
+    </root>
+    <root key="1" />
+    <root key="2">
+      <key name="Software" uninstall-type="0">
+        <key name="&lt;CompanyName&gt;" uninstall-type="0">
+          <key name="&lt;AppName&gt;" uninstall-type="0">
+            <value value="&lt;InstallDir&gt;" name="Directory" type="2" uninstall-type="0" />
+            <value value="&lt;AppVersion&gt;" name="Version" type="2" uninstall-type="0" />
+            <value value="&lt;UninstallerName&gt;" name="Uninstaller" type="2" uninstall-type="0" />
+          </key>
+        </key>
+      </key>
+    </root>
+    <root key="3" />
+    <apply-conditions-access selected="0" />
+  </cs-syschanges-registry>
+  <cs-syschanges-shortcuts>
+    <shortcut link-name="&lt;ShortcutDir&gt;\&lt;AppName&gt; Uninstaller.lnk" command-line="" target-file="&lt;UninstallerName&gt;" working-dir="&lt;InstallDir&gt;" icon="" />
+    <shortcut link-name="&lt;ShortcutDir&gt;\Tanjunka.lnk" command-line="" target-file="&lt;InstallDir&gt;\Tanjunka.exe" working-dir="" icon="" />
+    <open-shortcut-folder selected="0" />
+  </cs-syschanges-shortcuts>
+  <cs-syschanges-ini />
+  <cs-syschanges-text />
+  <cs-syschanges-associations>
+    <association parameters="&quot;%1&quot;" command="Open" program="&lt;InstallDir&gt;\Tanjunka.exe" description="" extension=".tan" icon="&lt;InstallDir&gt;\Tanjunka.exe,0" />
+  </cs-syschanges-associations>
+  <cs-sys-requirements>
+    <cpu amd="0" manufacturer="0" flags="0" speed="0" intel="0" />
+    <win-9x build="0" index="0" />
+    <win-nt index="0" service-pack="0" />
+    <ram value="0" />
+    <directx minor-version="0" major-version="0" />
+    <resolution yres="0" xres="0" bpp="0" />
+    <wave-playback selected="0" />
+    <midi-playback selected="0" />
+    <joystick selected="0" />
+    <java-version index="0" />
+    <net-version index="0" />
+  </cs-sys-requirements>
+  <cs-background>
+    <show-window selected="0" />
+    <occupy-task-bar selected="0" />
+    <title-bar show="1" text="&lt;AppName&gt; Installation" />
+    <background-color color1="8421376" color2="8421376" color3="8421376" mid-color-pos="50" />
+    <main-text color="16777215" shadow-color="0" text="&lt;AppName&gt; Installation" />
+    <sub-text color="16777215" shadow-color="0" text="Version &lt;AppVersion&gt;" />
+    <bottom-text color="16777215" text="Copyright ï½&#169; 2004 &lt;CompanyName&gt;" />
+    <image y-offset="60" transparent="0" file="" tiled="0" position="0" full-screen="0" x-offset="20" />
+  </cs-background>
+  <cs-background-slideshow>
+    <settings y-offset="0" showtime="0" relative-position="0" image-position="0" dialog-position="0" x-offset="0" />
+  </cs-background-slideshow>
+  <cs-advanced>
+    <convert-jpgs selected="0" />
+    <convert-mp3s selected="0" />
+    <default-overwrite-mode index="3" />
+    <backup-system-files selected="0" />
+    <replace-in-use-files selected="0" />
+    <no-append-appname selected="0" />
+    <disable-xp-visuals selected="0" />
+    <suppress-privilege-warning value="0" />
+    <check-previous-installations value="" selected="1" value-name="" any-above="0" path="Software\&lt;CompanyName&gt;\&lt;AppName&gt;" root-key="2" />
+    <start-sound file="" />
+    <own-dll command-line="" file="" />
+    <installation-icon file="" />
+    <min-compression-ratio value="0" />
+    <autorun-mode selected="0" />
+    <version-information file-version-major-low="0" file-version-minor-low="0" file-version-major-high="1" create-version-information="0" file-version-minor-high="0">
+      <string-properties>
+        <property property-key="Comments" property-value="" />
+        <property property-key="CompanyName" property-value="&lt;CompanyName&gt;" />
+        <property property-key="FileDescription" property-value="" />
+        <property property-key="FileVersion" property-value="&lt;AppVersion&gt;" />
+        <property property-key="InternalName" property-value="" />
+        <property property-key="LegalCopyright" property-value="" />
+        <property property-key="LegalTrademarks" property-value="" />
+        <property property-key="OriginalFilename" property-value="" />
+        <property property-key="ProductName" property-value="&lt;AppName&gt;" />
+        <property property-key="ProductVersion" property-value="&lt;AppVersion&gt;" />
+      </string-properties>
+    </version-information>
+  </cs-advanced>
+  <cs-advanced-variables />
+  <cs-advanced-shell-interactive />
+  <cs-advanced-shell-file />
+  <cs-advanced-resource />
+  <cs-autoupdate>
+    <mode index="1" />
+    <installation-item index="0" />
+    <install-to value="&lt;CommonFiles&gt;\Thraex Software\AutoUpdator" />
+    <update-xml-url value="http://tanjunka.com/tan/downloads/tanjunka.installer.xml" />
+    <download-urls>
+      <url value="http://tanjunka.com/tan/downloads/tanjunka.installer&lt;AppVersion&gt;.exe" />
+    </download-urls>
+    <program-description value="Tanjunka" />
+    <save-xml-as value="(Use project name)" />
+    <create-shortcut selected="1" />
+    <auto-execute selected="1" />
+  </cs-autoupdate>
+  <cs-create-setup>
+    <setup-filename value="tanjunka.installer&lt;AppVersion&gt;.exe" />
+    <multiple-disk-spanning selected="0" disk-size="1,38" />
+  </cs-create-setup>
+  <constants />
+  <internal>
+    <use-main-window-caption value="1" />
+    <last-bc-image-path value="" />
+    <last-dll-path value="" />
+    <last-text-file-path value="" />
+    <last-files-path value="D:\work\tanjunka\XMLRPCTest\libs\FlickrNet\bin\Release\" />
+    <last-slide-image-path value="" />
+    <active-theme value="Windows XP theme" />
+  </internal>
+</aiw2project>

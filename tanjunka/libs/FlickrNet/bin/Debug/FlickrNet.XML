@@ -1,0 +1,1056 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlickrNet</name>
+    </assembly>
+    <members>
+        <member name="T:FlickrNet.Utils">
+            <summary>
+            Summary description for Utils.
+            </summary>
+        </member>
+        <member name="M:FlickrNet.Utils.UrlEncode(System.String)">
+            <summary>
+            Encodes url items according to some specific rules, i.e. '&amp;', '=' and ' ' are also encoded to 
+            their respective codes.
+            </summary>
+            <param name="oldString">The old url parameter value to be encoded</param>
+            <returns>The encoded url paramter value.</returns>
+        </member>
+        <member name="T:FlickrNet.Photos">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Photos.PhotoCollection">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Photos.PageNumber">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Photos.TotalPages">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Photos.PhotosPerPage">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Photos.TotalPhotos">
+            <remarks/>
+        </member>
+        <member name="T:FlickrNet.Photo">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Photo.PhotoId">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Photo.UserId">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Photo.Secret">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Photo.Server">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Photo.Title">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Photo.IsPublic">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Photo.IsFriend">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Photo.IsFamily">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Photo.IsPrimary">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PhotoPermissions.PhotoId">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PhotoPermissions.IsPublic">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PhotoPermissions.IsFriend">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PhotoPermissions.IsFamily">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PhotoPermissions.PermissionComment">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PhotoPermissions.PermissionAddMeta">
+            <remarks/>
+        </member>
+        <member name="T:FlickrNet.PhotoInfo">
+            <summary>
+            Detailed information returned by <see cref="M:FlickrNet.Flickr.PhotosGetInfo(System.String)"/> method.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.PhotoInfoTag.TagId">
+            <summary>
+            The id of the tag.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.PhotoInfoTag.AuthorId">
+            <summary>
+            The author id of the tag.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.PhotoInfoTag.AuthorName">
+            <summary>
+            Author of the tag - only available if using <see cref="M:FlickrNet.Flickr.TagsGetListPhoto(System.String)"/>.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.PhotoInfoTag.Raw">
+            <summary>
+            Raw copy of the tag, as the user entered it.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.PhotoInfoTag.TagText">
+            <summary>
+            The actually tag.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.PhotoCounts.PhotoCountInfoCollection">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PhotoCountInfo.PhotoCount">
+            <summary>Total number of photos between the FromDate and the ToDate.</summary>
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PhotoCountInfo.fromdate">
+            <summary>The original from date in unix timestamp format.</summary>
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PhotoCountInfo.todate">
+            <summary>The original to date in unix timestamp format.</summary>
+            <remarks/>
+        </member>
+        <member name="P:FlickrNet.PhotoCountInfo.FromDate">
+            <summary>The From date.</summary>
+        </member>
+        <member name="P:FlickrNet.PhotoCountInfo.ToDate">
+            <summary>The To date.</summary>
+        </member>
+        <member name="F:FlickrNet.Licenses.LicenseCollection">
+            <summary>A collection of available licenses.</summary>
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.License.LicenseId">
+            <summary>The ID of the license. Used by <see cref="M:FlickrNet.Flickr.PhotosGetInfo(System.String)"/>.</summary>
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.License.LicenseName">
+            <summary>The name of the license.</summary>
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.License.LicenseUrl">
+            <summary>The URL for the license text.</summary>
+            <remarks/>
+        </member>
+        <member name="T:FlickrNet.Category">
+            <summary>
+            Contains details of a category, including groups belonging to the category and sub categories.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Category.CategoryName">
+            <summary>
+            The name for the category.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Category.Path">
+            <summary>
+            A forward slash delimited list of the parents of the current group.
+            </summary>
+            <remarks>
+            Can be matched against the list of PathIds to jump directly to a parent group.
+            </remarks>
+            <example>
+            Group Id 91, Romance will return "/Life/Romance" as the Path and "/90/91" as its PathIds
+            </example>
+        </member>
+        <member name="F:FlickrNet.Category.PathIds">
+            <summary>
+            A forward slash delimited list of the ids of the parents of the current group.
+            </summary>
+            <remarks>
+            Can be matched against the Path to jump directly to a parent group.
+            </remarks>
+            <example>
+            Group Id 91, Romance will return "/Life/Romance" as the Path and "/90/91" as its PathIds
+            </example>
+        </member>
+        <member name="F:FlickrNet.Category.SubCategories">
+            <summary>
+            An array of <see cref="T:FlickrNet.SubCategory"/> items.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Category.Groups">
+            <summary>
+            An array of <see cref="T:FlickrNet.GroupInfo"/> items, listing the groups within this category.
+            </summary>
+        </member>
+        <member name="T:FlickrNet.SubCategory">
+            <summary>
+            Holds details of a sub category, including its id, name and the number of groups in it.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.SubCategory.SubCategoryId">
+            <summary>
+            The id of the category.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.SubCategory.SubCategoryName">
+            <summary>
+            The name of the category.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.SubCategory.GroupCount">
+            <summary>
+            The number of groups found within the category.
+            </summary>
+        </member>
+        <member name="T:FlickrNet.Blogs">
+            <summary>
+            Contains a list of <see cref="T:FlickrNet.Blog"/> items for the user.
+            </summary>
+            <remarks>
+            <see cref="F:FlickrNet.Blogs.BlogCollection"/> may be null if no blogs are specified.
+            </remarks>
+        </member>
+        <member name="F:FlickrNet.Blogs.BlogCollection">
+            <summary>
+            An array of <see cref="T:FlickrNet.Blog"/> items for the user.
+            </summary>
+        </member>
+        <member name="T:FlickrNet.Blog">
+            <summary>
+            Provides details of a specific blog, as configured by the user.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Blog.BlogId">
+            <summary>
+            The ID Flickr has assigned to the blog. Use this to post to the blog using <see cref="M:FlickrNet.Flickr.BlogPostPhoto(System.Int32,System.Int32,System.String,System.String)"/>.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Blog.BlogName">
+            <summary>
+            The name you have assigned to the blog in Flickr.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Blog.BlogUrl">
+            <summary>
+            The URL of the blog website.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Blog.NeedsPassword">
+            <summary>
+            If Flickr stores the password for this then this will be 0, meaning you do not need to pass in the
+            password when posting.
+            </summary>
+        </member>
+        <member name="T:FlickrNet.User">
+            <summary>
+            Contains details of a user
+            </summary>
+        </member>
+        <member name="F:FlickrNet.User.UserId">
+            <summary>
+            The id of the user object.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.User.Url">
+            <summary>
+            The url for the user. Only available for objects returned 
+            by <see cref="M:FlickrNet.Flickr.UrlsGetUserPhotos(System.String)"/> and <see cref="M:FlickrNet.Flickr.UrlsGetUserProfile(System.String)"/>.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.User.UserName">
+            <summary>
+            The Username of the selected user.
+            Not available when returned by <see cref="M:FlickrNet.Flickr.UrlsGetUserPhotos(System.String)"/> and <see cref="M:FlickrNet.Flickr.UrlsGetUserProfile(System.String)"/>.
+            </summary>
+        </member>
+        <member name="T:FlickrNet.Flickr">
+            <summary>
+            The main Flickr class.
+            </summary>
+            <remarks>
+            Create an instance of this class and then call its methods to perform methods on Flickr.
+            </remarks>
+            <example>
+            <code>FlickrNet.Flickr flickr = new FlickrNet.Flickr();
+            User user = flickr.PeopleFindByEmail("cal@iamcal.com");
+            Console.WriteLine("User Id is " + u.UserId);</code>
+            </example>
+        </member>
+        <member name="M:FlickrNet.Flickr.SetPassword(System.String)">
+            <summary>
+            Set the password used for authentication. Only needed for certain methods.
+            </summary>
+            <param name="password">The password to be used.</param>
+        </member>
+        <member name="M:FlickrNet.Flickr.#ctor(System.String)">
+            <summary>
+            Create a new instance of the <see cref="T:FlickrNet.Flickr"/> class with no email or password.
+            </summary>
+        </member>
+        <member name="M:FlickrNet.Flickr.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Create a new instance of the <see cref="T:FlickrNet.Flickr"/> class with the email address and password given
+            </summary>
+            <param name="apiKey">The API Key for to use.</param>
+            <param name="email">The email address used for authentication.</param>
+            <param name="password">The password used for authentication.</param>
+        </member>
+        <member name="M:FlickrNet.Flickr.DownloadPicture(System.String)">
+            <summary>
+            Downloads the picture from a internet and transfers it to a stream object.
+            </summary>
+            <param name="url">The url of the image to download.</param>
+            <returns>A <see cref="T:System.IO.Stream"/> object containing the downloaded picture.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.UploadPicture(System.String)">
+            <summary>
+            Uploads a file to Flickr.
+            </summary>
+            <param name="filename">The filename of the file to open.</param>
+            <returns>The id of the photo on a successful upload.</returns>
+            <exception cref="T:FlickrNet.FlickrException">Thrown when Flickr returns an error. see http://www.flickr.com/services/api/upload.api.html for more details.</exception>
+            <remarks>Other exceptions may be thrown, see <see cref="T:System.IO.FileStream"/> constructors for more details.</remarks>
+        </member>
+        <member name="M:FlickrNet.Flickr.UploadPicture(System.String,System.String)">
+            <summary>
+            Uploads a file to Flickr.
+            </summary>
+            <param name="filename">The filename of the file to open.</param>
+            <param name="title">The title of the photograph.</param>
+            <returns>The id of the photo on a successful upload.</returns>
+            <exception cref="T:FlickrNet.FlickrException">Thrown when Flickr returns an error. see http://www.flickr.com/services/api/upload.api.html for more details.</exception>
+            <remarks>Other exceptions may be thrown, see <see cref="T:System.IO.FileStream"/> constructors for more details.</remarks>
+        </member>
+        <member name="M:FlickrNet.Flickr.UploadPicture(System.String,System.String,System.String)">
+            <summary>
+            Uploads a file to Flickr.
+            </summary>
+            <param name="filename">The filename of the file to open.</param>
+            <param name="title">The title of the photograph.</param>
+            <param name="description">The description of the photograph.</param>
+            <returns>The id of the photo on a successful upload.</returns>
+            <exception cref="T:FlickrNet.FlickrException">Thrown when Flickr returns an error. see http://www.flickr.com/services/api/upload.api.html for more details.</exception>
+            <remarks>Other exceptions may be thrown, see <see cref="T:System.IO.FileStream"/> constructors for more details.</remarks>
+        </member>
+        <member name="M:FlickrNet.Flickr.UploadPicture(System.String,System.String,System.String,System.String)">
+            <summary>
+            Uploads a file to Flickr.
+            </summary>
+            <param name="filename">The filename of the file to open.</param>
+            <param name="title">The title of the photograph.</param>
+            <param name="description">The description of the photograph.</param>
+            <param name="tags">A comma seperated list of the tags to assign to the photograph.</param>
+            <returns>The id of the photo on a successful upload.</returns>
+            <exception cref="T:FlickrNet.FlickrException">Thrown when Flickr returns an error. see http://www.flickr.com/services/api/upload.api.html for more details.</exception>
+            <remarks>Other exceptions may be thrown, see <see cref="T:System.IO.FileStream"/> constructors for more details.</remarks>
+        </member>
+        <member name="M:FlickrNet.Flickr.UploadPicture(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Uploads a file to Flickr.
+            </summary>
+            <param name="filename">The filename of the file to open.</param>
+            <param name="title">The title of the photograph.</param>
+            <param name="description">The description of the photograph.</param>
+            <param name="tags">A comma seperated list of the tags to assign to the photograph.</param>
+            <param name="isPublic">True if the photograph should be public and false if it should be private.</param>
+            <param name="isFriend">True if the photograph should be marked as viewable by friends contacts.</param>
+            <param name="isFamily">True if the photograph should be marked as viewable by family contacts.</param>
+            <returns>The id of the photo on a successful upload.</returns>
+            <exception cref="T:FlickrNet.FlickrException">Thrown when Flickr returns an error. see http://www.flickr.com/services/api/upload.api.html for more details.</exception>
+            <remarks>Other exceptions may be thrown, see <see cref="T:System.IO.FileStream"/> constructors for more details.</remarks>
+        </member>
+        <member name="M:FlickrNet.Flickr.UploadPicture(System.String,System.IO.Stream,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Private method that does all the uploading work.
+            </summary>
+            <param name="filename">The filename of the file to be uploaded.</param>
+            <param name="stream">The <see cref="T:System.IO.Stream"/> object containing the pphoto to be uploaded.</param>
+            <param name="title">The title of the photo (optional).</param>
+            <param name="description">The description of the photograph (optional).</param>
+            <param name="tags">The tags for the photograph (optional).</param>
+            <param name="isPublic">0 for private, 1 for public.</param>
+            <param name="isFamily">1 if family, 0 is not.</param>
+            <param name="isFriend">1 if friend, 0 if not.</param>
+            <returns>The id of the photograph after successful uploading.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.BlogGetList">
+            <summary>
+            Gets a list of blogs that have been set up by the user.
+            Requires authentication.
+            </summary>
+            <returns>A <see cref="T:FlickrNet.Blogs"/> object containing the list of blogs.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:FlickrNet.Flickr.BlogPostPhoto(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Posts a photo already uploaded to a blog.
+            Requires authentication.
+            </summary>
+            <param name="blogId">The Id of the blog to post the photo too.</param>
+            <param name="photoId">The Id of the photograph to post.</param>
+            <param name="title">The title of the blog post.</param>
+            <param name="description">The body of the blog post.</param>
+            <returns>True if the operation is successful.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.BlogPostPhoto(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Posts a photo already uploaded to a blog.
+            Requires authentication.
+            </summary>
+            <param name="blogId">The Id of the blog to post the photo too.</param>
+            <param name="photoId">The Id of the photograph to post.</param>
+            <param name="title">The title of the blog post.</param>
+            <param name="description">The body of the blog post.</param>
+            <param name="blogPassword">The password of the blog if it is not already stored in flickr.</param>
+            <returns>True if the operation is successful.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.ContactsGetList">
+            <summary>
+            Gets a list of contacts for the logged in user.
+            Requires authentication.
+            </summary>
+            <returns>An instance of the <see cref="T:FlickrNet.Contacts"/> class containing the list of contacts.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.ContactsGetPublicList(System.String)">
+            <summary>
+            Gets a list of the given users contact, or those that are publically avaiable.
+            </summary>
+            <param name="userId">The Id of the user who's contacts you want to return.</param>
+            <returns>An instance of the <see cref="T:FlickrNet.Contacts"/> class containing the list of contacts.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.FavoritesAdd(System.String)">
+            <summary>
+            Adds a photo to the logged in favourites.
+            Requires authentication.
+            </summary>
+            <param name="photoId">The id of the photograph to add.</param>
+            <returns>True if the operation is successful.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.FavoritesRemove(System.String)">
+            <summary>
+            Removes a photograph from the logged in users favourites.
+            Requires authentication.
+            </summary>
+            <param name="photoId">The id of the photograph to remove.</param>
+            <returns>True if the operation is successful.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.FavoritesGetList">
+            <summary>
+            Get a list of the currently logger in users favourites.
+            Requires authentication.
+            </summary>
+            <returns><see cref="T:FlickrNet.Photos"/> instance containing a collection of <see cref="T:FlickrNet.Photo"/> objects.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.FavoritesGetList(System.Int32,System.Int32)">
+            <summary>
+            Get a list of the currently logger in users favourites.
+            Requires authentication.
+            </summary>
+            <param name="perPage">Number of photos to include per page.</param>
+            <param name="page">The page to download this time.</param>
+            <returns><see cref="T:FlickrNet.Photos"/> instance containing a collection of <see cref="T:FlickrNet.Photo"/> objects.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.FavoritesGetList(System.String)">
+            <summary>
+            Get a list of favourites for the specified user.
+            </summary>
+            <param name="userId">The user id of the user whose favourites you wish to retrieve.</param>
+            <returns><see cref="T:FlickrNet.Photos"/> instance containing a collection of <see cref="T:FlickrNet.Photo"/> objects.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.FavoritesGetList(System.String,System.Int32,System.Int32)">
+            <summary>
+            Get a list of favourites for the specified user.
+            </summary>
+            <param name="userId">The user id of the user whose favourites you wish to retrieve.</param>
+            <param name="perPage">Number of photos to include per page.</param>
+            <param name="page">The page to download this time.</param>
+            <returns><see cref="T:FlickrNet.Photos"/> instance containing a collection of <see cref="T:FlickrNet.Photo"/> objects.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.FavoritesGetPublicList(System.String)">
+            <summary>
+            Gets the public favourites for a specified user.
+            </summary>
+            <remarks>This function difers from <see cref="M:FlickrNet.Flickr.FavoritesGetList"/> in that the user id
+            is not optional.</remarks>
+            <param name="userId">The is of the user whose favourites you wish to return.</param>
+            <returns>A <see cref="T:FlickrNet.Photos"/> object containing a collection of <see cref="T:FlickrNet.Photo"/> objects.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.FavoritesGetPublicList(System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets the public favourites for a specified user.
+            </summary>
+            <remarks>This function difers from <see cref="M:FlickrNet.Flickr.FavoritesGetList"/> in that the user id
+            is not optional.</remarks>
+            <param name="userId">The is of the user whose favourites you wish to return.</param>
+            <param name="perPage">The number of photos to return per page.</param>
+            <param name="page">The specific page to return.</param>
+            <returns>A <see cref="T:FlickrNet.Photos"/> object containing a collection of <see cref="T:FlickrNet.Photo"/> objects.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.GroupsBrowse">
+            <summary>
+            Returns the top <see cref="T:FlickrNet.Category"/> with a list of sub-categories and groups.
+            (The top category does not have any groups in it but others may).
+            </summary>
+            <returns>A <see cref="T:FlickrNet.Category"/> instance.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.GroupsBrowse(System.Int64)">
+            <summary>
+            Returns the <see cref="T:FlickrNet.Category"/> specified by the category id with a list of sub-categories and groups.
+            </summary>
+            <param name="catId"></param>
+            <returns>A <see cref="T:FlickrNet.Category"/> instance.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.GroupsGetActiveList">
+            <summary>
+            Returns a list of currently active groups.
+            </summary>
+            <returns>An <see cref="T:FlickrNet.ActiveGroups"/> instance.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.GroupsGetInfo(System.String)">
+            <summary>
+            Returns a <see cref="T:FlickrNet.GroupInfo"/> object containing details about a group.
+            </summary>
+            <param name="groupId">The id of the group to return.</param>
+            <returns>The <see cref="T:FlickrNet.GroupInfo"/> specified by the group id.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.GroupPoolAdd(System.String,System.String)">
+            <summary>
+            Adds a photo to a pool you have permission to add photos to.
+            </summary>
+            <param name="photoId">The id of one of your photos to be added.</param>
+            <param name="groupId">The id of a group you are a member of.</param>
+            <returns>True on a successful addition.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.GroupPoolRemove(System.String,System.String)">
+            <summary>
+            Remove a picture from a group.
+            </summary>
+            <param name="photoId">The id of one of your pictures you wish to remove.</param>
+            <param name="groupId">The id of the group to remove the picture from.</param>
+            <returns>True if the photo is successfully removed.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.GroupPoolGetGroups">
+            <summary>
+            Gets a list of
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.PeopleFindByUsername(System.String)">
+            <summary>
+            Returns a <see cref="T:FlickrNet.User"/> object matching the screen name.
+            </summary>
+            <param name="username">The screen name or username of the user.</param>
+            <returns>A <see cref="T:FlickrNet.User"/> class containing the userId and username of the user.</returns>
+            <exception cref="T:FlickrNet.FlickrException">Thrown when user is not found.</exception>
+        </member>
+        <member name="M:FlickrNet.Flickr.PhotosGetCounts(System.DateTime[])">
+            <summary>
+            Returns count of photos between each pair of dates in the list.
+            </summary>
+            <remarks>If you pass in DateA, DateB and DateC it returns
+            a list of the number of photos between DateA and DateB,
+            followed by the number between DateB and DateC.
+            More parameters means more sets.</remarks>
+            <param name="dates">Array of <see cref="T:System.DateTime"/> objects.</param>
+            <returns><see cref="T:FlickrNet.PhotoCounts"/> class instance.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.PhotosLicensesGetInfo">
+            <summary>
+            Gets a list of all current licenses.
+            </summary>
+            <returns><see cref="T:FlickrNet.Licenses"/> instance.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.PhotosRemoveTag(System.Int64)">
+            <summary>
+            Remove an existing tag.
+            </summary>
+            <param name="tagId">The id of the tag, as returned by <see cref="M:FlickrNet.Flickr.PhotosGetInfo(System.String)"/> or similar method.</param>
+            <returns>True if the tag was removed.</returns>
+        </member>
+        <member name="M:FlickrNet.Flickr.PhotosSetMeta(System.String,System.String,System.String)">
+            <summary>
+            Sets the title and description of the photograph.
+            </summary>
+            <param name="photoId">The numerical photoId of the photograph.</param>
+            <param name="title">The new title of the photograph.</param>
+            <param name="description">The new description of the photograph.</param>
+            <returns>True when the operation is successful.</returns>
+            <exception cref="T:FlickrNet.FlickrException">Thrown when the photo id cannot be found.</exception>
+        </member>
+        <member name="M:FlickrNet.Flickr.TestEcho(System.String)">
+            <summary>
+            Runs the flickr.test.echo method and returned an array of <see cref="T:System.Xml.XmlElement"/> items.
+            </summary>
+            <param name="echoText">The text to pass to the method. If not empty should start with a '&amp;'.</param>
+            <returns>An array of <see cref="T:System.Xml.XmlElement"/> items.</returns>
+            <remarks>
+            The APi Key has been removed from the returned array and will not be shown.
+            </remarks>
+            <example>
+            XmlElement[] elements = flickr.TestEcho("&amp;param=value");
+            foreach(XmlElement element in elements)
+            {
+                if( element.Name = "method" )
+                    Console.WriteLine("Method = " + element.InnerXml);
+                if( element.Name = "param" )
+                    Console.WriteLine("Param = " + element.InnerXml);
+            }
+            </example>
+        </member>
+        <member name="M:FlickrNet.Flickr.TestLogin">
+            <summary>
+            Test the logged in state of the current Filckr object.
+            </summary>
+            <returns>The <see cref="T:FlickrNet.User"/> object containing the username and userid of the current user.</returns>
+        </member>
+        <member name="P:FlickrNet.Flickr.Email">
+            <summary>
+            Get or set the authentication email. Only needed for certain methods.
+            </summary>
+        </member>
+        <member name="P:FlickrNet.Flickr.Proxy">
+            <summary>
+            You can set the <see cref="T:System.Net.WebProxy"/> or alter its properties.
+            It defaults to your internet explorer proxy settings.
+            </summary>
+        </member>
+        <member name="T:FlickrNet.Contacts">
+            <summary>
+            Contains a list of <see cref="T:FlickrNet.Contact"/> items for a given user.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Contacts.ContactCollection">
+            <summary>
+            An array of <see cref="T:FlickrNet.Contact"/> items for the user.
+            </summary>
+        </member>
+        <member name="T:FlickrNet.Contact">
+            <summary>
+            Contains details of a contact for a particular user.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Contact.UserId">
+            <summary>
+            The user id of the contact.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Contact.UserName">
+            <summary>
+            The username (or screen name) of the contact.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Contact.IsFriend">
+            <summary>
+            Is this contact marked as a friend contact?
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Contact.IsFamily">
+            <summary>
+            Is this user marked a family contact?
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Contact.IsIgnored">
+            <summary>
+            Unsure how to even set this!
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Contact.IsOnline">
+            <summary>
+            Is the user online at the moment (FlickrLive)
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Contact.AwayDescription">
+            <summary>
+            If the user is online, but marked as away, then this will contains their away message.
+            </summary>
+        </member>
+        <member name="T:FlickrNet.Sizes">
+            <summary>
+            Collection of <see cref="T:FlickrNet.Size"/> items for a given photograph.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Sizes.SizeCollection">
+            <summary>
+            The size collection contains an array of <see cref="T:FlickrNet.Size"/> items.
+            </summary>
+        </member>
+        <member name="T:FlickrNet.Size">
+            <summary>
+            Contains details about all the sizes available for a given photograph.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Size.Label">
+            <summary>
+            The label for the size, such as "Thumbnail", "Small", "Medium", "Large" and "Original".
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Size.Width">
+            <summary>
+            The width of the resulting image, in pixels
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Size.Height">
+            <summary>
+            The height of the resulting image, in pixels
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Size.Source">
+            <summary>
+            The source url of the image.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Size.Url">
+            <summary>
+            The url to the photographs web page for this particular size.
+            </summary>
+        </member>
+        <member name="T:FlickrNet.Uploader">
+            <summary>
+            Information returned by the UploadPicture url.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Uploader.Status">
+            <summary>
+            The status of the upload, either "ok" or "fail".
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Uploader.PhotoId">
+            <summary>
+            If the upload succeeded then this contains the id of the photo. Otherwise it will be zero.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Uploader.Code">
+            <summary>
+            If the upload failed then this contains the error code.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Uploader.Message">
+            <summary>
+            If the upload failed then this contains the error description.
+            </summary>
+        </member>
+        <member name="T:FlickrNet.Person">
+            <summary>
+            The <see cref="T:FlickrNet.Person"/> class contains details returned by the <see cref="M:FlickrNet.Flickr.PeopleGetInfo(System.String)"/>
+            method.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Person.UserId">
+            <summary>The user id of the user.</summary>
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Person.IsAdmin">
+            <summary>Is the user an administrator. 
+            1 = admin, 0 = normal user.</summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:FlickrNet.Person.IsPro">
+            <summary>Does the user posses a pro account.
+            0 = free acouunt, 1 = pro account holder.</summary>
+        </member>
+        <member name="F:FlickrNet.Person.UserName">
+            <summary>The users username, also known as their screenname.</summary>
+        </member>
+        <member name="F:FlickrNet.Person.RealName">
+            <summary>The users real name, as entered in their profile.</summary>
+        </member>
+        <member name="F:FlickrNet.Person.Location">
+            <summary>Consists of your current location followed by country.</summary>
+            <example>e.g. Newcastle, UK.</example>
+        </member>
+        <member name="F:FlickrNet.Person.PhotosSummary">
+            <summary>Sub element containing a summary of the users photo information.</summary>
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PersonPhotosSummary.PhotoCount">
+            <summary>The total number of photos for the user.</summary>
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PersonPhotosSummary.firstdate">
+            <remarks>The unix timestamp of the date the first photo was uploaded.</remarks>
+        </member>
+        <member name="F:FlickrNet.PersonPhotosSummary.firsttakendate">
+            <remarks>The unix timestamp of the date the first photo was uploaded.</remarks>
+        </member>
+        <member name="P:FlickrNet.PersonPhotosSummary.FirstDate">
+            <summary>The first date the user uploaded a picture, converted into <see cref="T:System.DateTime"/> format.</summary>
+        </member>
+        <member name="P:FlickrNet.PersonPhotosSummary.FirstTakenDate">
+            <summary>The first date the user took a picture, converted into <see cref="T:System.DateTime"/> format.</summary>
+        </member>
+        <member name="T:FlickrNet.ActiveGroups">
+            <summary>
+            Contains a list of active <see cref="T:FlickrNet.Group"/> items.
+            </summary>
+            <remarks>
+            This information is taken from FlickrLive.
+            </remarks>
+        </member>
+        <member name="F:FlickrNet.ActiveGroups.GroupsCollection">
+            <remarks/>
+        </member>
+        <member name="T:FlickrNet.Group">
+            <summary>
+            Provides details of a particular group.
+            </summary>
+            <remarks>Used by <see cref="M:FlickrNet.Flickr.GroupsGetActiveList"/> and <see cref="M:FlickrNet.Flickr.GroupsBrowse"/>.</remarks>
+        </member>
+        <member name="F:FlickrNet.Group.GroupId">
+            <summary>
+            The id of the group.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Group.GroupName">
+            <summary>
+            The name of the group
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Group.Members">
+            <summary>
+            The number of memebers of the group.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Group.NumberOnline">
+            <summary>
+            The number of users online in FlickrLive for this group.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Group.ChatId">
+            <summary>
+            The chat id of the chat room for this group.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Group.NumberInChat">
+            <summary>
+            The number of users in the chat room in FlickrLive for this group.
+            </summary>
+        </member>
+        <member name="T:FlickrNet.GroupInfo">
+            <summary>
+            Provides details of a particular group.
+            </summary>
+            <remarks>
+            Used by the Url methods and <see cref="M:FlickrNet.Flickr.GroupsGetInfo(System.String)"/> method.
+            The reason for a <see cref="T:FlickrNet.Group"/> and <see cref="T:FlickrNet.GroupInfo"/> are due to xml serialization
+            incompatabilities.
+            </remarks>
+        </member>
+        <member name="F:FlickrNet.GroupInfo.GroupId">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.GroupInfo.Url">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.GroupInfo.GroupName">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.GroupInfo.Members">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.GroupInfo.NumberOnline">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.GroupInfo.Privacy">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.GroupInfo.ChatId">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.GroupInfo.NumberInChat">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PoolGroups.GroupsCollection">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PoolInfo.GroupId">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PoolInfo.GroupName">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PoolInfo.IsAdmin">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PoolInfo.privacy">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.PoolInfo.PhotoCount">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Online.UserCollection">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.OnlineUser.UserId">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.OnlineUser.UserName">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.OnlineUser.IsOnline">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.OnlineUser.AwayDescription">
+            <remarks/>
+        </member>
+        <member name="T:FlickrNet.Response">
+            <summary>
+            The root object returned by Flickr. Used with Xml Serialization to get the relevant object.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Response.Blogs">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.Contacts">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.Photos">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.Category">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.ActiveGroups">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.PoolGroups">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.GroupInfo">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.PhotoCounts">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.PhotoInfo">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.Who">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.PhotoPermissions">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.User">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.Person">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.Photoset">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.Photosets">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.OnlineUsers">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.Sizes">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.Licenses">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.Status">
+            <remarks/>
+        </member>
+        <member name="F:FlickrNet.Response.Error">
+            <summary>
+            If an error occurs the Error property is populated with 
+            a <see cref="T:FlickrNet.ResponseError"/> instance.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.Response.AllElements">
+            <summary>
+            If using flickr.test.echo this contains all the other elements not covered above.
+            </summary>
+            <remarks>
+            t is an array of <see cref="T:System.Xml.XmlElement"/> objects. Use the XmlElement Name and InnerXml properties
+            to get the name and value of the returned property.
+            </remarks>
+        </member>
+        <member name="T:FlickrNet.ResponseError">
+            <summary>
+            If an error occurs then Flickr returns this object.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.ResponseError.Code">
+            <summary>
+            The code or number of the error.
+            </summary>
+            <remarks>
+            100 - Invalid Api Key.
+            99  - User not logged in.
+            Other codes are specific to a method.
+            </remarks>
+        </member>
+        <member name="F:FlickrNet.ResponseError.Message">
+            <summary>
+            The verbose message matching the error code.
+            </summary>
+        </member>
+        <member name="T:FlickrNet.ResponseStatus">
+            <summary>
+            The status of the response, either ok or fail.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.ResponseStatus.OK">
+            <summary>
+            The response returns "ok" on a successful execution of the method.
+            </summary>
+        </member>
+        <member name="F:FlickrNet.ResponseStatus.Failed">
+            <summary>
+            The response returns "fail" if there is an error, such as invalid API key or login failure.
+            </summary>
+        </member>
+        <member name="T:FlickrNet.Cache">
+            <summary>
+            Summary description for Cache.
+            </summary>
+        </member>
+        <member name="T:FlickrNet.FlickrException">
+            <summary>
+            A FlickrException, thrown when a connection to Flickr fails.
+            </summary>
+        </member>
+        <member name="M:FlickrNet.FlickrException.#ctor(System.Int32,System.String)">
+            <summary>
+            Creates a new exception with the given the code and verbose message string
+            </summary>
+            <param name="code">The code of the error. 100 is Invalid Api Key and 99 is User not logged in. Others are method specific.</param>
+            <param name="verbose">The verbose description of the error.</param>
+        </member>
+        <member name="M:FlickrNet.FlickrException.#ctor(FlickrNet.ResponseError)">
+            <summary>
+            Creates a new exception from the <see cref="T:FlickrNet.ResponseError"/> class.
+            </summary>
+            <param name="error">An instance of the <see cref="T:FlickrNet.ResponseError"/> class.</param>
+        </member>
+        <member name="P:FlickrNet.FlickrException.Code">
+            <summary>
+            Get the code of the Flickr error.
+            </summary>
+        </member>
+        <member name="P:FlickrNet.FlickrException.Verbose">
+            <summary>
+            Gets the verbose message returned by Flickr.
+            </summary>
+        </member>
+        <member name="P:FlickrNet.FlickrException.Message">
+            <summary>
+            Overrides the message to return custom error message.
+            </summary>
+        </member>
+    </members>
+</doc>

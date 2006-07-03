@@ -1,0 +1,16 @@
+<PUBLIC:COMPONENT>
+<PUBLIC:ATTACH EVENT="onmouseover" ONEVENT="tMenuItemHighlight()" />
+<PUBLIC:ATTACH EVENT="onmouseout"  ONEVENT="tMenuItemRestore()" />
+<SCRIPT LANGUAGE="JScript">
+function tMenuItemHighlight()
+{
+    element.style.backgroundColor = "blue";
+    element.style.color = "white";
+}
+function tMenuItemRestore()
+{
+    element.style.backgroundColor = "white";
+    element.style.color = "black";
+}
+</SCRIPT>
+</PUBLIC:COMPONENT>

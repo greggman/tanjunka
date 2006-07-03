@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>New Page 1</title>
+<style>
+.postoptions {
+  border-collapse: collapse;
+  }
+.postoptions td {
+  border: 1px solid black;
+  padding: 4px;
+  }
+.postcol1 {
+  text-align: center;
+  }
+.postcol2 {
+  width: 100%;
+  white-space: nowrap;
+  }
+.postcategories td {
+  border: 0px;
+  padding: 0px;
+  }
+.gmaniconlist {
+    };
+.gmaniconlist td{
+    text-align: center;
+    };
+.gmaniconlist img {
+    border: 1px solid black;
+    };
+.gmaniconsel {
+    };
+.gmaniconsel td{
+    border: 0px;
+    };
+.gmaniconsel img {
+    border: 1px solid black;
+    };
+</style>
+<link rel="stylesheet" href="optionstyles.css">
+<script language="javascript" type="text/javascript" src="tanjunka_edit.js"></script>
+<script>
+function addicon(checked, iconname, iconurl, iconid)
+{
+    var tbodyElem = document.getElementById("gmanicontbody");
+    var trElem, tdElem, txtNode;
+    var onOrOff;
+    var rowNdx;
+
+    onOrOff = "";
+    if (checked != 0)
+    {
+      onOrOff = "CHECKED";
+    }
+
+    //
+    if (tbodyElem.rows.length == 0)
+    {
+        trElem = tbodyElem.insertRow(0);
+    }
+
+    trElem = tbodyElem.rows(tbodyElem.rows.length - 1);
+    if (trElem.cells.length >= 7)
+    {
+        trElem = tbodyElem.insertRow(tbodyElem.rows.length);
+    }
+
+    tdElem = trElem.insertCell(trElem.cells.length);
+    tdElem.innerHTML =
+      '<label for="icon_' + iconid + '">' +
+      '<img onclick="gmanselecticonimg();" id="imgicon_' + iconid + '" src="' + iconurl +'" width="64" height="64" /></label><br/>' +
+      '<input onclick="gmanselecticonchk();" type="RADIO" name="gmaniconlist" id="icon_' + iconid + '" value="' + iconid + '" ' + onOrOff + ' />' +
+      '<label for="icon_' + iconid + '">' + iconname + '</label>';
+
+    if (checked != 0)
+    {
+        gmanseticon(iconurl);
+    }
+}
+
+function gmanseticonselect(index)
+{
+    var elSel  = window.document.getElementById("gman_icon");
+    var ii;
+    for (ii = 0; ii < elSel.options.length; ii++)
+    {
+        var elOpt = elSel.options(ii);
+
+        elOpt.selected = (elOpt.value == index);
+    }
+}
+
+function gmanseticon(url)
+{
+    var elIcon  = window.document.getElementById("gmaniconicon");
+    elIcon.src = url;
+}
+
+// when icon image is clicked
+function gmanselecticonimg()
+{
+    var elImg  = window.event.srcElement;
+    var iconID = elImg.id.substring(3);
+    var elChk  = window.document.getElementById(iconID);
+
+    elChk.checked = !elChk.checked;
+
+    gmanseticon(elImg.src);
+    gmanseticonselect(iconID.substring(5));
+}
+
+// when checkbox for icon is checked
+function gmanselecticonchk()
+{
+    var elChk  = window.event.srcElement;
+    var iconID = elChk.id;
+    var elImg  = window.document.getElementById("img" + iconID);
+    gmanseticon(elImg.src);
+    gmanseticonselect(iconID.substring(5));
+}
+
+// when select is changed
+function gmannewicon()
+{
+    var elSel  = window.event.srcElement;
+    var index  = elSel.value;
+    var elImg  = window.document.getElementById("imgicon_" + index);
+    var elChk  = window.document.getElementById("icon_" + index);
+    gmanseticon(elImg.src);
+    elChk.checked = true;
+}
+
+function DoCal()
+{
+    var elTarget = window.event.srcElement;
+    var sRtn = showModalDialog("Calendar.htm","","center=yes;dialogWidth=200pt;dialogHeight=200pt;help=0;resizeable=0;scroll=0;status=0;");
+    if (sRtn!="")
+    {
+        if (sRtn == "clear")
+        {
+            elTarget.value = "";
+        }
+        else
+        {
+            elTarget.value = sRtn;
+        }
+    }
+}
+function matchenabled()
+{
+    var chk = (postset_enabled.checked != true);
+
+    postoptions.disabled = chk;
+}
+</script>
+</head>
+<body>
+<div class="posttitle">$PostOptionsFor <span id="postoptionsname">movabletype</span></div>
+<div><input onclick="matchenabled()" name="postset_enabled" type="CHECKBOX"/>$PostOptionsOn</DIV>
+<table id="postoptions" class="postoptions">
+<col class="postcol1">
+<col class="postcol2">
+<tr><td>$PostOptionsShared</TD><td></TD></TR>
+<tr><td><input name="shared_postdate" type="CHECKBOX"/></TD><td><div>$PostOptionsAuthoredOn</div>
+<div><input onclick="DoCal()" class="full" type="text" name="postdate" size="20"  /></div></TD></TR>
+<tr><td></td><td><div>$PostOptionsCategory</DIV><select name="gman-cat"><option>utf-8</option></select></td></tr>
+<tr><td></td><td><div>$PostOptionsIcon</DIV>
+    <table class="gmaniconsel">
+        <tr>
+            <td><img src="tan-logo.jpg" width="64" height="64" id="gmaniconicon" /></td>
+            <td><select name="gman-icon" style="width: 200px;" id="gman_icon" onchange="gmannewicon();">
+                <option>utf-8</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <hr/>
+<!-- <div style="overflow: scroll; width: 600px; white-space: normal; height: 160px; border: 1px solid black;"> -->
+<table class="gmaniconlist">
+    <tbody id="gmanicontbody">
+  <tr>
+    <td class>
+      <img src="tan-logo.jpg" width="64" height="64" /><br/>
+      <input type="RADIO" name="gmaniconlist" id="c1" value="c1"/>cell
+    </td>
+    <td>
+      <img src="tan-logo.jpg" width="64" height="64" /><br/>
+      <input type="RADIO" name="gmaniconlist" id="c1" value="c1"/>cell
+    </td>
+    <td>
+      <img src="tan-logo.jpg" width="64" height="64" /><br/>
+      <input type="RADIO" name="gmaniconlist" id="c1" value="c1"/>cell
+    </td>
+    <td>
+      <img src="tan-logo.jpg" width="64" height="64" /><br/>
+      <input type="RADIO" name="gmaniconlist" id="c1" value="c1"/>cell
+    </td>
+    <td>
+      <img src="tan-logo.jpg" width="64" height="64" /><br/>
+      <input type="RADIO" name="gmaniconlist" id="c1" value="c1"/>cell
+    </td>
+    <td>
+      <img src="tan-logo.jpg" width="64" height="64" /><br/>
+      <input type="RADIO" name="gmaniconlist" id="c1" value="c1"/>cell
+    </td>
+  </tr>
+  </tbody>
+</table>
+<!-- </DIV> -->
+
+</td></tr>
+<tr><td></td><td align="right"><input class="button" type="button" value="$LabelUpdate" onclick="window.external.genericCallbackI(1)" /></TD></TR>
+<tr><td></td><td><div>Link:</DIV><input class="full" type="text" name="gman-link" size="20"  /></td></tr>
+<tr><td></td><td><div><input type="checkbox" name="option-nocut" checked="true" value="ON"  />Don't Cut</div></td></tr>
+<tr><td></td><td><div><input type="checkbox" name="option-notfrontfeature" checked="true" value="ON"  />Not Front Feature</div></td></tr>
+<tr><td></td><td><div><input type="checkbox" name="option-notheadline" checked="true" value="ON"  />Not Headline</div></td></tr>
+<tr><td><input name="shared_pingurls" type="CHECKBOX"/></TD><td><div>$PostOptionsURLsToPing</div>
+<textarea name="pingurls" rows="4" cols="20"  /></textarea></TD></TR>
+</TABLE>
+
+
+</body>
+
+</html>

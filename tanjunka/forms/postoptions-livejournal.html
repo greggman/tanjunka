@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>New Page 1</title>
+<style>
+</style>
+<link rel="stylesheet" href="optionstyles.css">
+<script language="javascript" type="text/javascript" src="tanjunka_edit.js"></script>
+<script>
+function matchenabled()
+{
+    var chk = (postset_enabled.checked != true);
+
+    postoptions.disabled = chk;
+}
+</script>
+</head>
+<body>
+<div class="posttitle">$PostOptionsFor <span id="postoptionsname">Live Journal</span></div>
+<div><input onclick="matchenabled()" name="postset_enabled" type="CHECKBOX"/>$PostOptionsOn</DIV>
+<table id="postoptions" class="postoptions">
+<col class="postcol1">
+<col class="postcol2">
+<tr><td>$PostOptionsShared</TD><td></TD></TR>
+<tr><td><!-- <input name="shared_publish" type="CHECKBOX"/> --></TD><td><div>Current Mood:</div><div>
+    <select id="prop_current_moodid" name="prop_current_moodid" style="width: 150px;">
+        <option value=""   selected='selected'></option>
+        <option value="accomplished" gvalue="90"  id='prop_current_moodid_90' >accomplished</option>
+        <option value="aggravated" gvalue="1"  id='prop_current_moodid_1' >aggravated</option>
+        <option value="amused" gvalue="44"  id='prop_current_moodid_44' >amused</option>
+        <option value="angry" gvalue="2"  id='prop_current_moodid_2' >angry</option>
+        <option value="annoyed" gvalue="3"  id='prop_current_moodid_3' >annoyed</option>
+        <option value="anxious" gvalue="4"  id='prop_current_moodid_4' >anxious</option>
+        <option value="apathetic" gvalue="114"  id='prop_current_moodid_114' >apathetic</option>
+        <option value="artistic" gvalue="108"  id='prop_current_moodid_108' >artistic</option>
+        <option value="awake" gvalue="87"  id='prop_current_moodid_87' >awake</option>
+        <option value="bitchy" gvalue="110"  id='prop_current_moodid_110' >bitchy</option>
+        <option value="blah" gvalue="92"  id='prop_current_moodid_92' >blah</option>
+        <option value="blank" gvalue="113"  id='prop_current_moodid_113' >blank</option>
+        <option value="bored" gvalue="5"  id='prop_current_moodid_5' >bored</option>
+        <option value="bouncy" gvalue="59"  id='prop_current_moodid_59' >bouncy</option>
+        <option value="busy" gvalue="91"  id='prop_current_moodid_91' >busy</option>
+        <option value="calm" gvalue="68"  id='prop_current_moodid_68' >calm</option>
+        <option value="cheerful" gvalue="125"  id='prop_current_moodid_125' >cheerful</option>
+        <option value="chipper" gvalue="99"  id='prop_current_moodid_99' >chipper</option>
+        <option value="cold" gvalue="84"  id='prop_current_moodid_84' >cold</option>
+        <option value="complacent" gvalue="63"  id='prop_current_moodid_63' >complacent</option>
+        <option value="confused" gvalue="6"  id='prop_current_moodid_6' >confused</option>
+        <option value="contemplative" gvalue="101"  id='prop_current_moodid_101' >contemplative</option>
+        <option value="content" gvalue="64"  id='prop_current_moodid_64' >content</option>
+        <option value="cranky" gvalue="8"  id='prop_current_moodid_8' >cranky</option>
+        <option value="crappy" gvalue="7"  id='prop_current_moodid_7' >crappy</option>
+        <option value="crazy" gvalue="106"  id='prop_current_moodid_106' >crazy</option>
+        <option value="creative" gvalue="107"  id='prop_current_moodid_107' >creative</option>
+        <option value="crushed" gvalue="129"  id='prop_current_moodid_129' >crushed</option>
+        <option value="curious" gvalue="56"  id='prop_current_moodid_56' >curious</option>
+        <option value="cynical" gvalue="104"  id='prop_current_moodid_104' >cynical</option>
+        <option value="depressed" gvalue="9"  id='prop_current_moodid_9' >depressed</option>
+        <option value="determined" gvalue="45"  id='prop_current_moodid_45' >determined</option>
+        <option value="devious" gvalue="130"  id='prop_current_moodid_130' >devious</option>
+        <option value="dirty" gvalue="119"  id='prop_current_moodid_119' >dirty</option>
+        <option value="disappointed" gvalue="55"  id='prop_current_moodid_55' >disappointed</option>
+        <option value="discontent" gvalue="10"  id='prop_current_moodid_10' >discontent</option>
+        <option value="distressed" gvalue="127"  id='prop_current_moodid_127' >distressed</option>
+        <option value="ditzy" gvalue="35"  id='prop_current_moodid_35' >ditzy</option>
+        <option value="dorky" gvalue="115"  id='prop_current_moodid_115' >dorky</option>
+        <option value="drained" gvalue="40"  id='prop_current_moodid_40' >drained</option>
+        <option value="drunk" gvalue="34"  id='prop_current_moodid_34' >drunk</option>
+        <option value="ecstatic" gvalue="98"  id='prop_current_moodid_98' >ecstatic</option>
+        <option value="embarrassed" gvalue="79"  id='prop_current_moodid_79' >embarrassed</option>
+        <option value="energetic" gvalue="11"  id='prop_current_moodid_11' >energetic</option>
+        <option value="enraged" gvalue="12"  id='prop_current_moodid_12' >enraged</option>
+        <option value="enthralled" gvalue="13"  id='prop_current_moodid_13' >enthralled</option>
+        <option value="envious" gvalue="80"  id='prop_current_moodid_80' >envious</option>
+        <option value="exanimate" gvalue="78"  id='prop_current_moodid_78' >exanimate</option>
+        <option value="excited" gvalue="41"  id='prop_current_moodid_41' >excited</option>
+        <option value="exhausted" gvalue="14"  id='prop_current_moodid_14' >exhausted</option>
+        <option value="flirty" gvalue="67"  id='prop_current_moodid_67' >flirty</option>
+        <option value="frustrated" gvalue="47"  id='prop_current_moodid_47' >frustrated</option>
+        <option value="full" gvalue="93"  id='prop_current_moodid_93' >full</option>
+        <option value="geeky" gvalue="103"  id='prop_current_moodid_103' >geeky</option>
+        <option value="giddy" gvalue="120"  id='prop_current_moodid_120' >giddy</option>
+        <option value="giggly" gvalue="72"  id='prop_current_moodid_72' >giggly</option>
+        <option value="gloomy" gvalue="38"  id='prop_current_moodid_38' >gloomy</option>
+        <option value="good" gvalue="126"  id='prop_current_moodid_126' >good</option>
+        <option value="grateful" gvalue="132"  id='prop_current_moodid_132' >grateful</option>
+        <option value="groggy" gvalue="51"  id='prop_current_moodid_51' >groggy</option>
+        <option value="grumpy" gvalue="95"  id='prop_current_moodid_95' >grumpy</option>
+        <option value="guilty" gvalue="111"  id='prop_current_moodid_111' >guilty</option>
+        <option value="happy" gvalue="15"  id='prop_current_moodid_15' >happy</option>
+        <option value="high" gvalue="16"  id='prop_current_moodid_16' >high</option>
+        <option value="hopeful" gvalue="43"  id='prop_current_moodid_43' >hopeful</option>
+        <option value="horny" gvalue="17"  id='prop_current_moodid_17' >horny</option>
+        <option value="hot" gvalue="83"  id='prop_current_moodid_83' >hot</option>
+        <option value="hungry" gvalue="18"  id='prop_current_moodid_18' >hungry</option>
+        <option value="hyper" gvalue="52"  id='prop_current_moodid_52' >hyper</option>
+        <option value="impressed" gvalue="116"  id='prop_current_moodid_116' >impressed</option>
+        <option value="indescribable" gvalue="48"  id='prop_current_moodid_48' >indescribable</option>
+        <option value="indifferent" gvalue="65"  id='prop_current_moodid_65' >indifferent</option>
+        <option value="infuriated" gvalue="19"  id='prop_current_moodid_19' >infuriated</option>
+        <option value="intimidated" gvalue="128"  id='prop_current_moodid_128' >intimidated</option>
+        <option value="irate" gvalue="20"  id='prop_current_moodid_20' >irate</option>
+        <option value="irritated" gvalue="112"  id='prop_current_moodid_112' >irritated</option>
+        <option value="jealous" gvalue="133"  id='prop_current_moodid_133' >jealous</option>
+        <option value="jubilant" gvalue="21"  id='prop_current_moodid_21' >jubilant</option>
+        <option value="lazy" gvalue="33"  id='prop_current_moodid_33' >lazy</option>
+        <option value="lethargic" gvalue="75"  id='prop_current_moodid_75' >lethargic</option>
+        <option value="listless" gvalue="76"  id='prop_current_moodid_76' >listless</option>
+        <option value="lonely" gvalue="22"  id='prop_current_moodid_22' >lonely</option>
+        <option value="loved" gvalue="86"  id='prop_current_moodid_86' >loved</option>
+        <option value="melancholy" gvalue="39"  id='prop_current_moodid_39' >melancholy</option>
+        <option value="mellow" gvalue="57"  id='prop_current_moodid_57' >mellow</option>
+        <option value="mischievous" gvalue="36"  id='prop_current_moodid_36' >mischievous</option>
+        <option value="moody" gvalue="23"  id='prop_current_moodid_23' >moody</option>
+        <option value="morose" gvalue="37"  id='prop_current_moodid_37' >morose</option>
+        <option value="naughty" gvalue="117"  id='prop_current_moodid_117' >naughty</option>
+        <option value="nauseated" gvalue="97"  id='prop_current_moodid_97' >nauseated</option>
+        <option value="nerdy" gvalue="102"  id='prop_current_moodid_102' >nerdy</option>
+        <option value="nervous" gvalue="134"  id='prop_current_moodid_134' >nervous</option>
+        <option value="nostalgic" gvalue="60"  id='prop_current_moodid_60' >nostalgic</option>
+        <option value="numb" gvalue="124"  id='prop_current_moodid_124' >numb</option>
+        <option value="okay" gvalue="61"  id='prop_current_moodid_61' >okay</option>
+        <option value="optimistic" gvalue="70"  id='prop_current_moodid_70' >optimistic</option>
+        <option value="peaceful" gvalue="58"  id='prop_current_moodid_58' >peaceful</option>
+        <option value="pensive" gvalue="73"  id='prop_current_moodid_73' >pensive</option>
+        <option value="pessimistic" gvalue="71"  id='prop_current_moodid_71' >pessimistic</option>
+        <option value="pissed off" gvalue="24"  id='prop_current_moodid_24' >pissed off</option>
+        <option value="pleased" gvalue="109"  id='prop_current_moodid_109' >pleased</option>
+        <option value="predatory" gvalue="118"  id='prop_current_moodid_118' >predatory</option>
+        <option value="productive" gvalue="89"  id='prop_current_moodid_89' >productive</option>
+        <option value="quixotic" gvalue="105"  id='prop_current_moodid_105' >quixotic</option>
+        <option value="recumbent" gvalue="77"  id='prop_current_moodid_77' >recumbent</option>
+        <option value="refreshed" gvalue="69"  id='prop_current_moodid_69' >refreshed</option>
+        <option value="rejected" gvalue="123"  id='prop_current_moodid_123' >rejected</option>
+        <option value="rejuvenated" gvalue="62"  id='prop_current_moodid_62' >rejuvenated</option>
+        <option value="relaxed" gvalue="53"  id='prop_current_moodid_53' >relaxed</option>
+        <option value="relieved" gvalue="42"  id='prop_current_moodid_42' >relieved</option>
+        <option value="restless" gvalue="54"  id='prop_current_moodid_54' >restless</option>
+        <option value="rushed" gvalue="100"  id='prop_current_moodid_100' >rushed</option>
+        <option value="sad" gvalue="25"  id='prop_current_moodid_25' >sad</option>
+        <option value="satisfied" gvalue="26"  id='prop_current_moodid_26' >satisfied</option>
+        <option value="scared" gvalue="46"  id='prop_current_moodid_46' >scared</option>
+        <option value="shocked" gvalue="122"  id='prop_current_moodid_122' >shocked</option>
+        <option value="sick" gvalue="82"  id='prop_current_moodid_82' >sick</option>
+        <option value="silly" gvalue="66"  id='prop_current_moodid_66' >silly</option>
+        <option value="sleepy" gvalue="49"  id='prop_current_moodid_49' >sleepy</option>
+        <option value="sore" gvalue="27"  id='prop_current_moodid_27' >sore</option>
+        <option value="stressed" gvalue="28"  id='prop_current_moodid_28' >stressed</option>
+        <option value="surprised" gvalue="121"  id='prop_current_moodid_121' >surprised</option>
+        <option value="sympathetic" gvalue="81"  id='prop_current_moodid_81' >sympathetic</option>
+        <option value="thankful" gvalue="131"  id='prop_current_moodid_131' >thankful</option>
+        <option value="thirsty" gvalue="29"  id='prop_current_moodid_29' >thirsty</option>
+        <option value="thoughtful" gvalue="30"  id='prop_current_moodid_30' >thoughtful</option>
+        <option value="tired" gvalue="31"  id='prop_current_moodid_31' >tired</option>
+        <option value="touched" gvalue="32"  id='prop_current_moodid_32' >touched</option>
+        <option value="uncomfortable" gvalue="74"  id='prop_current_moodid_74' >uncomfortable</option>
+        <option value="weird" gvalue="96"  id='prop_current_moodid_96' >weird</option>
+        <option value="working" gvalue="88"  id='prop_current_moodid_88' >working</option>
+        <option value="worried" gvalue="85"  id='prop_current_moodid_85' >worried</option>
+    </select> <input type="text" gsize="20" name="prop_current_mood" /></div>
+    </TD></TR>
+<tr><td><!-- <input name="shared_publish" type="CHECKBOX"/> --></TD><td><div>Current Music:</div><div><input class="full" type="text" size="20" name="prop_current_music" /></div></td></tr>
+</TABLE>
+<!-- here so we can use the BloggerAPI service for this -->
+<!-- Live Journal does not support the publish flag -->
+<div style="display: none;"><input type="checkbox" name="publish" value="ON" />$PostOptionsPublish</div>
+
+
+</body>
+
+</html>

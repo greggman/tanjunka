@@ -1,0 +1,146 @@
+
+fieldset { font-size: small; padding: 10px 5px 0px 5px; }
+.labelbr { display: none; }
+.labeltext { width: 200px; float: left;  }
+.labelchk { };
+.inputtext {
+    width: 100%;
+    }
+.inputpass {
+    width: 100%;
+    }
+.inputchk {
+    }
+input.text {
+}
+a.button {
+    font-weight: bold;
+    font-size: xx-small;
+    font-family: Verdana;
+    padding: 5px 8px;
+    border-top: 1px solid white;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid white;
+    text-align: center;
+    width: 10em;
+  }
+a.button:link {
+     background-color: #pink;
+     color: red;
+     text-decoration: none;
+  }
+a.button:visited {
+    background-color: #light-green;
+    color: green;
+    text-decoration: none;
+ }
+ a.button:hover {
+     background-color: #light-blue;
+     color: blue;
+     border-color: black white white black;
+     text-decoration: none;
+}
+a.button:active {
+    background-color: #black;
+    color: white;
+    text-decoration: none;
+}
+
+.full {
+  width: 100%;
+  gbackground-color: #AEF8F7;
+  gborder-color: #AEF8F7;
+  }
+select {
+  gbackground-color: #AEF8F7;
+  gborder-color: #AEF8F7;
+  width: 100%;
+  }
+body {
+  gbackground-color: #647184;
+  gcolor: white;
+  background: #ECE9D8;
+  gbackground: #AEF3FF repeat-x bottom url('dialogback.png');
+
+  font-family: Verdana;
+  }
+textarea, input.text, .full {
+  gbackground-color: #748194;
+  gcolor: white;
+}
+.list, #listtable, #listtbody {
+  font-size: x-small;
+  background-color: #FFFFFF;
+  width: 100%;
+  }
+table {
+  font-size: x-small;
+  }
+textarea {
+  width: 100%;
+  }
+h1 {
+ margin: 0px;
+ font-size: x-small;
+}
+.button {
+    width: 8em;
+    margin: 2px;
+    float: right;
+}
+.col2, .col3, .col4, .col5, .col6 {
+    border-bottom: 1px solid gray;
+}
+.col1 {
+    white-space: nowrap;
+    }
+.col2 {
+    width: 100%;
+    white-space: nowrap;
+    cursor: hand;
+}
+.col2:hover {
+    color: red;
+}
+.col3 {
+    white-space: nowrap;
+    cursor: hand;
+}
+.col4 {
+    white-space: nowrap;
+    cursor: hand;
+    text-align: center;
+}
+.col5 {
+    white-space: nowrap;
+    cursor: hand;
+    text-align: center;
+}
+.col6 {
+    white-space: nowrap;
+    cursor: hand;
+    text-align: center;
+}
+
+.postoptions {
+  border-collapse: collapse;
+  }
+.postoptions td {
+  border: 1px solid black;
+  padding: 4px;
+  }
+.postcol1 {
+  text-align: center;
+  }
+.postcol2 {
+  width: 100%;
+  white-space: nowrap;
+  }
+.postcategories td {
+  border: 0px;
+  padding: 0px;
+  }
+
+
+

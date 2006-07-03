@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<link rel="stylesheet" href="bodyform.css" type="text/css" />
+<link rel="stylesheet" href="tan-edit.css" type="text/css" />
+<script language="javascript" type="text/javascript" src="tanjunka_edit.js"></script>
+<script LANGUAGE="JavaScript">
+<!--
+function HandleDrop()
+{
+  var oTarg = window.event.srcElement;
+  var oData = window.event.dataTransfer;
+
+  // Cancel default action.
+//  fnCancelDefault();
+
+  // Set the content of the oTarget to the information stored
+  //  in the data transfer object in the desired format.
+  // oTarg.innerText += oData.getData("text");
+  ShowResults();
+  logPrintn ("text:" + oData.getData("text"));
+  logPrintn (" url:" + oData.getData("URL"));
+//  logPrintn ("file:" + oData.getData("file"));
+}
+tanInitEditForm();
+// -->
+</script>
+</head>
+<body style="margin: 0px;">
+<div id="content"><div class="blog">
+<div class="blogbody"
+    contentEditable
+    id="postbody"
+    name="postbody"
+    style="overflow: auto; height: 100%;"
+    >Enter Extra Here Or Drag and Drop Some Images</div>
+    </div></div>
+$include(tan-contextmenu.html)
+</body></html>

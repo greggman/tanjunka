@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>New Page 1</title>
+<link rel="stylesheet" href="optionstyles.css">
+<script language="javascript" type="text/javascript" src="tanjunka_edit.js"></script>
+<script language="javascript">
+function matchforms()
+{
+    var chk = (useforms.checked != true);
+
+     bodyform.disabled = chk;
+     bodyformbrowse.disabled = chk;
+     moreform.disabled = chk;
+     moreformbrowse.disabled = chk;
+}
+
+function matchstyle()
+{
+    var chk = (usestylesheet.checked != true);
+
+    stylesheet.disabled = chk;
+    stylesheetbrowse.disabled = chk;
+}
+
+function initform()
+{
+   matchstyle();
+   matchforms();
+//   logPrintn("init-movabletype-form");
+//   settext("servicename","foo");
+//   settext("blogurl", gettext("blogname"));
+}
+</script>
+</head>
+<body onload="initform()">
+
+<table width="100%">
+<col class="col1">
+<col class="col2">
+<col class="col3">
+<tr><td colspan="3"><h1>Blogger Service</h1></td></tr>
+<tr><td>$SettingsName</td><td colspan="2"><input class="full" type="text" name="servicename" size="20"  /></td></tr>
+<tr><td colspan="3"><hr><h1>$SettingsUserInfo</h1></td></tr>
+<tr><td>$SettingsUsername</td><td colspan="2"><input class="full" type="text" name="username" size="20"  /></td></tr>
+<tr><td>$SettingsPassword</td><td colspan="2"><input class="full" type="password" name="password" size="20"  /></td></tr>
+<tr><td colspan="3"><hr><h1>$SettingsDefaults</h1></td></tr>
+<tr><td>$SettingsBlog</td><td colspan="2"><select name="blogid"><option>unselected</option></select></td></tr>
+<tr><td></td><td><div><input type="checkbox" name="publish" checked="true" value="ON"  />$SettingsPublish</div></td><td><input class="button" type="button" value="$LabelUpdate" onclick="window.external.genericCallbackI(12)" /></td></tr>
+<tr><td colspan="3"><hr><h1>$SettingsAdvanced</h1></td></tr>
+$include(settings-common.html)
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>New Page 1</title>
+<link rel="stylesheet" href="optionstyles.css">
+<script language="javascript" type="text/javascript" src="tanjunka_edit.js"></script>
+<script language="javascript">
+function matchforms()
+{
+    var chk = (useforms.checked != true);
+
+     bodyform.disabled = chk;
+     bodyformbrowse.disabled = chk;
+     moreform.disabled = chk;
+     moreformbrowse.disabled = chk;
+}
+
+function matchstyle()
+{
+    var chk = (usestylesheet.checked != true);
+
+    stylesheet.disabled = chk;
+    copystylesheet.disabled = chk;
+    updatestylesheet.disabled = chk;
+}
+
+function initform()
+{
+   matchstyle();
+   matchforms();
+//   logPrintn("init-movabletype-form");
+//   settext("servicename","foo");
+//   settext("blogurl", gettext("blogname"));
+}
+</script>
+</head>
+<body onload="initform()">
+<form id="formlayout">
+  <fieldset>
+    <legend>Blog</legend>
+    <label for="servicename">Name:</label><br class="labelbr" />
+    <input class="full" type="text" name="servicename" size="20" /><br class="textbr" />
+    <label for="blogurl">Blog URL:</label><br class="labelbr" />
+    <input class="full" type="text" name="blogurl" size="20" /><br class="textbr" />
+    <input class="button" type="button" value="Guess Info"  onclick="window.external.genericCallbackI(10)"/>
+  </fieldset>
+  <fieldset>
+    <legend>User Info</legend>
+    <label for="username">Username:</label><br class="labelbr" />
+    <input class="full" type="text" name="username" size="20" /><br class="textbr" />
+    <label for="password">PasswordL:</label><br class="labelbr" />
+    <input class="full" type="password" name="password" size="20" /><br class="textbr" />
+  </fieldset>
+  <fieldset>
+    <legend>Paths</legend>
+    <label for="imageURL">Image URL:</label><br class="labelbr" />
+    <input class="full" type="text" name="imageURL" size="20" /><br class="textbr" />
+    <label for="imagePath">Image Path:</label><br class="labelbr" />
+    <input class="full" type="text" name="imagePath" size="20" /><br class="textbr" />
+    <label for="xmlrpcURL">XML-RPC URL:</label><br class="labelbr" />
+    <input class="full" type="text" name="xmlrpcURL" size="20" /><br class="textbr" />
+    <input class="button" type="button" value="Test"  onclick="window.external.genericCallbackI(11)"/>
+  </fieldset>
+  <fieldset>
+    <legend>Defaults</legend>
+    <label for="imageURL">Image URL:</label><br class="labelbr" />
+    <input class="full" type="text" name="imageURL" size="20" /><br class="textbr" />
+    <label for="imagePath">Image Path:</label><br class="labelbr" />
+    <input class="full" type="text" name="imagePath" size="20" /><br class="textbr" />
+    <label for="xmlrpcURL">XML-RPC URL:</label><br class="labelbr" />
+    <input class="full" type="text" name="xmlrpcURL" size="20" /><br class="textbr" />
+    <input class="button" type="button" value="Test"  onclick="window.external.genericCallbackI(11)"/>
+  </fieldset>
+</FONT>
+<table>
+<tr><td colspan="3"><hr><h1>Defaults</h1></td></tr>
+<tr><td>Blog:</td><td colspan="2"><select name="blogid"><option>unselected</option></select></td></tr>
+<tr><td></td><td><div><input type="checkbox" name="publish" checked="true" value="ON"  />Publish</div></td><td><input class="button" type="button" value="Update" onclick="window.external.genericCallbackI(12)" /></td></tr>
+<tr><td></td><td><div><input type="checkbox" name="allowcomments" checked="true" value="ON"  />Allow Comments</div></td><td></td></tr>
+<tr><td></td><td><div><input type="checkbox" name="allowtrackback" checked="true" value="ON"  />Allow Trackback</div></td><td></td></tr>
+<tr><td colspan="3"><hr><h1>Advanced</h1></td></tr>
+<tr><td>Encoding:</td><td colspan="2"><select name="encoding"><option>utf-8</option></select></td></tr>
+<tr><td>Style Sheet:</td><td><div><input type="checkbox" onclick="matchstyle()" name="usestylesheet" value="OFF"  />Use Style Sheet</div></td><td></td></tr>
+<tr><td>CSS URL:</td><td colspan="2"><input class="full" type="text" name="stylesheet" size="20"  /></td></tr>
+<tr><td></td><td><div><input type="checkbox" name="copystylesheet" checked="true" size="20" value="ON"  />Copy Locally</div></td><td><input class="button" type="button" name="updatestylesheet" value="Update" onclick="window.external.genericCallbackI(13)" /></td></tr>
+<tr><td>Forms:</td><td><div><input type="checkbox" onclick="matchforms()" name="useforms" value="OFF"  />Use Custom Forms</div></td><td></td></tr>
+<tr><td><div>Body Form:</div></td><td colspan="1"><input class="full" type="text" name="bodyform" size="20" value="bodyform.html"  /></td><td><input class="button" type="button" name="bodyformbrowse" value="Browse..." onclick="window.external.genericCallbackI(14)" /></td></tr>
+<tr><td>More Form:</td><td colspan="1"><input class="full" type="text" name="moreform" size="20" value="moreform.html" /></td><td><input class="button" type="button" name="moreformbrowse" value="Browse..." onclick="window.external.genericCallbackI(15)" /></td></tr>
+</table>
+
+</body>
+
+</html>

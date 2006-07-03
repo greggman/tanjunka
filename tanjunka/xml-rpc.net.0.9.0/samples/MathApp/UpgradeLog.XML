@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?>
+<UpgradeLog>
+<Properties><Property Name="Solution" Value="MathApp">
+</Property><Property Name="Solution File" Value="E:\temp\trash\xmlrpc\xml-rpc.net.0.9.0\samples\MathApp\MathApp.sln">
+</Property><Property Name="User Options File" Value="E:\temp\trash\xmlrpc\xml-rpc.net.0.9.0\samples\MathApp\MathApp.suo">
+</Property><Property Name="Date" Value="Wednesday, November 10, 2004">
+</Property><Property Name="Time" Value="23:16 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="MathApp.sln" Description="File successfully backed up as E:\temp\trash\xmlrpc\xml-rpc.net.0.9.0\samples\MathApp\bak\Backup\MathApp.sln">
+</Event><Event ErrorLevel="2" Project="" Source="MathApp.suo" Description="Error creating backup file: E:\temp\trash\xmlrpc\xml-rpc.net.0.9.0\samples\MathApp\bak\Backup\MathApp.suo">
+</Event><Event ErrorLevel="0" Project="MathApp" Source="MathApp.csproj" Description="Project file successfully backed up as E:\temp\trash\xmlrpc\xml-rpc.net.0.9.0\samples\MathApp\bak\Backup\MathApp.csproj">
+</Event><Event ErrorLevel="0" Project="MathApp" Source="AssemblyInfo.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\xml-rpc.net.0.9.0\samples\MathApp\bak\Backup\MathApp.csproj">
+</Event><Event ErrorLevel="0" Project="MathApp" Source="Form1.cs" Description="File successfully backed up as E:\temp\trash\xmlrpc\xml-rpc.net.0.9.0\samples\MathApp\bak\Backup\MathApp.csproj">
+</Event><Event ErrorLevel="0" Project="MathApp" Source="Form1.resx" Description="File successfully backed up as E:\temp\trash\xmlrpc\xml-rpc.net.0.9.0\samples\MathApp\bak\Backup\MathApp.csproj">
+</Event><Event ErrorLevel="0" Project="MathApp" Source="MathApp.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="MathApp" Source="MathApp.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="MathApp.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MathApp.sln" Description="Converted">
+</Event></UpgradeLog>

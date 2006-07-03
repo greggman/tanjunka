@@ -1,0 +1,958 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Gregg Tavares</Author>
+  <LastAuthor>Gregg Tavares</LastAuthor>
+  <Created>2005-04-16T10:16:05Z</Created>
+  <LastSaved>2005-04-18T12:36:04Z</LastSaved>
+  <Company>Greggman</Company>
+  <Version>10.6714</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <DownloadComponents/>
+  <LocationOfComponents HRef="file:///\\"/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>12525</WindowHeight>
+  <WindowWidth>15195</WindowWidth>
+  <WindowTopX>480</WindowTopX>
+  <WindowTopY>120</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s23">
+   <Alignment ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#CCCCFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s24">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Protection ss:Protected="0"/>
+  </Style>
+  <Style ss:ID="s25">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#CCCCFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s26">
+   <Protection/>
+  </Style>
+  <Style ss:ID="s27">
+   <Alignment ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font x:Family="Swiss" ss:Bold="1"/>
+   <Interior ss:Color="#CCCCFF" ss:Pattern="Solid"/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s28">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font x:Family="Swiss" ss:Bold="1"/>
+   <Interior ss:Color="#CCCCFF" ss:Pattern="Solid"/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s29">
+   <Protection ss:Protected="0"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Tanjunka">
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="237" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:StyleID="s23" ss:AutoFitWidth="0" ss:Width="150"/>
+   <Column ss:StyleID="s24" ss:AutoFitWidth="0" ss:Width="259.5"/>
+   <Column ss:StyleID="s25" ss:AutoFitWidth="0" ss:Width="175.5"/>
+   <Row ss:StyleID="s26">
+    <Cell ss:StyleID="s27"><Data ss:Type="String">Name</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Text</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Notes</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LanguageLabel</Data></Cell>
+    <Cell><Data ss:Type="String">日本語</Data></Cell>
+    <Cell><Data ss:Type="String">Name of this Language</Data></Cell>
+   </Row>
+   <Row ss:Height="25.5">
+    <Cell><Data ss:Type="String">LanguageID</Data></Cell>
+    <Cell><Data ss:Type="String">ja</Data></Cell>
+    <Cell><Data ss:Type="String">used to figure out default language based on user's OS settings</Data></Cell>
+    <Cell ss:StyleID="s29"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LanguageAbout</Data></Cell>
+    <Cell><Data ss:Type="String">Created by Gregg Tavares</Data></Cell>
+    <Cell><Data ss:Type="String">Appears in About page</Data></Cell>
+    <Cell ss:StyleID="s29"/>
+   </Row>
+   <Row ss:Index="6">
+    <Cell><Data ss:Type="String">LabelOkay</Data></Cell>
+    <Cell><Data ss:Type="String">オッケ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelCancel</Data></Cell>
+    <Cell><Data ss:Type="String">キャンセル</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelYes</Data></Cell>
+    <Cell><Data ss:Type="String">はい</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelNo</Data></Cell>
+    <Cell><Data ss:Type="String">いいえ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelUpdate</Data></Cell>
+    <Cell><Data ss:Type="String">更新</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelAdd</Data></Cell>
+    <Cell><Data ss:Type="String">新規作成…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelDelete</Data></Cell>
+    <Cell><Data ss:Type="String">削除…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelClose</Data></Cell>
+    <Cell><Data ss:Type="String">閉じる</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelBrowse</Data></Cell>
+    <Cell><Data ss:Type="String">参照…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelOops</Data></Cell>
+    <Cell><Data ss:Type="String">失礼ですが</Data></Cell>
+    <Cell><Data ss:Type="String">User Error</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelConfirmation</Data></Cell>
+    <Cell><Data ss:Type="String">確認…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LabelUhOh</Data></Cell>
+    <Cell><Data ss:Type="String">しまった</Data></Cell>
+    <Cell><Data ss:Type="String">Something unexpected happened</Data></Cell>
+   </Row>
+   <Row ss:Index="19">
+    <Cell><Data ss:Type="String">MainNewPostButton</Data></Cell>
+    <Cell><Data ss:Type="String">新規アップ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MainRepostButton</Data></Cell>
+    <Cell><Data ss:Type="String">再アップ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MainPostButton</Data></Cell>
+    <Cell><Data ss:Type="String">アップ</Data></Cell>
+   </Row>
+   <Row ss:Index="23">
+    <Cell><Data ss:Type="String">ToolStripNew</Data></Cell>
+    <Cell><Data ss:Type="String">新規作成</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripOpen</Data></Cell>
+    <Cell><Data ss:Type="String">開く</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripSave</Data></Cell>
+    <Cell><Data ss:Type="String">保存</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripCut</Data></Cell>
+    <Cell><Data ss:Type="String">カット</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripCopy</Data></Cell>
+    <Cell><Data ss:Type="String">コピー</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripPaste</Data></Cell>
+    <Cell><Data ss:Type="String">貼り付け</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripNoPostsets</Data></Cell>
+    <Cell><Data ss:Type="String">*no postsets*</Data></Cell>
+    <Cell><Data ss:Type="String">Used when there are no post sets</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripImage</Data></Cell>
+    <Cell><Data ss:Type="String">画像</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripLink</Data></Cell>
+    <Cell><Data ss:Type="String">リンク</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripBold</Data></Cell>
+    <Cell><Data ss:Type="String">太字</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripItalics</Data></Cell>
+    <Cell><Data ss:Type="String">斜体</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripUnderline</Data></Cell>
+    <Cell><Data ss:Type="String">下線</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripLeft</Data></Cell>
+    <Cell><Data ss:Type="String">左揃え</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripCenter</Data></Cell>
+    <Cell><Data ss:Type="String">中央揃え</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripRight</Data></Cell>
+    <Cell><Data ss:Type="String">右揃え</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripJustify</Data></Cell>
+    <Cell><Data ss:Type="String">両端揃え</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripOrderedList</Data></Cell>
+    <Cell><Data ss:Type="String">段落番号</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripUnorderedList</Data></Cell>
+    <Cell><Data ss:Type="String">箇条書き</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripOutdent</Data></Cell>
+    <Cell><Data ss:Type="String">インデント解除</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripIndent</Data></Cell>
+    <Cell><Data ss:Type="String">インデント</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripHighlight</Data></Cell>
+    <Cell><Data ss:Type="String">蛍光ペン色</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ToolStripFontColor</Data></Cell>
+    <Cell><Data ss:Type="String">フォントの色</Data></Cell>
+   </Row>
+   <Row ss:Index="46">
+    <Cell><Data ss:Type="String">MenuFile</Data></Cell>
+    <Cell><Data ss:Type="String">ファイル</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuFileNew</Data></Cell>
+    <Cell><Data ss:Type="String">新規作成</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuFileOpen</Data></Cell>
+    <Cell><Data ss:Type="String">開く…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuFileSave</Data></Cell>
+    <Cell><Data ss:Type="String">保存</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuFileSaveAs</Data></Cell>
+    <Cell><Data ss:Type="String">名前を付けて保存…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuFileGetEntry</Data></Cell>
+    <Cell><Data ss:Type="String">記事をダウンする…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuFileExit</Data></Cell>
+    <Cell><Data ss:Type="String">終了</Data></Cell>
+   </Row>
+   <Row ss:Index="54">
+    <Cell><Data ss:Type="String">MenuEdit</Data></Cell>
+    <Cell><Data ss:Type="String">編集</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuEditUndo</Data></Cell>
+    <Cell><Data ss:Type="String">取り消し</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuEditRedo</Data></Cell>
+    <Cell><Data ss:Type="String">やり直す</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuEditCut</Data></Cell>
+    <Cell><Data ss:Type="String">カット</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuEditCopy</Data></Cell>
+    <Cell><Data ss:Type="String">コピー</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuEditPaste</Data></Cell>
+    <Cell><Data ss:Type="String">貼り付け</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuEditSelectAll</Data></Cell>
+    <Cell><Data ss:Type="String">すべて選択</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuEditFind</Data></Cell>
+    <Cell><Data ss:Type="String">検索/置換…</Data></Cell>
+   </Row>
+   <Row ss:Index="63">
+    <Cell><Data ss:Type="String">MenuInsert</Data></Cell>
+    <Cell><Data ss:Type="String">挿入</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuInsertImage</Data></Cell>
+    <Cell><Data ss:Type="String">画像 / 写真…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuInsertClip</Data></Cell>
+    <Cell><Data ss:Type="String">Clip…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuInserTime</Data></Cell>
+    <Cell><Data ss:Type="String">時間</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuInsertDate</Data></Cell>
+    <Cell><Data ss:Type="String">日付</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuInsertSymbol</Data></Cell>
+    <Cell><Data ss:Type="String">記号…</Data></Cell>
+   </Row>
+   <Row ss:Index="70">
+    <Cell><Data ss:Type="String">MenuPost</Data></Cell>
+    <Cell><Data ss:Type="String">アップ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuPostPost</Data></Cell>
+    <Cell><Data ss:Type="String">アップ…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuPostPostSets</Data></Cell>
+    <Cell><Data ss:Type="String">サービスセット…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuPostServices</Data></Cell>
+    <Cell><Data ss:Type="String">サービス…</Data></Cell>
+   </Row>
+   <Row ss:Index="75">
+    <Cell><Data ss:Type="String">MenuTools</Data></Cell>
+    <Cell><Data ss:Type="String">ツール</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuToolsSpellCheck</Data></Cell>
+    <Cell><Data ss:Type="String">スペル チェック…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuToolsUpdate</Data></Cell>
+    <Cell><Data ss:Type="String">最新版…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuToolsPrefs</Data></Cell>
+    <Cell><Data ss:Type="String">設定…</Data></Cell>
+   </Row>
+   <Row ss:Index="80">
+    <Cell><Data ss:Type="String">MenuHelp</Data></Cell>
+    <Cell><Data ss:Type="String">ヘルプ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuHelpHelp</Data></Cell>
+    <Cell><Data ss:Type="String">ヘルプ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuHelpWebpage</Data></Cell>
+    <Cell><Data ss:Type="String">ホームページ…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuHelpForum</Data></Cell>
+    <Cell><Data ss:Type="String">掲示板…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuHelpAbout</Data></Cell>
+    <Cell><Data ss:Type="String">バージョン情報…</Data></Cell>
+   </Row>
+   <Row ss:Index="86">
+    <Cell><Data ss:Type="String">MenuDebug</Data></Cell>
+    <Cell><Data ss:Type="String">デバッグ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuDebugReload</Data></Cell>
+    <Cell><Data ss:Type="String">Editform更新</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MenuDebugShowInfo</Data></Cell>
+    <Cell><Data ss:Type="String">Blog Info Form表示</Data></Cell>
+   </Row>
+   <Row ss:Index="90">
+    <Cell><Data ss:Type="String">TabBody</Data></Cell>
+    <Cell><Data ss:Type="String">記事</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TabExtra</Data></Cell>
+    <Cell><Data ss:Type="String">追記</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TabPhoto</Data></Cell>
+    <Cell><Data ss:Type="String">写真</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TabOptions</Data></Cell>
+    <Cell><Data ss:Type="String">オプション</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TabBodyHTML</Data></Cell>
+    <Cell><Data ss:Type="String">記事HTML</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TabExtraHTML</Data></Cell>
+    <Cell><Data ss:Type="String">追記HTML</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TabLog</Data></Cell>
+    <Cell><Data ss:Type="String">Log</Data></Cell>
+   </Row>
+   <Row ss:Index="98">
+    <Cell><Data ss:Type="String">PhotoRevert</Data></Cell>
+    <Cell><Data ss:Type="String">リセット</Data></Cell>
+    <Cell><Data ss:Type="String">Photo Bottom Buttons</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoUndo</Data></Cell>
+    <Cell><Data ss:Type="String">取り消し</Data></Cell>
+    <Cell><Data ss:Type="String">Photo Bottom Buttons</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoRedo</Data></Cell>
+    <Cell><Data ss:Type="String">やり直す</Data></Cell>
+    <Cell><Data ss:Type="String">Photo Bottom Buttons</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoTabCrop</Data></Cell>
+    <Cell><Data ss:Type="String">回転/切り抜き</Data></Cell>
+    <Cell><Data ss:Type="String">Photo Tab</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoTabBright</Data></Cell>
+    <Cell><Data ss:Type="String">明るさ</Data></Cell>
+    <Cell><Data ss:Type="String">Photo Tab</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoTabHue</Data></Cell>
+    <Cell><Data ss:Type="String">Hue/Saturation</Data></Cell>
+    <Cell><Data ss:Type="String">Photo Tab</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoContrast</Data></Cell>
+    <Cell><Data ss:Type="String">コントラスト</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoBright</Data></Cell>
+    <Cell><Data ss:Type="String">明るさ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoHue</Data></Cell>
+    <Cell><Data ss:Type="String">色</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoSaturation</Data></Cell>
+    <Cell><Data ss:Type="String">Saturation</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoLightness</Data></Cell>
+    <Cell><Data ss:Type="String">明るさ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoTintHue</Data></Cell>
+    <Cell><Data ss:Type="String">淡彩色</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoTintAmount</Data></Cell>
+    <Cell><Data ss:Type="String">淡彩強さ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoGamma</Data></Cell>
+    <Cell><Data ss:Type="String">Gamma</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoRotate</Data></Cell>
+    <Cell><Data ss:Type="String">回転/引っ繰り返す</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoCrop</Data></Cell>
+    <Cell><Data ss:Type="String">切り抜き</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PhotoReset</Data></Cell>
+    <Cell><Data ss:Type="String">リセット</Data></Cell>
+    <Cell><Data ss:Type="String">Reset crop</Data></Cell>
+   </Row>
+   <Row ss:Index="116">
+    <Cell><Data ss:Type="String">PostOptionsFor</Data></Cell>
+    <Cell><Data ss:Type="String">記事オプション：</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsOn</Data></Cell>
+    <Cell><Data ss:Type="String">このサービスにアップ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsShared</Data></Cell>
+    <Cell><Data ss:Type="String">共用</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsKeywords</Data></Cell>
+    <Cell><Data ss:Type="String">キーワード:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsExcerpt</Data></Cell>
+    <Cell><Data ss:Type="String">引用:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsAuthoredOn</Data></Cell>
+    <Cell><Data ss:Type="String">投稿日時:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsPublish</Data></Cell>
+    <Cell><Data ss:Type="String">出版:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsAllowComments</Data></Cell>
+    <Cell><Data ss:Type="String">コメント受け入れる:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsAcceptTrackbacks</Data></Cell>
+    <Cell><Data ss:Type="String">トラックバック受け入れる:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsURLsToPing</Data></Cell>
+    <Cell><Data ss:Type="String">トラックバック先のURL:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsCategory</Data></Cell>
+    <Cell><Data ss:Type="String">カテゴリー:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsCategories</Data></Cell>
+    <Cell><Data ss:Type="String">カテゴリー:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsMainCategory</Data></Cell>
+    <Cell><Data ss:Type="String">マイン・カテゴリー</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsIcon</Data></Cell>
+    <Cell><Data ss:Type="String">アイコン:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostOptionsNoOptions</Data></Cell>
+    <Cell><Data ss:Type="String">このサービスのオプションがありません</Data></Cell>
+   </Row>
+   <Row ss:Index="132">
+    <Cell><Data ss:Type="String">Prefs</Data></Cell>
+    <Cell><Data ss:Type="String">Tanjunka設定</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsImageOptions</Data></Cell>
+    <Cell><Data ss:Type="String">イメージのオプション:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsMaxWidth</Data></Cell>
+    <Cell><Data ss:Type="String">最大幅さ:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsMaxHeight</Data></Cell>
+    <Cell><Data ss:Type="String">最大高さ:</Data></Cell>
+   </Row>
+   <Row ss:Height="25.5">
+    <Cell><Data ss:Type="String">PrefsCopyImagesLocal</Data></Cell>
+    <Cell><Data ss:Type="String">貼り付けられたHTMLのイメージをローカルにコピーする:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsAutoImageNames</Data></Cell>
+    <Cell><Data ss:Type="String">イメージファイル名を自動生成する:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsLanguage</Data></Cell>
+    <Cell><Data ss:Type="String">言語</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsOptions</Data></Cell>
+    <Cell><Data ss:Type="String">オプション:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsShowHTML</Data></Cell>
+    <Cell><Data ss:Type="String">HTML表示:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsConnection</Data></Cell>
+    <Cell><Data ss:Type="String">接続:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsUseProxy</Data></Cell>
+    <Cell><Data ss:Type="String">プロキシ サーバー使用する:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsProxyAddress</Data></Cell>
+    <Cell><Data ss:Type="String">アドレス:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsUseAuthentication</Data></Cell>
+    <Cell><Data ss:Type="String">認証を使用:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsProxyUsername</Data></Cell>
+    <Cell><Data ss:Type="String">ユーザー名:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsProxyPassword</Data></Cell>
+    <Cell><Data ss:Type="String">パスワード:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsDebug</Data></Cell>
+    <Cell><Data ss:Type="String">デバッグ:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsShowLog</Data></Cell>
+    <Cell><Data ss:Type="String">Log表示:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PrefsShowDebugMenu</Data></Cell>
+    <Cell><Data ss:Type="String">デバッグ メニュー表示:</Data></Cell>
+   </Row>
+   <Row ss:Index="151">
+    <Cell><Data ss:Type="String">ContextImageEdit</Data></Cell>
+    <Cell><Data ss:Type="String">編集…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ContextImageResize</Data></Cell>
+    <Cell><Data ss:Type="String">Resize…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ContextImageProperties</Data></Cell>
+    <Cell><Data ss:Type="String">プロパティ…</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ContextImageFloatLeft</Data></Cell>
+    <Cell><Data ss:Type="String">Float Left</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ContextImageFloatRight</Data></Cell>
+    <Cell><Data ss:Type="String">Float Right</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ContextImageNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Normal</Data></Cell>
+   </Row>
+   <Row ss:Index="158">
+    <Cell><Data ss:Type="String">PostSetTitle</Data></Cell>
+    <Cell><Data ss:Type="String">サービスセット編集</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostSet</Data></Cell>
+    <Cell><Data ss:Type="String">サービスセット:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostSetName</Data></Cell>
+    <Cell><Data ss:Type="String">名前:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostSetBlogService</Data></Cell>
+    <Cell><Data ss:Type="String">ブログ・サービス:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostSetPhotoService</Data></Cell>
+    <Cell><Data ss:Type="String">写真サービス:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostSetFileService</Data></Cell>
+    <Cell><Data ss:Type="String">ファイル・サービス:</Data></Cell>
+   </Row>
+   <Row ss:Index="165">
+    <Cell><Data ss:Type="String">PostsTitle</Data></Cell>
+    <Cell><Data ss:Type="String">オンライン記事をダウンロード/編集</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostsGetMore</Data></Cell>
+    <Cell><Data ss:Type="String">もっとダウンロード</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">PostsNoPosts</Data></Cell>
+    <Cell><Data ss:Type="String">このサービスはオンライン記事を読み込むことに対応していません。</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PostsSorry</Data></Cell>
+    <Cell><Data ss:Type="String">すみません</Data></Cell>
+   </Row>
+   <Row ss:Index="170">
+    <Cell><Data ss:Type="String">PublishTitle</Data></Cell>
+    <Cell><Data ss:Type="String">サービスセット</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PublishPostTo</Data></Cell>
+    <Cell><Data ss:Type="String">アップ</Data></Cell>
+   </Row>
+   <Row ss:Index="173">
+    <Cell><Data ss:Type="String">ServicesTitle</Data></Cell>
+    <Cell><Data ss:Type="String">サービス</Data></Cell>
+   </Row>
+   <Row ss:Index="175">
+    <Cell><Data ss:Type="String">ServiceTypeTitle</Data></Cell>
+    <Cell><Data ss:Type="String">サービス類</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ServiceTypePrompt</Data></Cell>
+    <Cell><Data ss:Type="String">サービス類を選択してください</Data></Cell>
+   </Row>
+   <Row ss:Index="178">
+    <Cell><Data ss:Type="String">AboutTitle</Data></Cell>
+    <Cell><Data ss:Type="String">Tanjunka(単純化）について</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AboutCreatedBy</Data></Cell>
+    <Cell><Data ss:Type="String">クリエイタ：</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AboutCopyright</Data></Cell>
+    <Cell><Data ss:Type="String">Copyright:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AboutVersion</Data></Cell>
+    <Cell><Data ss:Type="String">バージョン：</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AboutMoreInfo</Data></Cell>
+    <Cell><Data ss:Type="String">For more info please visit the</Data></Cell>
+   </Row>
+   <Row ss:Index="184">
+    <Cell><Data ss:Type="String">SettingsName</Data></Cell>
+    <Cell><Data ss:Type="String">名前:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsUserInfo</Data></Cell>
+    <Cell><Data ss:Type="String">ユーザー情報</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsEmail</Data></Cell>
+    <Cell><Data ss:Type="String">Eメール:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsUsername</Data></Cell>
+    <Cell><Data ss:Type="String">ユーサー名:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsPassword</Data></Cell>
+    <Cell><Data ss:Type="String">パスワード:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsPaths</Data></Cell>
+    <Cell><Data ss:Type="String">パス</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsImagePath</Data></Cell>
+    <Cell><Data ss:Type="String">イメージ パス:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsXMLRPCURL</Data></Cell>
+    <Cell><Data ss:Type="String">XML-RPC URL:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsDefaults</Data></Cell>
+    <Cell><Data ss:Type="String">デフォルト</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsBlog</Data></Cell>
+    <Cell><Data ss:Type="String">ブログ</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsPublish</Data></Cell>
+    <Cell><Data ss:Type="String">出版</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsAllowComments</Data></Cell>
+    <Cell><Data ss:Type="String">コメント受け入れる:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsAllowTrackback</Data></Cell>
+    <Cell><Data ss:Type="String">トラックバック受け入れる:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsAdvanced</Data></Cell>
+    <Cell><Data ss:Type="String">上級設定</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsEncoding</Data></Cell>
+    <Cell><Data ss:Type="String">エンコード:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsStyleSheet</Data></Cell>
+    <Cell><Data ss:Type="String">スタイルシート:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsUseStyleSheet</Data></Cell>
+    <Cell><Data ss:Type="String">スタイルシートを使用する</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsCSSFile</Data></Cell>
+    <Cell><Data ss:Type="String">CSSファイル:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsForms</Data></Cell>
+    <Cell><Data ss:Type="String">フォーム:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsUseCustomForms</Data></Cell>
+    <Cell><Data ss:Type="String">カスタム フォーム使用する</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsBodyForm</Data></Cell>
+    <Cell><Data ss:Type="String">記事フォーム:</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SettingsExtraForm</Data></Cell>
+    <Cell><Data ss:Type="String">追記フォーム:</Data></Cell>
+   </Row>
+   <Row ss:Index="207">
+    <Cell><Data ss:Type="String">ErrorNoPostSetsDefined</Data></Cell>
+    <Cell><Data ss:Type="String">まだサービスセット設定していません</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ErrorNoPostSetsSelected</Data></Cell>
+    <Cell><Data ss:Type="String">サービスセット選択されていません</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ErrorTroubleReadingEntry</Data></Cell>
+    <Cell><Data ss:Type="String">記事を読み込めませんでした</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">ErrorNoBlogServices</Data></Cell>
+    <Cell><Data ss:Type="String">ブログ・サービスまだ設定されていません。</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ErrorGetCategoryList</Data></Cell>
+    <Cell><Data ss:Type="String">カテゴリー リストを読み込めませんでした</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">ErrorServiceInUse</Data></Cell>
+    <Cell><Data ss:Type="String">このサービスはサービスセットに使われています。サービスを削除する前にサービスセットを編集か削除してください。</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ErrorNoServicesSelected</Data></Cell>
+    <Cell><Data ss:Type="String">No services selected</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">ErrorBadSettings</Data></Cell>
+    <Cell><Data ss:Type="String">Tanjunka設定を読み込めませんでした。設定をリセットするしかありません。ごめんなさい。</Data></Cell>
+   </Row>
+   <Row ss:Height="25.5">
+    <Cell><Data ss:Type="String">ErrorCantGetPosts</Data></Cell>
+    <Cell><Data ss:Type="String">このサービスはオンライン記事を読む込み機能がありません。</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">ErrorCantPostPhoto</Data></Cell>
+    <Cell><Data ss:Type="String">「{0}」という写真を「{1}」にアップ出来ませんでした</Data></Cell>
+    <Cell><Data ss:Type="String">{0} is image filename, {1} is service name</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ErrorCantPostEntry</Data></Cell>
+    <Cell><Data ss:Type="String">「{0}」に記事をアップ出来ませんでした。</Data></Cell>
+    <Cell><Data ss:Type="String">{0} service name</Data></Cell>
+   </Row>
+   <Row ss:Index="225">
+    <Cell><Data ss:Type="String">PromptClearIt</Data></Cell>
+    <Cell><Data ss:Type="String">記事が保存されていません。クリアしますか？</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">PromptGetEntry</Data></Cell>
+    <Cell><Data ss:Type="String">記事が保存されていません。Are you sure you want to get an entry?</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">PromptLoadEntry</Data></Cell>
+    <Cell><Data ss:Type="String">記事が保存されていません。他の記事を開きますか？</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PromptQuit</Data></Cell>
+    <Cell><Data ss:Type="String">記事が保存されていません。終了しますか？</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">PromptDeletePostsets</Data></Cell>
+    <Cell><Data ss:Type="String">Postset{0}前削除?</Data></Cell>
+    <Cell><Data ss:Type="String">{0} is replaced by the count of postsets</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="String">PromptDeleteServices</Data></Cell>
+    <Cell><Data ss:Type="String">Service{0}前削除?</Data></Cell>
+    <Cell><Data ss:Type="String">{0} is replaced by the count of services</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PromptTitle</Data></Cell>
+    <Cell><Data ss:Type="String">題名を入力</Data></Cell>
+   </Row>
+   <Row ss:Height="25.5">
+    <Cell><Data ss:Type="String">PromptHtml</Data></Cell>
+    <Cell><Data ss:Type="String">ここに記事を入力か写真をドラッグ・アンド・ドロップ</Data></Cell>
+   </Row>
+   <Row ss:Index="236">
+    <Cell><Data ss:Type="String">SpellCheck</Data></Cell>
+    <Cell><Data ss:Type="String">スペル チェック</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SpellCheckComplete</Data></Cell>
+    <Cell><Data ss:Type="String">スペル チェック完了</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>-4</HorizontalResolution>
+    <VerticalResolution>0</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>3</ActiveRow>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

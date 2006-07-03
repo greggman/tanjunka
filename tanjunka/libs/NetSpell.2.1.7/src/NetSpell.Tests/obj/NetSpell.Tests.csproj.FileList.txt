@@ -1,0 +1,6 @@
+bin\Release\NetSpell.Tests.dll
+bin\Release\\NetSpell.SpellChecker.dll
+bin\Release\\nunit.framework.dll
+bin\Release\\NetSpell.SpellChecker.xml
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\NetSpell.Tests.dll

@@ -1,0 +1,9 @@
+SCC = This is a source code control file
+
+[FlickrNet.sln]
+SCC_Aux_Path = http://scc.wdevs.com/VaultService|Flickr.Net:4
+SCC_Project_Name = $/FlickrNet
+
+[FlickrNet.csproj]
+SCC_Aux_Path = http://scc.wdevs.com/VaultService|Flickr.Net:4
+SCC_Project_Name = $/FlickrNet

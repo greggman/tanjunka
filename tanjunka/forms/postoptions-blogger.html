@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>New Page 1</title>
+<style>
+</style>
+<link rel="stylesheet" href="optionstyles.css">
+<script language="javascript" type="text/javascript" src="tanjunka_edit.js"></script>
+<script>
+function matchenabled()
+{
+    var chk = (postset_enabled.checked != true);
+
+    postoptions.disabled = chk;
+}
+</script>
+</head>
+<body>
+<div class="posttitle">$PostOptionsFor <span id="postoptionsname">blogger</span></div>
+<div><input onclick="matchenabled()" name="postset_enabled" type="CHECKBOX"/>$PostOptionsOn</DIV>
+<table id="postoptions" class="postoptions">
+<col class="postcol1">
+<col class="postcol2">
+<tr><td>$PostOptionsShared</TD><td></TD></TR>
+<tr><td><!-- <input name="shared_publish" type="CHECKBOX"/> --></TD><td><div><input type="checkbox" name="publish" value="ON" />$PostOptionsPublish</div></TD></TR>
+</TD></TR>
+</TABLE>
+
+
+</body>
+
+</html>

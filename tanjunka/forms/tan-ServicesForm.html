@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>New Page 1</title>
+<link rel="stylesheet" href="optionstyles.css">
+<script language="javascript" type="text/javascript" src="tanjunka_edit.js"></script>
+<script language="javascript">
+function addservice(checked, name, typename)
+{
+    var tbodyElem = document.getElementById("servicelist");
+    var trElem, tdElem;
+    var onstr = "";
+
+    if (checked != 0)
+    {
+        onstr = 'checked="true"';
+    }
+
+    var ndx = tbodyElem.rows.length;
+    trElem = tbodyElem.insertRow(ndx);
+
+    // first column
+    tdElem = trElem.insertCell(trElem.cells.length);
+    tdElem.className = "col1";
+    tdElem.innerHTML = '<input type="checkbox" name="service0_' + ndx + '" ' + onstr + '  />';
+
+    // 2nd column
+    tdElem = trElem.insertCell(trElem.cells.length);
+    tdElem.className = "col2";
+    tdElem.innerText = name;
+    tdElem.onclick     = editsomething;
+    tdElem.id            = "service1_" + ndx;
+    tdElem.ID            = "service1_" + ndx;
+
+    // 3nd column
+    tdElem = trElem.insertCell(trElem.cells.length);
+    tdElem.className = "col3";
+    tdElem.innerText = typename;
+    tdElem.onclick     = editsomething;
+    tdElem.id            = "service2_" + ndx;
+    tdElem.ID            = "service2_" + ndx;
+}
+</script>
+</head>
+<body>
+<table class="buttons" width="100%"><tr>
+    <td nowrap>
+    <input class="button" type="button" name="addservice" value="$LabelAdd" onclick="window.external.ClickSomething(1)" />
+    <input class="button" type="button" name="delservice" value="$LabelDelete" onclick="window.external.ClickSomething(2)" />
+    </td>
+</tr></table>
+
+<table id="servicelist" class="list" width="100%" >
+<col class="col1">
+<col class="col2">
+<col class="col3">
+<tr><td class="col1"><input type="checkbox" name="service1" value="OFF"  /></td><td class="col2" onclick="editsomething();">Greggman</td><td class="col3">Movabletype</td></tr>
+<tr><td class="col1"><input type="checkbox" name="service2" value="OFF"  /></td><td class="col2">Gregg</td><td class="col3">Flickr</td></tr>
+<tr><td class="col1"><input type="checkbox" name="service3" value="OFF"  /></td><td class="col2">Greggman</td><td class="col3">WordPress</td></tr>
+</table>
+
+</body>
+
+</html>

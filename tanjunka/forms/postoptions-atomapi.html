@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>New Page 1</title>
+<style>
+.postoptions {
+  border-collapse: collapse;
+  }
+.postoptions td {
+  border: 1px solid black;
+  padding: 4px;
+  }
+.postcol1 {
+  text-align: center;
+  }
+.postcol2 {
+  width: 100%;
+  white-space: nowrap;
+  }
+.postcategories td {
+  border: 0px;
+  padding: 0px;
+  }
+</style>
+<link rel="stylesheet" href="optionstyles.css">
+<script language="javascript" type="text/javascript" src="tanjunka_edit.js"></script>
+<script>
+function addcategory(name, checked, mainChecked)
+{
+    var tbodyElem = document.getElementById("postcategoriestbody");
+    var trElem, tdElem, txtNode;
+    var onOrOff;
+    var mainOnOrOff;
+    var rowNdx;
+
+    onOrOff = "";
+    if (checked != 0)
+    {
+      onOrOff = "CHECKED";
+    }
+
+    mainOnOrOff = "";
+    if (mainChecked != 0)
+    {
+        mainOnOrOff = "CHECKED";
+    }
+
+    rowNdx = tbodyElem.rows.length;
+    trElem = tbodyElem.insertRow(rowNdx);
+    trElem.className = "row" + (rowNdx % 2);
+
+    tdElem = trElem.insertCell(trElem.cells.length);
+    tdElem.innerHTML = '<input type="radio" name="mtmaincategory" id="categor1_' + rowNdx + '" ' + mainOnOrOff + ' value="' + rowNdx + '" />' +
+                       '<span id="catname_' + rowNdx + '"></span>';
+
+    window.document.all("catname_" + rowNdx).innerText = name;
+}
+
+function DoCal()
+{
+    var elTarget = window.event.srcElement;
+    var sRtn = showModalDialog("Calendar.htm","","center=yes;dialogWidth=200pt;dialogHeight=200pt;help=0;resizeable=0;scroll=0;status=0;");
+    if (sRtn!="")
+    {
+        if (sRtn == "clear")
+        {
+            elTarget.value = "";
+        }
+        else
+        {
+            elTarget.value = sRtn;
+        }
+    }
+}
+function matchenabled()
+{
+    var chk = (postset_enabled.checked != true);
+
+    postoptions.disabled = chk;
+}
+</script>
+</head>
+<body>
+<div class="posttitle">$PostOptionsFor <span id="postoptionsname">AtomAPI</span></div>
+<div><input onclick="matchenabled()" name="postset_enabled" type="CHECKBOX"/>$PostOptionsOn</DIV>
+<table id="postoptions" class="postoptions">
+<col class="postcol1">
+<col class="postcol2">
+<tr><td>$PostOptionsShared</TD><td></TD></TR>
+<tr><td><input name="shared_excerpt" type="CHECKBOX"/></TD><td><div>$PostOptionsExcerpt</div>
+<textarea name="excerpt" rows="4" cols="20"  /></textarea></TD></TR>
+<tr><td><input name="shared_postdate" type="CHECKBOX"/></TD><td><div>$PostOptionsAuthoredOn</div>
+<div><input onclick="DoCal()" class="full" type="text" name="postdate" size="20"  /></div></TD></TR>
+<tr><td></TD><td><div>$PostOptionsCategories<input class="button" type="button" value="$LabelUpdate" onclick="window.external.genericCallbackI(1)" /></div>
+<table class="postcategories">
+ <tbody id="postcategoriestbody">
+  <tr><td><input type="RADIO" name="mtmaincategory" id="c1" value="categor0001"/>Italian</TD><tr>
+  <tr><td><input type="RADIO" name="mtmaincategory" id="c2" value="categor0002"/>French</TD><tr>
+  <tr><td><input type="RADIO" name="mtmaincategory" id="c3" value="categor0003"/>Japanese</TD><tr>
+ </tbody>
+</TABLE>
+</TD></TR>
+</TABLE>
+
+
+</body>
+
+</html>

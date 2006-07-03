@@ -1,0 +1,10 @@
+bin\Release\NetSpell.DictionaryBuild.exe.config
+bin\Release\NetSpell.DictionaryBuild.exe
+bin\Release\\NetSpell.SpellChecker.dll
+bin\Release\\NetSpell.SpellChecker.xml
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\NetSpell.DictionaryBuild.AboutForm.resources
+obj\Release\NetSpell.DictionaryBuild.DictionaryForm.resources
+obj\Release\NetSpell.DictionaryBuild.MainForm.resources
+obj\Release\NetSpell.DictionaryBuild.csproj.GenerateResource.Cache
+obj\Release\NetSpell.DictionaryBuild.exe

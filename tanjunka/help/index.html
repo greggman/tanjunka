@@ -1,0 +1,904 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+
+<title>Tanjunka: Help</title>
+<style>
+table {
+  gborder-collapse: collapse;
+}
+.col1 {
+  white-space: nowrap;
+}
+td {
+  border: 1px dashed gray; padding: 3px;
+  gborder: 1px solid black;
+  background-color: #D0E0F0;
+  vertical-align: top;
+}
+.blanktable, .blanktable td
+{
+ background-color: white;
+ border: 0px;
+ padding: 0px;
+ margin: 0px;
+}
+body {
+  font-family: Verdana;
+  background-color: white;
+  color: black;
+}
+</style>
+</head>
+<body>
+<img align="RIGHT" src="../forms/tan-logo.jpg" width="200" height="200">
+<h1>Tanjunka Help</h1>
+<p>For the latest info please visit the <a href="http://tanjunka.com/">Tanjunka 
+website</a>.</p>
+<h2>Contents:</h2>
+<ul>
+  <li><a href="#What is Tanjunka">What is Tanjunka</a></li>
+  <li><a href="#Getting Started">Getting Started</a><ul>
+    <li><a href="#Setting up your first Service">Setting up your first service</a><ul>
+      <li><a href="#First-Movabletype">MovableType</a></li>
+      <li><a href="#First-Blogger">Blogger</a></li>
+      <li><a href="#First-Live Journal">Live Journa</a>l</li>
+      <li><a href="#First-Blogger API">Blogger API</a></li>
+      <li><a href="#First-Flickr">Flickr</a></li>
+    </ul>
+    </li>
+    <li><a href="#Setting up your first Post Set">Setting up your first Post Set</a></li>
+    <li><a href="#Posting your first Entry">Posting your first Entry</a></li>
+    <li><a href="#Setting up a Photo service">Setting up your first Photo 
+    Service</a></li>
+    <li><a href="#Posting your first Photo">Posting your first Photo</a></li>
+  </ul>
+  </li>
+  <li><a href="#Using Tanjuna">Using Tanjunka</a><ul>
+  <li><a href="#Toolbar">Toolbar</a></li>
+  <li><a href="#Working with Images">Working with Images</a><ul>
+  <li><a href="#Drag and Drop and image from Windows Explorer">Drag and Drop and 
+  image from Windows Explorer</a></li>
+  <li><a href="#Copy and Paste Files">Copy and Paste Files</a></li>
+  <li><a href="#Pick Insert Image">Pick Insert Image</a></li>
+  <li><a href="#Copy and Paste HTML">Copy and Paste Images from HTML</a></li>
+  <li><a href="#Copy and Paste Graphic Data">Copy and Paste Graphic Data</a></li>
+</ul>
+  </li>
+  <li><a href="#Editing Images">Editing Images</a><ul>
+  <li><a href="#Rotating, Flipping and Cropping">Rotating Flipping and Cropping</a></li>
+  <li><a href="#Adjusting Brightness and Contrast">Adjusting Brightness and 
+  Contrast</a></li>
+  <li><a href="#Adjusting Hue, Saturation and Tint">Adjusting Hue, Saturation 
+  and Tint</a></li>
+  <li><a href="#Tinting your image">Tinting your Image</a></li>
+  <li><a href="#Undo/Redo/Revert">Undo, Redo, Revert</a></li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li><a href="#Services">Services</a><ul>
+  <li><a href="#service-BloggerAPI">Movabletype</a></li>
+  <li>Blogger</li>
+  <li><a href="#service-Live Journal">Live Journal</a></li>
+  <li><a href="#service-Live Journal">Blogger API</a></li>
+  <li><a href="#service-Flickr">Flickr</a></li>
+</ul>
+  </li>
+  <li><a href="#Keyboard Shortcuts">Keyboard Shortcuts</a></li>
+  <li><a href="#Using Custom Style Sheets">Using Custom Style Sheets</a></li>
+  <li><a href="#Troubleshooting">Troubleshooting</a></li>
+</ul>
+<h2><a name="What is Tanjunka">What is Tanjunka</a></h2>
+<p>Tanjunka is a program for making it simpler to post entries with photos to 
+your blog.&nbsp; Typically when you want to post a photo you have to manually 
+upload it, often you have to manually prepare it before hand an a separate piece 
+of software before you upload it, both of those steps take time, time that would 
+be better spent being creative and updating your blog.</p>
+<p>With Tanjunka you just start typing, drag or paste some images in and it will 
+automatically prepare them for your blog.&nbsp; Pick Post and you&#39;re done.</p>
+<h2><a name="Getting Started">Getting Started</a></h2>
+<p>If this is your first time using Tanjunka you need to setup info for your 
+blog.</p>
+<h3><a name="Setting up your first Service">Setting up your first service</a>:</h3>
+<p>From the menus pick Post-&gt;Services... to bring up the Services form.&nbsp; 
+Click the &quot;Add...&quot; button and select the service that matching your blog software.&nbsp; 
+If a matching service is not listed it might be possible to use a compatible 
+service.&nbsp; Check your blog's instructions for more information. For a 
+particular service follow the corresponding instructions below</p>
+<h4><a name="First-Movabletype">Movabletype</a>:</h4>
+<p>You may be able to use this service for movabletype compatible blogs as well.</p>
+<p>Fill out the following fields.</p>
+<p>Movabletype:</p>
+<table>
+  <col class="col1">
+  <col class="col2">
+  <tbody>
+  <tr>
+    <td>Name:</td>
+    <td>a name for you to identify this service with.&nbsp; For 
+    example &quot;Gregg's Food Blog&quot;</td>
+  </tr>
+  <tr>
+    <td>Username:<br>
+    Password:</td>
+    <td>The username and password you use to log into your 
+    movabletype blog</td>
+  </tr>
+  <tr>
+    <td>XML-RPC URL:</td>
+    <td>This is the URL Tanjunka needs to be able to post to your 
+    blog.&nbsp; Go to the login page of your movabletype blog and you'll see an 
+    address similar to this:<pre>  http://Tanjunka.com/cgi-bin/mt.cgi</pre>
+    <p>Copy that address here but change the &quot;mt.cgi&quot; part to &quot;mt-xmlrpc.cgi&quot;&nbsp; 
+    In other words if the address is as above then you'd enter</p>
+    <pre>  <a href="http://tanjunka.com/cgi-bin/mt-xmlrpc.cgi">http://Tanjunka.com/cgi-bin/mt-xmlrpc.cgi</a></pre>
+    <p>If you are using a movabletype compatible blog service consult the 
+    documentation for that service for the correct XML-RPC URL.</td>
+  </tr>
+  </tbody>
+</table>
+<p>Click the &quot;Update&quot; button below the &quot;Blog:&quot; field.&nbsp; In a few seconds you 
+should see a list of the blogs you have setup.&nbsp; Pick the one you want for 
+this service.&nbsp; If you get an error then most likely your username, 
+password, or XML-RPC URL are incorrect.&nbsp; Double check them.&nbsp; If you 
+were successfully able to select a blog click &quot;OK&quot; and follow the instructions 
+below for <a href="#Setting up your first Post Set">setting up your first Post Set</a></p>
+<h4><a name="First-Blogger">Blogger</a>:</h4>
+<p>Fill out the following fields</p>
+<table>
+  <col class="col1">
+  <col class="col2">
+  <tbody>
+  <tr>
+    <td>Name:</td>
+    <td>a name for you to identify this service with.&nbsp; For 
+    example &quot;Yuki's Life Blog&quot;</td>
+  </tr>
+  <tr>
+    <td>Username:<br>
+    Password:</td>
+    <td>The username and password you use to log into Blogger</td>
+  </tr>
+  </tbody>
+</table>
+<p>Click the &quot;Update&quot; button below the &quot;Blog:&quot; field.&nbsp; In a few seconds you 
+should see a list of the blogs you have setup.&nbsp; Pick the one you want for 
+this service.&nbsp; If you get an error then most likely your username or 
+password are incorrect.&nbsp; Double check them.&nbsp; If you 
+were successfully able to select a blog click &quot;OK&quot; and follow the instructions 
+below for <a href="#Setting up your first Post Set">setting up your first Post Set</a></p>
+<p><a name="First-Live Journal">Live Journal</a></p>
+<p>Fill out the following fields</p>
+<table>
+  <col class="col1">
+  <col class="col2">
+  <tbody>
+  <tr>
+    <td>Name:</td>
+    <td>a name for you to identify this service with.&nbsp; For 
+    example &quot;JP's Osaka Life&quot;</td>
+  </tr>
+  <tr>
+    <td>Username:<br>
+    Password:</td>
+    <td>The username and password you use to log into your 
+    Live Journal</td>
+  </tr>
+  </tbody>
+</table>
+<p>Click the &quot;Update&quot; button below the &quot;Blog:&quot; field.&nbsp; In a few seconds you 
+should see a list of the blogs you have setup.&nbsp; Pick the one you want for 
+this service.&nbsp; If you get an error then most likely your username or 
+password are incorrect.&nbsp; Double check them.&nbsp; If you 
+were successfully able to select a blog click &quot;OK&quot; and follow the instructions 
+below for <a href="#Setting up your first Post Set">setting up your first Post Set</a></p>
+<p><a name="First-Blogger API">Blogger API</a></p>
+<p>The Blogger API can be used for a blog system that follows the Blogger API.&nbsp;
+<font color="#FF0000"><b>Note: If you are using Blogger USE THE &quot;Blogger&quot; service, 
+not the &quot;Blogger API&quot; service</b></font></p>
+<p>Fill out the following fields.</p>
+<table>
+  <col class="col1">
+  <col class="col2">
+  <tbody>
+  <tr>
+    <td>Name:</td>
+    <td>a name for you to identify this service with.&nbsp; For 
+    example &quot;Gregg&#39;s Food Blog&quot;</td>
+  </tr>
+  <tr>
+    <td>Username:<br>
+    Password:</td>
+    <td>The username and password you use to log into your movabletype blog</td>
+  </tr>
+  <tr>
+    <td>XML-RPC URL:</td>
+    <td>This is the URL Tanjunka needs to be able to post to your 
+    blog.&nbsp; Check the documentation for your blog for the correct URL to 
+    enter here</td>
+  </tr>
+  </tbody>
+</table>
+<p>Click the &quot;Update&quot; button below the &quot;Blog:&quot; field.&nbsp; In a few seconds you 
+should see a list of the blogs you have setup.&nbsp; Pick the one you want for 
+this service.&nbsp; If you get an error then most likely your username, 
+password, or XML-RPC URL are incorrect.&nbsp; Double check them.&nbsp; If you 
+were successfully able to select a blog click &quot;OK&quot; and follow the instructions 
+below for <a href="#Setting up your first Post Set">setting up your first Post Set</a></p>
+<p><a name="First-Flickr">Flickr</a></p>
+<p>Flickr is NOT a blog service, it is a Photo service.&nbsp; If you are using a 
+blog service that does not support photos directly, for example Blogger or Live 
+Journal, then you can setup Tanjunka to post pictures on Flickr and they will 
+appear on your blog but first you need to setup your blog so select the matching 
+service above.</p>
+<h3><a name="Setting up your first Post Set">Setting up your first Post Set</a>:</h3>
+<p>If you have already setup a service and the &quot;Services&quot; window is still open 
+click &quot;OK&quot; to close it.</p>
+<p>Now from the menus pick &quot;Post-&gt;Post Sets...&quot; then click &quot;Add...&quot;</p>
+<p>A Post Set is a combination of a blog service and a photo service.&nbsp; If 
+you are using a blog service that directly supports photos, for example 
+movabletype, then both services may be the same.&nbsp; If you are using a blog 
+service that does not support photos directly then you can use a different 
+service, for example <a href="http://flickr.com/">flickr</a>, to host your 
+images.&nbsp; In either case, for now lets just deal with the blog part, not the 
+photo part.</p>
+<p>The only thing you should have to do is enter a name for this post set.&nbsp; 
+For example, &quot;Gregg&#39;s Food Blog&quot; then click &quot;OK&quot; then click &quot;Close&quot; to close the 
+Post Set window.</p>
+<h3><a name="Posting your first Entry">Posting your first Entry</a>:</h3>
+<p>Click where it says &quot;Enter a Title&quot;, delete that text and enter a title.&nbsp; 
+For example &quot;My First Post from Tanjunka&quot;.&nbsp; Click &quot;Type an Entry Here 
+or Drag and Drop Some Images&quot;, delete that text and type an entry like &quot;I&#39;m 
+testing out Tanjunka.&quot;</p>
+<p>At the bottom of the window click &quot;Post&quot;.&nbsp; When the Post Sets window 
+appears make sure the checkbox next to your post set is checked then click &quot;Post 
+To&quot;.&nbsp; If everything went well your post should have appeared on your blog. 
+Open your browser and navigate to your blog to see.</p>
+<p>Some services take a few moments to update so if you don&#39;t see the results 
+immediately wait a few moments and pick refresh in your web browser.&nbsp; If it 
+still doesn&#39;t show up see the troubleshooting section</p>
+<h3><a name="Setting up a Photo service">Setting up a Photo service</a>:</h3>
+<p>If you are using a service that directly supports photos like movabletype you 
+can skip ahead to <a href="#Posting your first Photo">Posting your first Photo</a>.</p>
+<p>If you are using a service that does not directly support photos visit the
+<a href="http://flickr.com/">flickr website</a> and sign up for an account . 
+Once you have your account setup go into Tanjunka, from the menus pick 
+Post-&gt;Services..., click &quot;Add...&quot;, choose &quot;Flickr&quot; and click &quot;OK&quot;.&nbsp; Fill 
+out the following fields</p>
+<table>
+  <col class="col1">
+  <col class="col2">
+  <tbody>
+  <tr>
+    <td>Name:</td>
+    <td>a name for you to identify this service with.&nbsp; For 
+    example &quot;Colin's Flickr&quot;</td>
+  </tr>
+  <tr>
+    <td>E-Mail:<br>
+    Password:</td>
+    <td>The e-mail and password you use to log into flickr</td>
+  </tr>
+  </tbody>
+</table>
+<p>Click &quot;OK&quot; then Click &quot;OK&quot; again to exit the Services window.&nbsp; Bring up 
+the Post Sets window by picking &quot;Post-&gt;Post Sets...&quot; from the menus.&nbsp; Click 
+the name of the Post Set you created previously. Where it says &quot;Photo Service:&quot; 
+use the drop down list to select the flickr service you just created.&nbsp; 
+Click &quot;OK&quot; and then &quot;Close&quot; to exit the Post Sets window</p>
+<h3><a name="Posting your first Photo">Posting your first Photo</a>:</h3>
+<p>Select &quot;File-&gt;New&quot; from the menus. If you are asked if you are sure pick 
+&quot;Yes&quot;. Enter a title, for example, &quot;My first photo from Tanjunka&quot; and enter some 
+text, for example, &quot;Tanjunka makes posting photos easy!&quot;.&nbsp; Now, open 
+Windows Explorer or Double Click on My Documents and navigate to some photos you 
+have.&nbsp; These are often found in the My Pictures folder.&nbsp; Drag and Drop 
+a photo on to Tanjunka.&nbsp; Alternatively, select the photo, pick copy, then 
+go to Tanjunka, click somewhere in your entry and pick &quot;Paste&quot;. The photo should 
+appear in Tanjunka. It will automatically be scaled to 400x300 pixels which is 
+the default size for most blogs.</p>
+<p>At the bottom of the window click &quot;Post&quot;.&nbsp; When the Post Sets window 
+appears make sure the checkbox next to your post set is checked then click &quot;Post 
+To&quot;.&nbsp; If everything went well your post with your photo should have appeared on your blog. 
+Open your browser and navigate to your blog to see.</p>
+<p>Some services take a few moments to update so if you don&#39;t see the results 
+immediately wait a few moments and pick refresh in your web browser.&nbsp; If it 
+still doesn&#39;t show up see the troubleshooting section</p>
+<h2><a name="Using Tanjuna">Using Tanjunka</a>:</h2>
+<p>Here is the main Tanjunka window.</p>
+<p align="center"><img border="0" src="screenshot.gif" width="500" height="369"></p>
+<p align="left">If you&#39;ve used any Windows software before most of it should be 
+familiar to do so I&#39;m first going to go over the stuff that is specific to 
+Tanjunka.</p>
+<p align="center"><img border="1" src="top-left.gif" width="412" height="171"></p>
+<p align="left">The first drop down list in the toolbar, the one that says &quot;G&#39;s 
+Blogger&quot; in the image above is the list of post sets you have setup in Tanjunka.&nbsp; 
+You can one of them here to change which settings are being used to edit the 
+current post.&nbsp; The most important place this comes up is under the 
+&quot;Options&quot; tab.&nbsp; Different services have different options so before you 
+post if you need any special settings, for example categories or keywords then 
+you should click on the &quot;Options&quot; tab and then select the Post Set for which you 
+want to edit options.</p>
+<p align="left">Since Tanjunka supports posting to more than one blog at the 
+same time you can edit the options for every post set you have.</p>
+<p align="left">Otherwise, generally you type a title, type some text for your 
+entry and choose post.&nbsp; You can use the icons on the toolbar to help you 
+format your entry.&nbsp; The icons on the toolbar from left to right are as 
+follows:</p>
+<h3 align="left"><a name="Toolbar">Toolbar</a>:</h3>
+<table>
+  <col class="col1">
+  <col class="col2">
+  <tbody>
+  <tr>
+    <td>New:</td>
+    <td>Creates a new entry (clears out the old one)</td>
+  </tr>
+  <tr>
+    <td>Open:</td>
+    <td>Opens an entry from a saved entry file</td>
+  </tr>
+  <tr>
+    <td>Save:</td>
+    <td>Saves the current entry to a file.&nbsp; Note: You can send this entry 
+    to someone else using Tanjunka.&nbsp; It will contain the entire entry 
+    including images.</td>
+  </tr>
+  <tr>
+    <td>Cut:</td>
+    <td>Cuts the selected text to the clipboard</td>
+  </tr>
+  <tr>
+    <td>Copy:</td>
+    <td>Copies the selected text to the clipboard</td>
+  </tr>
+  <tr>
+    <td>Paste:</td>
+    <td>Pastes the text in the clipboard</td>
+  </tr>
+  <tr>
+    <td>Post Sets</td>
+    <td>Sets the Post Set you want to work with.&nbsp; If you have custom styles 
+    setup this will also show your entry in the style for that post set.</td>
+  </tr>
+  <tr>
+    <td>Style:</td>
+    <td>Sets the currently selected text to a particular style</td>
+  </tr>
+  <tr>
+    <td>Font Size:</td>
+    <td>Sets the selected text to a font size.</td>
+  </tr>
+  <tr>
+    <td>Insert Images:</td>
+    <td>Brings up a window letting you select one or more images to insert.&nbsp; 
+    See <a href="#Working with Images">Working with Images</a> for other ways to 
+    bring images into your post.</td>
+  </tr>
+  <tr>
+    <td>Hyperlink:</td>
+    <td>Insert a link if no text is selected.&nbsp; Create a link from the 
+    selected text OR edit the link currently at the cursor.</td>
+  </tr>
+  <tr>
+    <td>Bold:</td>
+    <td>Toggles Bold</td>
+  </tr>
+  <tr>
+    <td>Italic:</td>
+    <td>Toggles Italic</td>
+  </tr>
+  <tr>
+    <td>Underline:</td>
+    <td>Toggles Underline</td>
+  </tr>
+  <tr>
+    <td>Left:</td>
+    <td>Left justifies the current paragraph</td>
+  </tr>
+  <tr>
+    <td>Center:</td>
+    <td>Centers the current paragraph</td>
+  </tr>
+  <tr>
+    <td>Right:</td>
+    <td>Right justifies the current paragraph</td>
+  </tr>
+  <tr>
+    <td>Justify:</td>
+    <td>Justifies the current paragraph</td>
+  </tr>
+  <tr>
+    <td>Ordered List:</td>
+    <td>Converts the current selection to an ordered list</td>
+  </tr>
+  <tr>
+    <td>Unordered List:</td>
+    <td>Converts the current selection to an ordered list</td>
+  </tr>
+  <tr>
+    <td>Outdent:</td>
+    <td>Unindents the current selection</td>
+  </tr>
+  <tr>
+    <td>Indent:</td>
+    <td>Indents the current selection</td>
+  </tr>
+  <tr>
+    <td>Highlight:</td>
+    <td>Highlights the current selection to with a color</td>
+  </tr>
+  <tr>
+    <td>Color:</td>
+    <td>Sets the text color of the selection.</td>
+  </tr>
+  </tbody>
+</table><h3 align="left"><a name="Working with Images">Working with Images</a></h3>
+<p align="left">Tanjunka&#39;s main strength is making it easy to get images into 
+your entries.&nbsp; There are several ways:</p>
+<h4 align="left"><a name="Drag and Drop and image from Windows Explorer">Drag 
+and Drop and image from Windows Explorer</a></h4>
+<p align="left">Double 
+click on My Computer or My Documents, find your pictures.&nbsp; If they are not 
+visible as Thumbnails choose Thumbnails from the view menu. Then drag and drop 
+an image into your Tanjunka entry</p>
+<p align="center">
+<img border="0" src="drag-n-drop.jpg" width="471" height="403"></p>
+<p align="left">
+Tanjunka will automatically scale and recompress the image for your blog.</p>
+<h4 align="left">
+<a name="Copy and Paste Files">Copy and Paste Files</a></h4>
+<p align="left">
+Instead of dragging and dropping like above you can select the files in Windows 
+Explorer, pick copy, switch to Tanjunka, click in the entry and pick paste.</p>
+<h4 align="left">
+<a name="Pick Insert Image">Pick Insert Image</a></h4>
+<p align="left">
+Clicking the image icon on the toolbar or picking Insert-&gt;Image... from the 
+menus you can select multiple images to insert.&nbsp; Again, Tanjunka will 
+automatically prepare them for your blog.</p>
+<h4 align="left">
+<a name="Copy and Paste HTML">Copy and Paste Images from HTML</a>:</h4>
+<p align="left">
+If you select some HTML from a browser window and paste it into Tanjunka it will 
+copy the embedded images and prepare them for your blog</p>
+<h4 align="left">
+<a name="Copy and Paste Graphic Data">Copy and Paste Graphic Data</a>:</h4>
+<p align="left">
+If you have graphic data in the clipboard and paste it into Tanjunka, Tanjunka 
+will automatically create a new image ready to upload to your blog.&nbsp; To see 
+some examples of this</p>
+<p align="left">
+1) If you have a graphic program like Photoshop.&nbsp; Load it, load a picture, 
+select part of the pictures, Copy, Switch to Tanjunka, click in the entry area, 
+paste.</p>
+<p align="left">
+2) Press the &quot;Print Screen&quot; key on your keyboard to take screenshot.&nbsp; Go to 
+Tanjunka, click in the entry area, paste.</p>
+<h3 align="left">
+<a name="Editing Images">Editing Images</a></h3>
+<p align="left">
+Double click an image to edit it.&nbsp; The photo editing tab will appear.</p>
+<p align="center">
+<img border="0" src="edit-screenshot.jpg" width="500" height="372"></p>
+<p align="left">
+Along the right side are controls for editing your image.&nbsp; Note that 
+Tanjunka only works on copies of your images, it does not edit the originals.&nbsp; 
+Also the changes are never permanent.&nbsp; You can always revert back to the 
+original image.&nbsp; When you post your entry Tanjunka will generate an image 
+based on your edits and send that image to your blog or photo service.</p>
+<h4 align="left">
+<a name="Rotating, Flipping and Cropping">Rotating, Flipping and Cropping</a></h4>
+<table class="blanktable"><tr><td><p align="left">
+<img border="0" src="edit-crop.gif" align="right" width="231" height="366">The 
+first photo editing tab allows you to rotate, flip and crop your image. To crop, 
+select the area of the image you want to keep by dragging a rectangle in the 
+image on the left. Then click the &quot;Crop&quot; button.&nbsp; If you want to remove all 
+cropping and go back to the entire original image you can click the &quot;Reset&quot; 
+button.</p></td></tr></table>
+<h4><a name="Adjusting Brightness and Contrast">Adjusting Brightness and 
+Contrast</a></h4>
+<table class="blanktable"><tr><td><p align="left">
+<img border="0" src="edit-bright.gif" align="right" width="231" height="366">Contrast: 
+Left lowers the contrast, right increases the contast</p><p align="left">
+Brightness: Left lowers the brightness toward black, right raises the brightness 
+toward white</p><p align="left">
+Gamma is also a kind of contrast setting.&nbsp; Experiment with it</p></td></tr></table>
+<h4><a name="Adjusting Hue, Saturation and Tint">Adjusting Hue, Saturation and 
+Tint</a></h4>
+<table class="blanktable"><tr><td><p align="left">
+<img border="0" src="edit-hue.gif" align="right" width="231" height="366">Hue: 
+Rotates the hues of the image around the color wheel. Red &gt; Yellow -&gt; Green -&gt; 
+Blue -&gt; Purple -&gt; Red.&nbsp; (-180 to 180)</p><p align="left">
+Saturation: Saturates or de-saturates the colors in your image.&nbsp; Drag all 
+the way to the left to remove all color or to the right to exaggerate the 
+colors.</p><p align="left">
+Lightness: Same as the brightness setting on the previous tab.</p><p align="left">
+Tint-Hue: Tints the image a setable amount in a certain color.</p><p align="left">
+Tint-Amount: Adjust the amount of colored Tint to apply to the image. See Below</p></td></tr></table>
+<h4 align="left">
+<a name="Tinting your image">Tinting your image</a></h4>
+<p align="left">
+The most common use for tint is to take an image and make it all one color.&nbsp; 
+To do this, set the Saturation to 0 (drag the setting all the way to the left).&nbsp; 
+The raise the Tint-Amount.&nbsp; All the way to the right will give it an 
+extremely brightly colored tint.&nbsp; Set it to the amount you want. Then drag 
+the Tint-Hue to the color you want.&nbsp; You can then adjust the Lightness 
+setting for a darker or lighter image.</p>
+<p align="center">
+<img border="0" src="edit-tint.gif" width="400" height="298"></p>
+<h4 align="left">
+<a name="Undo/Redo/Revert">Undo, Redo, Revert</a></h4>
+<p align="left">
+Undo and Redo should be pretty self explanatory. Revert sets the entire picture 
+back to the original image with no cropping and no color adjustments.</p>
+<p align="left">
+Note: Undo and Redo are remembered for each photo.&nbsp; In other words, if you 
+adjust the hue of image1 then adjust the saturation of image2, then go back to 
+editing image1 if you click undo you&#39;ll undo the editing of image1.&nbsp; Image2 
+will not be effected. </p>
+<h2><a name="Services">Services</a>:</h2>
+<p>A list of options and things to be aware of for each service</p>
+<h3><a name="service-Movabletype">Movabletype</a></h3>
+<table>
+  <col class="col1">
+  <col class="col2">
+  <tbody>
+  <tr>
+    <td>Name:</td>
+    <td>a name for you to identify this service with.&nbsp;For 
+    example &quot;Gregg's Food Blog&quot;</td>
+  </tr>
+  <tr>
+    <td>Username:<br>
+    Password:</td>
+    <td>The username and password you use to log into your 
+    movabletype blog</td>
+  </tr>
+  <tr>
+    <td>Image Path:</td>
+    <td>Added to upload path.&nbsp; Example &quot;images&quot;.&nbsp; This path is passed 
+    to moveabletype to help it decide where to store your image.</td>
+  </tr>
+  <tr>
+    <td>XML-RPC URL:</td>
+    <td>This is the URL Tanjunka needs to be able to post to your 
+    blog.&nbsp; Go to the login page of your movabletype blog and you'll see an 
+    address similar to this:<pre>  http://Tanjunka.com/cgi-bin/mt.cgi</pre>
+    <p>Copy that address here but change the &quot;mt.cgi&quot; part to &quot;mt-xmlrpc.cgi&quot;&nbsp; 
+    In other words if the address is as above then you'd enter</p>
+    <pre>  <a href="http://tanjunka.com/cgi-bin/mt-xmlrpc.cgi">http://Tanjunka.com/cgi-bin/mt-xmlrpc.cgi</a></pre>
+    <p>If you are using a movabletype compatible blog service consult the 
+    documentation for that service for the correct XML-RPC URL.</td>
+  </tr>
+  <tr>
+    <td>Blog:</td>
+    <td>The Blog you have this service setup to post to.&nbsp; Click the Update 
+    button to refresh the list.</td>
+  </tr>
+  <tr>
+    <td>Publish</td>
+    <td>The default publish value for new entries.</td>
+  </tr>
+  <tr>
+    <td>Allow Comments:</td>
+    <td>The default allow comment value for new entries.</td>
+  </tr>
+  <tr>
+    <td>Allow Trackback:</td>
+    <td>The default allow trackback value for new entries.</td>
+  </tr>
+  <tr>
+    <td>Encoding:</td>
+    <td>The character encoding to use for posts.&nbsp; Apparently movabletype 
+    does not support anything other than Unicode UTF-8 for posting through XML-RPC.&nbsp; 
+    So, if you are using movabletype leave this as Unicode UTF-8.&nbsp; Some 
+    other blog systems that support the movabletype API might be able to support 
+    other character sets.</td>
+  </tr>
+  <tr>
+    <td>Use Style Sheet</td>
+    <td>Check this box to use a custom style sheet.&nbsp; For each blog you can 
+    setup a custom CSS style sheet so that Tanjunka will display your new entry 
+    exactly as you would see it on your blog as you enter it.&nbsp; See
+    <a href="#Using Custom Style Sheets">Using Custom Style Sheets</a> for more 
+    information.</td>
+  </tr>
+  <tr>
+    <td>CSS File:</td>
+    <td>This is the path to your custom CSS Style Sheet.&nbsp; Click the 
+    &quot;Browse...&quot; button to select it.</td>
+  </tr>
+  <tr>
+    <td>Use Custom Forms:</td>
+    <td>You can even go so far as to create custom html forms for each blog.&nbsp; 
+    This would allow you to edit inside Tanjunka as though you were editing 
+    directly on your blog including your banner, your side bars, and other 
+    features of your blog.<p><b><font color="#FF0000">NOTE:</font></b> It&#39;s 
+    still an experimental option and although you can get tio work with a lot of 
+    effort it is essentially not yet implemented.</td>
+  </tr>
+  <tr>
+    <td>Body Form:<br>
+    More Form:</td>
+    <td>The custom forms for the body and extra tabs of the main Tanjunka 
+    display for this blog.</td>
+  </tr>
+  </tbody>
+</table>
+<h3><a name="service-Blogger">Blogger</a></h3>
+<table height="642">
+  <col class="col1">
+  <col class="col2">
+  <tbody>
+  <tr>
+    <td height="40">Name:</td>
+    <td height="40">a name for you to identify this service with.&nbsp;For 
+    example &quot;Jill's Wedding Blog&quot;</td>
+  </tr>
+  <tr>
+    <td height="40">Username:<br>
+    Password:</td>
+    <td height="40">The username and password you use to log into blogger</td>
+  </tr>
+  <tr>
+    <td height="22">Blog:</td>
+    <td height="22">The Blog you have this service setup to post to.&nbsp; Click 
+    the Update button to refresh the list.</td>
+  </tr>
+  <tr>
+    <td height="94">Use Style Sheet</td>
+    <td height="94">Check this box to use a custom style sheet.&nbsp; For each blog you can 
+    setup a custom CSS style sheet so that Tanjunka will display your new entry 
+    exactly as you would see it on your blog as you enter it.&nbsp; See
+    <a href="#Using Custom Style Sheets">Using Custom Style Sheets</a> for more 
+    information.</td>
+  </tr>
+  <tr>
+    <td height="40">CSS File:</td>
+    <td height="40">This is the path to your custom CSS Style Sheet.&nbsp; Click the 
+    &quot;Browse...&quot; button to select it.</td>
+  </tr>
+  <tr>
+    <td height="149">Use Custom Forms:</td>
+    <td height="149">You can even go so far as to create custom html forms for each blog.&nbsp; 
+    This would allow you to edit inside Tanjunka as though you were editing 
+    directly on your blog including your banner, your side bars, and other 
+    features of your blog.<p><b><font color="#FF0000">NOTE:</font></b> It&#39;s 
+    still an experimental option and although you can get tio work with a lot of 
+    effort it is essentially not yet implemented.</td>
+  </tr>
+  <tr>
+    <td height="40">Body Form:<br>
+    More Form:</td>
+    <td height="40">The custom forms for the body and extra tabs of the main 
+    Tanjunka 
+    display for this blog.</td>
+  </tr>
+  </tbody>
+</table>
+<h3><a name="service-Live Journal">Live Journal</a></h3>
+<table height="642">
+  <col class="col1">
+  <col class="col2">
+  <tbody>
+  <tr>
+    <td height="40">Name:</td>
+    <td height="40">a name for you to identify this service with.&nbsp;For example 
+    &quot;John&#39;s Journal&quot;</td>
+  </tr>
+  <tr>
+    <td height="40">Username:<br>
+    Password:</td>
+    <td height="40">The username and password you use to log into Live Journal</td>
+  </tr>
+  <tr>
+    <td height="22">Blog:</td>
+    <td height="22">The Blog you have this service setup to post to.&nbsp; Click 
+    the Update button to refresh the list.</td>
+  </tr>
+  <tr>
+    <td height="22">Publish</td>
+    <td height="22">The default publish value for new entries.</td>
+  </tr>
+  <tr>
+    <td height="94">Use Style Sheet</td>
+    <td height="94">Check this box to use a custom style sheet.&nbsp; For each blog you can 
+    setup a custom CSS style sheet so that Tanjunka will display your new entry 
+    exactly as you would see it on your blog as you enter it.&nbsp; See
+    <a href="#Using Custom Style Sheets">Using Custom Style Sheets</a> for more 
+    information.</td>
+  </tr>
+  <tr>
+    <td height="40">CSS File:</td>
+    <td height="40">This is the path to your custom CSS Style Sheet.&nbsp; Click the 
+    &quot;Browse...&quot; button to select it.</td>
+  </tr>
+  <tr>
+    <td height="149">Use Custom Forms:</td>
+    <td height="149">You can even go so far as to create custom html forms for each blog.&nbsp; 
+    This would allow you to edit inside Tanjunka as though you were editing 
+    directly on your blog including your banner, your side bars, and other 
+    features of your blog.<p><b><font color="#FF0000">NOTE:</font></b> It&#39;s 
+    still an experimental option and although you can get tio work with a lot of 
+    effort it is essentially not yet implemented.</td>
+  </tr>
+  <tr>
+    <td height="40">Body Form:<br>
+    More Form:</td>
+    <td height="40">The custom forms for the body and extra tabs of the main 
+    Tanjunka 
+    display for this blog.</td>
+  </tr>
+  </tbody>
+</table>
+<h3><a name="service-BloggerAPI">Blogger API</a></h3>
+<p>The Blogger API can be used for a blog system that follows the Blogger API.&nbsp;
+<font color="#FF0000"><b>Note: If you are using Blogger USE THE &quot;Blogger&quot; service, 
+not the &quot;Blogger API&quot; service</b></font></p>
+<table>
+  <col class="col1">
+  <col class="col2">
+  <tbody>
+  <tr>
+    <td>Name:</td>
+    <td>a name for you to identify this service with.&nbsp;For 
+    example &quot;Old Richard's Old Blog&quot;</td>
+  </tr>
+  <tr>
+    <td>Username:<br>
+    Password:</td>
+    <td>The username and password you use to log into your 
+    Blogger API compatible blog</td>
+  </tr>
+  <tr>
+    <td>XML-RPC URL:</td>
+    <td>This is the URL Tanjunka needs to be able to post to your 
+    blog.&nbsp; Consult the 
+    documentation for that service for the correct XML-RPC URL.</td>
+  </tr>
+  <tr>
+    <td>Blog:</td>
+    <td>The Blog you have this service setup to post to.&nbsp; Click the Update 
+    button to refresh the list.</td>
+  </tr>
+  <tr>
+    <td>Publish</td>
+    <td>The default publish value for new entries.</td>
+  </tr>
+  <tr>
+    <td>Encoding:</td>
+    <td>The character encoding to use for posts.&nbsp; Consult your blog 
+    software for information on which character encodings it supports.</td>
+  </tr>
+  <tr>
+    <td>Use Style Sheet</td>
+    <td>Check this box to use a custom style sheet.&nbsp; For each blog you can 
+    setup a custom CSS style sheet so that Tanjunka will display your new entry 
+    exactly as you would see it on your blog as you enter it.&nbsp; See
+    <a href="#Using Custom Style Sheets">Using Custom Style Sheets</a> for more 
+    information.</td>
+  </tr>
+  <tr>
+    <td>CSS File:</td>
+    <td>This is the path to your custom CSS Style Sheet.&nbsp; Click the 
+    &quot;Browse...&quot; button to select it.</td>
+  </tr>
+  <tr>
+    <td>Use Custom Forms:</td>
+    <td>You can even go so far as to create custom html forms for each blog.&nbsp; 
+    This would allow you to edit inside Tanjunka as though you were editing 
+    directly on your blog including your banner, your side bars, and other 
+    features of your blog.<p><b><font color="#FF0000">NOTE:</font></b> It&#39;s 
+    still an experimental option and although you can get tio work with a lot of 
+    effort it is essentially not yet implemented.</td>
+  </tr>
+  <tr>
+    <td>Body Form:<br>
+    More Form:</td>
+    <td>The custom forms for the body and extra tabs of the main Tanjunka 
+    display for this blog.</td>
+  </tr>
+  </tbody>
+</table>
+<h3><a name="service-Flickr">Flickr</a></h3>
+<table>
+  <col class="col1">
+  <col class="col2">
+  <tbody>
+  <tr>
+    <td>Name:</td>
+    <td>a name for you to identify this service with.&nbsp;For 
+    example &quot;Hiroko&#39;s Photos&quot;</td>
+  </tr>
+  <tr>
+    <td>E-Mail:<br>
+    Password:</td>
+    <td>The e-mail address and password you use to log into Flickr</td>
+  </tr>
+  </tbody>
+</table>
+<h2><a name="Keyboard Shortcuts">Keyboard Shortcuts</a>:</h2>
+<table>
+  <col class="col1">
+  <col class="col2">
+  <tbody>
+  <tr>
+    <td>Ctrl-A</td>
+    <td>select all</td>
+  </tr>
+  <tr>
+    <td>Ctrl-B</td>
+    <td>toggle <b>bold</b></td>
+  </tr>
+  <tr>
+    <td>Ctrl-C</td>
+    <td>copy</td>
+  </tr>
+  <tr>
+    <td>Ctrl-F</td>
+    <td>Find</td>
+  </tr>
+  <tr>
+    <td>Ctrl-I</td>
+    <td>toggle <i>italic</i></td>
+  </tr>
+  <tr>
+    <td>Ctrl-K</td>
+    <td>edit/create hyperlink</td>
+  </tr>
+  <tr>
+    <td>Ctrl-U</td>
+    <td>toggle <u>underline</u></td>
+  </tr>
+  <tr>
+    <td>Ctrl-V</td>
+    <td>Paste</td>
+  </tr>
+  <tr>
+    <td>Ctrl-X</td>
+    <td>Cut</td>
+  </tr>
+  <tr>
+    <td>Ctrl-Y</td>
+    <td>Redo</td>
+  </tr>
+  <tr>
+    <td>Ctrl-Z</td>
+    <td>Undo</td>
+  </tr>
+  </tbody>
+</table>
+<h2><a name="Using Custom Style Sheets">Using Custom Style Sheets</a></h2>
+<p>You can setup a custom style sheet for any blog service you have configured.&nbsp; 
+In the settings area check the &quot;Use Custom Style Sheet&quot; checkbox, then click 
+&quot;Browse...&quot; and find your style sheet (CSS file).&nbsp; If you do this you can 
+make Tanjunka show your post in the same fonts, sizes, colors and other style 
+settings as your individual blogs.<p>You will probably have to edit your CSS 
+file.&nbsp; The details of CSS or beyond the scope of this document.&nbsp; 
+Tanjunka&#39;s default entry display uses the following styles.<p><div style="border: 1px dashed gray; padding: 2em; background-color: #f0f0ff;">&lt;div id=&quot;content&quot;&gt;<div style="border: 1px dashed gray; padding: 2em; background-color: #f0fff0;">&lt;div class=&quot;blog&quot;&gt;<div style="border: 1px dashed gray; padding: 2em; background-color: #fff0ff;">&lt;div class=&quot;blogtitle&quot;&gt;<div style="border: 1px dashed gray; padding: 2em; background-color: #fff0f0;">title</div>&lt;/div&gt;</div><br /><br /><div style="border: 1px dashed gray; padding: 2em; background-color: #fff0ff;">&lt;div 
+class=&quot;blogbody&quot;&gt;<div style="border: 1px dashed gray; padding: 2em; background-color: #f0ffff;">entry text</div>&lt;/div&gt;</div>&lt;/div&gt;</div>&lt;/div&gt;</div></p>
+<p>Change your style sheet to match.</p>
+<h2><a name="Troubleshooting">Troubleshooting</a>:</h2>
+<p>Trouble Posting An Entry:</p>
+<p>If you get the error &quot;could not post entry to [____]: fault response contains 
+string value where integer expected [fault response: struct mapped to type Fault 
+: member faultCode mapped to type Int32]&quot; it&#39;s most likely that you have your 
+Encoding set to something other than &quot;Unicode (UTF-8)&quot;.&nbsp; Check the settings 
+for the service you are having problems with and try setting the encoding to 
+&quot;Unicode (UTF-8)&quot;.</p>
+<p>If you get any other error while posting the first thing to check is your 
+name, password and XML-RPC path if applicable. If those seem correct click the 
+&quot;update&quot; button in the settings for the service you are having trouble with.&nbsp; 
+If any error appears again, double check your username, password and XML-RPC 
+path.&nbsp; If you are behind a proxy make sure you setup your proxy.&nbsp; The 
+&quot;HTTP:&quot; is required as is the port.&nbsp; Example proxy: </p>
+  <blockquote>
+    <pre>http://proxy.mycompany.com:8080</pre>
+  </blockquote>
+  <p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

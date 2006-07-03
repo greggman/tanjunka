@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+
+
+<project name="xmlrpc" default="build" basedir=".">
+	<property name="assembly.version" value="0.9.0.0" />
+	<property name="buildoutput" value="buildoutput" />
+	<property name="debug" value="false"/>
+	<property name="Mono-build" value="false" />
+	<property name="nant.settings.currentframework" value="net-1.1" />
+	<property name="bin.dir" value="${nant.project.basedir}/bin" />
+
+	<target name="build.all" depends="clean,buildNumber">
+
+		<property name="nant.settings.currentframework" value="net-1.0" />
+		<property name="Mono-build" value="false" />
+		<call target="build"/>
+
+<!--
+		<property name="Mono-build" value="false" />
+		<property name="nant.settings.currentframework" value="net-1.1" />
+		<call target="build" />
+
+		<property name="Mono-build" value="true" />
+		<property name="nant.settings.currentframework" value="mono-1.0" />
+		<call target="build" />
+
+-->
+	</target>
+	
+
+	<target name="build">
+		<property name="bin.dir" value="${nant.project.basedir}/bin" />
+        <mkdir dir="${bin.dir}" />
+		<call target="xml-rpc.net" />
+		<call target="ntest-build" />
+		<call target="samples" />
+		<call target="xrpgen" />
+	</target>
+
+	<target name="init" >
+	</target>
+
+
+	<target name="xml-rpc.net" description="compiles the source code">
+		<echo message="building"/>
+		<csc target="library" warnaserror="true" debug="${debug}" optimize="true" output="${bin.dir}/CookComputing.XmlRpc.dll">
+            		<sources failonempty="true">
+ 				<includes name="src/*.cs" />
+			</sources>
+			<references failonempty="true">
+				<includes name="System.dll" asis="true"/>
+				<includes name="System.Xml.dll" asis="true" />
+				<includes name="System.Data.dll" asis="true" />
+				<includes name="System.Web.dll" asis="true" />
+				<includes name="System.Web.Services.dll" asis="true" />
+			</references>
+		</csc>
+	</target>
+	
+	<target name="ntest-build" description="compiles the unit tests">
+		<csc target="library" warnaserror="true" debug="${debug}" output="${bin.dir}/ntest.dll" nowarn="649, 168">
+            		<sources failonempty="true">
+ 				<includes name="ntest/*.cs" />
+			</sources>
+			<references failonempty="true">
+				<includes name="System.Web.dll" asis="true" />
+				<includes name="${bin.dir}/CookComputing.XmlRpc.dll"  />
+				<includes name="C:/Program Files/NUnit/bin/nunit.framework.dll" />
+			</references>
+		</csc>
+
+	</target>
+
+	<target name="ntest-run" description="run unit tests">
+        <copy todir="${nant.project.basedir}">
+            <fileset basedir="ntest" >
+                <includes name="*.xml" />
+            </fileset>
+        </copy>
+
+        <nunit2>
+            <formatter type="Plain" />
+            <test assemblyname="${bin.dir}/ntest.dll"  />
+        </nunit2>
+	</target>
+
+	<target name="clean" description="remove all generated files">
+		<delete dir="bin" failonerror="false"/>
+	</target>
+
+	<target name="release" description="build XML-RPC.NET release" depends="clean,build.all,ntest-run">
+		<echo message="release"/>
+        <mkdir dir="${buildoutput}" failonerror="false" />
+		<zip zipfile="${buildoutput}/xml-rpc.net.${buildver}.zip">
+			<fileset basedir=".">
+				<includes name="src/*.cs"/>
+				<includes name="src/*.sln"/>
+				<includes name="src/*.csproj"/>
+				<includes name="interfaces/*"/>
+				<includes name="ntest/*.cs"/>
+				<includes name="ntest/*.sln"/>
+				<includes name="ntest/*.csproj"/>
+				<includes name="samples/**"/>
+				<includes name="doc/*.html"/>
+				<includes name="doc/*.jpg"/>
+				<includes name="README.txt"/>
+				<includes name="xml-rpc.net.build"/>
+				<includes name="xmlrpcnetfaq.html"/>				
+				<includes name="index.html"/>				
+				<includes name="history.html"/>				
+				<includes name="bin/*.exe"/>
+				<includes name="bin/*.dll"/>
+			</fileset>
+		</zip>
+	</target>
+
+	<target name="buildNumber">
+		<echo message="${assembly.version}" />
+		<asminfo output="src/AssemblyBuildNumber.cs" language="CSharp">
+			<imports>
+				<import name="System" />
+				<import name="System.Reflection" />
+				<import name="System.Runtime.InteropServices" />
+			</imports>
+			<attributes>
+				<attribute type="AssemblyVersionAttribute" value="${assembly.version}" />
+			</attributes>
+			<references>
+                    		<includes name="System.EnterpriseServices.dll" />
+                	</references>
+	        </asminfo>
+		<regex pattern="(?'buildver'[0-9]*\.[0-9]*\.[0-9]*)" input="${assembly.version}" />
+	</target>
+
+	<!-- xrpgen -->
+	<target name="xrpgen" unless="${Mono-build}" >
+		<vbc target="exe" output="${bin.dir}/xrpgen.exe" debug="${debug}" imports="Microsoft.VisualBasic,System"  >
+			<sources>
+				<includes name="xrpgen/*.vb" />
+			</sources>
+			<references failonempty="true">
+				<includes name="System.dll" asis="true" />
+				<includes name="${bin.dir}/CookComputing.XmlRpc.dll"  />
+			</references>
+			<arg value="/reference:System.dll"/>
+		</vbc>
+	</target>
+
+	<!-- Samples -->
+	<target name="samples">
+		<call target="AsyncBettyApplication" />
+		<call target="BettyAppplication" />
+		<call target="MathApp" />
+		<call target="MathService" />
+		<call target="SumAndDiff" />
+	</target>
+
+
+	<target name="AsyncBettyApplication" unless="${Mono-build}" > 
+		<csc target="winexe"  output="${bin.dir}/AsyncBettyApp.exe" nowarn="649">
+            		<sources failonempty="true">
+ 				<includes name="samples/AsyncBettyApplication/*.cs" />
+			</sources>
+			<references failonempty="true">
+				<includes name="System.Web.dll" asis="true" />
+				<includes name="${bin.dir}/CookComputing.XmlRpc.dll"  />
+			</references>
+		</csc>
+	</target>
+
+	<target name="BettyAppplication" unless="${Mono-build}" > 
+		<csc target="winexe"  output="${bin.dir}/BettyApp.exe" nowarn="649">
+            		<sources failonempty="true">
+ 				<includes name="samples/BettyApplication/*.cs" />
+			</sources>
+			<references failonempty="true">
+				<includes name="System.Web.dll" asis="true" />
+				<includes name="System.Windows.Forms.dll" asis="true" />
+				<includes name="System.Xml.dll" asis="true" />
+				<includes name="${bin.dir}/CookComputing.XmlRpc.dll"  />
+			</references>
+		</csc>
+	</target>
+
+	<target name="MathApp" unless="${Mono-build}"> 
+		<csc target="winexe"  output="${bin.dir}/MathApp.exe">
+            		<sources failonempty="true">
+ 				<includes name="samples/MathApp/*.cs" />
+			</sources>
+			<references failonempty="true">
+				<includes name="System.Web.dll" asis="true" />
+				<includes name="System.Windows.Forms.dll" asis="true" />
+				<includes name="System.Xml.dll" asis="true" />
+				<includes name="${bin.dir}/CookComputing.XmlRpc.dll"  />
+			</references>
+		</csc>
+	</target>
+
+	<target name="MathService" > 
+		<csc target="library"  output="${bin.dir}/MathService.dll">
+            		<sources failonempty="true">
+ 				<includes name="samples/MathService/*.cs" />
+			</sources>
+			<references failonempty="true">
+				<includes name="System.Web.dll" asis="true" />
+				<includes name="System.Windows.Forms.dll" asis="true" />
+				<includes name="System.Xml.dll" asis="true" />
+				<includes name="${bin.dir}/CookComputing.XmlRpc.dll"  />
+			</references>
+		</csc>
+	</target>
+
+	<target name="SumAndDiff" > 
+		<csc target="library"  output="${bin.dir}/SumAndDiff.dll">
+            		<sources failonempty="true">
+ 				<includes name="samples/SumAndDiff/*.cs" />
+			</sources>
+			<references failonempty="true">
+				<includes name="System.Web.dll" asis="true" />
+				<includes name="System.Windows.Forms.dll" asis="true" />
+				<includes name="System.Xml.dll" asis="true" />
+				<includes name="${bin.dir}/CookComputing.XmlRpc.dll"  />
+			</references>
+		</csc>
+	</target>
+
+</project>

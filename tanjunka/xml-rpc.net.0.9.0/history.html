@@ -1,0 +1,249 @@
+<html>
+<head>
+<title>XML-RPC.Net - Release History</title>
+<meta name="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="Charles Cook, XML-RPC, xmlrpc, .Net, C#, Cook Computing" >
+
+<style type="text/css">
+pre {
+	font-family:monospace, arial, verdana;
+	font-size: 100%;
+	color:black;
+    background: #d9e3e9;
+    border: 1px black solid ;
+    padding: 5px;
+}
+
+<!--
+body {
+  font-size: 93%; /* for IE/Win */
+  font-family:  "Lucida Grande", "Trebuchet MS", Verdana, Geneva, Lucida, Helvetica, sans-serif;
+}
+-->
+body {
+	font-size: 93%; /* for IE/Win */
+	font-family:verdana, arial, sans-serif;
+}
+html>body {
+  font-size: 100%; /* for Opera */
+}
+H1, H2, H3, H4 {
+	font-family:verdana, arial, sans-serif;
+}
+H1 {
+  font-size: 30px;
+}
+H2 {
+  font-size: 110%;
+}
+H3, H4 {
+  font-size: 100%;
+}
+</style>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<table width="100%" border="0">
+  <tr>
+    <td width="60%"> 
+      <h1>XML-RPC.NET - Release History</h1>
+    </td>
+    <td width="40%">
+      <h3 align="center"><a href="http://www.cookcomputing.com">Cook Computing</a></h3>
+    </td>
+  </tr>
+</table>
+
+<h2> 0.8.0</h2>
+<p><a href="http://www.xml-rpc.net/release/xml-rpc.net.0.8.0.zip">xml-rpc.net.0.8.0.zip</a> </p>
+<ul>
+  <li>optional struct members</li>
+  <li>The zip file contains a bin directory containing:</li>
+</ul>
+<ul>
+  <li><b>CookComputing.XmlRpc.dll</b></li>
+  <li><b>bettyapp.exe </b>(A WinForms application which calls the UserLand betty 
+    example server.)</li>
+  <li><b>asyncbettyapp.exe</b> (Another WinForms app illustrating how to make 
+    async calls.)</li>
+  <li><b>mathservice.exe</b> (A simple XML-RPC service.)</li>
+  <li><b>mathapp.exe </b>(A WinForms application which calls MathService.)</li>
+</ul>
+<h2>0.7.1</h2>
+<p><a href="http://www.xml-rpc.net/release/xml-rpc.net.0.7.1.zip">xml-rpc.net.0.7.1.zip</a> </p>
+<ul>
+  <li>License change.</li>
+  <li>Fixed problem in XmlRpcServerFormatterSink.cs whereby an exception was thrown 
+    if the XML-RPC and .NET method names are different.</li>
+
+</ul>
+<h3></h3>
+<h2>0.7.0</h2>
+<p><a href="http://www.xml-rpc.net/release/xml-rpc.net.0.7.0.zip">xml-rpc.net.0.7.0.zip</a> </p>
+<ul>
+  <li>error reporting of parsing errors using parse stack</li>
+  <li>support for async proxy method generation</li>
+  <li>contiuning work on auto-generated documentation</li>
+  <li>params keywords used in XmlRpcClientProtocol.Invoke</li>
+  <li>server method can return void (return empty string in XML-RPC response)</li>
+  <li> proxy method can return void (return value in XML-RPC response discarded)</li>
+  <li>deserializer throws exception if an XML-RPC struct is missing one or more 
+    expected members</li>
+  <li>fixed irritating warning when compiling XmlRpcStruct</li>
+  <li>add version of BeginInvoke taking correct params as per docs</li>
+  <li>Close always called on WebResponse </li>
+  <li>fixed usage of XmlRpcClientProtocol Proxy property when used in VS designer 
+    (Drew Marsh)</li>
+  <li>fixed handling of response without Content-Length during async calls (Dmitry 
+    Jemerov)</li>
+  <li>fixed case when zero-length string in default string value is passed as 
+    &lt;value/&gt; (Drew Marsh)</li>
+  <li>The zip file contains a bin directory containing:</li>
+</ul>
+<ul>
+  <li><b>CookComputing.XmlRpc.dll</b></li>
+  <li><b>bettyapp.exe </b>(A WinForms application which calls the UserLand betty 
+    example server.)</li>
+  <li><b>asyncbettyapp.exe</b> (Another WinForms app illustrating how to make 
+    async calls.)</li>
+  <li><b>mathservice.exe</b> (A simple XML-RPC service.)</li>
+  <li><b>mathapp.exe </b>(A WinForms application which calls MathService.)</li>
+</ul>
+<h3>Limitations of Current Release<br>
+</h3>
+<ul>
+  <li>Auto-documentation generation not fully implemented.</li>
+  <li>No tracing/logging functionality.</li>
+</ul>
+<h3></h3>
+<h3>0.6.0</h3>
+<p><a href="http://www.xml-rpc.net/release/xml-rpc.net.0.6.0.zip">xml-rpc.net.0.6.0.zip</a></p>
+<ul>
+  <li>Fixed UserAgent property of XmlRpcClientProtocol.</li>
+  <li>Added Proxy property to XmlRpcClientProtocol.</li>
+  <li>Default for XML-RPC request XML document is no explicit encoding, i.e. implicitly 
+    UTF-8.</li>
+  <li>Added Encoding property to XmlRpcClientProtocol to set explicit encoding 
+    on XML-RPC request XML document</li>
+  <li>Can now use interface to define XML-RPC methods. For example can use same 
+    interface to implement both server and client. MathService changed to illustrate 
+    use of interface.</li>
+  <li>Added XmlRpcProxyGen class to dynamically create a proxy object from an 
+    interface, i.e. makes hand-coding of proxies unnecessary in most cases. bettyapp 
+    sample changed to illustrate this.</li>
+  <li>Fixed parsing of double type to be culture independent.</li>
+  <li>Fault response XML document now generated in same way as ordinary response, 
+    i.e. will be in same format and encoding.</li>
+</ul>
+<h3>0.5.5</h3>
+<p><a href="http://www.xml-rpc.net/release/xml-rpc.net.0.5.5.zip">xml-rpc.net.0.5.5.zip</a> 
+</p>
+<ul>
+  <li>Added ClientCertificates property to XmlRpcClientProtocol<br>
+  </li>
+  <li>The zip file contains a bin directory containing:</li>
+</ul>
+<ul>
+  <li><b>CookComputing.XmlRpc.dll</b></li>
+  <li><b>bettyapp.exe </b>(A WinForms application which calls the UserLand betty 
+    example server.)</li>
+  <li><b>asyncbettyapp.exe</b> (Another WinForms app illustrating how to make 
+    async calls.)</li>
+  <li><b>mathservice.exe</b> (A simple XML-RPC service.)</li>
+  <li><b>mathapp.exe </b>(A WinForms application which calls MathService.)</li>
+</ul>
+<h4>Limitations of Current Release<br>
+</h4>
+<ul>
+  <li>Auto-documentation generation not fully implemented.</li>
+  <li>No tracing/logging functionality.</li>
+</ul>
+<h3>0.5.4</h3>
+<p><a href="http://www.xml-rpc.net/release/xml-rpc.net.0.5.4.zip">xml-rpc.net.0.5.4.zip</a></p>
+<ul>
+  <li>Added Headers property to XmlRpcClientProtocol. </li>
+  <li>Added XmlRpcMemberAttribute. </li>
+  <li>Modified deserialization of arrays to return more specific array type when 
+    all elements are of the same type.</li>
+</ul>
+<h4></h4>
+<h3>0.5.3</h3>
+<p><a href="http://www.xml-rpc.net/release/xml-rpc.net.0.5.3.zip">xml-rpc.net.0.5.3.zip</a></p>
+<ul>
+  <li>Fixed problem with deserializing arrays.</li>
+</ul>
+<h3>0.5.2</h3>
+<p><a href="http://www.xml-rpc.net/release/xml-rpc.net.0.5.2.zip">xml-rpc.net.0.5.2.zip</a></p>
+<ul>
+  <li>Improved handling of XmlRpcFaultException in server formatter sink..</li>
+</ul>
+<h4></h4>
+<h3>0.5.1</h3>
+<p><a href="http://www.xml-rpc.net/release/xml-rpc.net.0.5.1.zip">xml-rpc.net.0.5.1.zip</a></p>
+<ul>
+  <li>Improved handling of XmlRpcFaultException in server formatter sink..</li>
+</ul>
+<h3>0.5.0</h3>
+<p><a href="http://www.xml-rpc.net/release/xml-rpc.net.0.5.0.zip">xml-rpc.net.0.5.0.zip</a></p>
+<ul>
+  <li>Interim release containing preliminary code for client and server NET Remoting 
+    formatter sinks.</li>
+  <li>A Remoting sample, with assemblies and config files.</li>
+</ul>
+<h3>0.4.3</h3>
+<p><a href="http://www.xml-rpc.net/release/xml-rpc.net.0.4.3.zip">xml-rpc.net.0.4.3.zip</a></p>
+<ul>
+  <li>Interim release containing bug fixes, mainly in the serialization/deserialization 
+    code.</li>
+  <li>Some restructuring in preparation for some major changes in the 0.5 series 
+    of releases.</li>
+</ul>
+<h3>0.4.2</h3>
+<p><a href="http://www.xml-rpc.net/release/xml-rpc.net.0.4.2.zip">xml-rpc.net.0.4.2.zip</a></p>
+<ul>
+  <li>Build for .NET RTM.</li>
+  <li>Added preliminary support for Introspection API.</li>
+</ul>
+<h4></h4>
+<h4></h4>
+<h3>0.4.1</h3>
+<p><a href="http://www.xml-rpc.net/release/xml-rpc.net.0.4.1.zip">xml-rpc.net.0.4.1.zip</a></p>
+<ul>
+  <li>Major changes to XmlRpcClientProtocol class to support async calls, working 
+    but coding not completed.</li>
+  <li>Extra sample - AsyncBettyApp - to illustrate async calls.</li>
+</ul>
+<h4></h4>
+<h3>0.4.0</h3>
+<p>Initial release for .NET beta 2.</p>
+<p><a href="http://www.xml-rpc.net/release/xml-rpc.net.0.4.0.zip">xml-rpc.net.0.4.0.zip</a></p>
+<h3>0.3.0</h3>
+<p>Initial release for .NET beta 1.</p>
+<h2>Developers</h2>
+<p>Lead Developer - Charles Cook.</p>
+<h2>License</h2>
+<p>XML-RPC.NET is released under the terms of the <a href="http://www.opensource.org/licenses/mit-license.html">MIT 
+  X11</a> license. </p>
+<h2>Contact</h2>
+<p>Please contact <script language="JavaScript" type="text/javascript">
+<!--
+document.write('<a href="mailto:' + '&#99;&#104;&#97;&#114;&#108;&#101;&#115;&#99;&#111;&#111;&#107;' + '&#64;' + '&#117;&#107;&#111;&#110;&#108;&#105;&#110;&#101;&#46;&#99;&#111;&#46;&#117;&#107;' + '" title="Charles Cook">' + 'Charles Cook' + '</a>');
+// -->
+</script> 
+  with any feedback or suggestions for XML-RPC.NET. </p>
+<p>&nbsp; </p>
+<table width="100%" border="0">
+  <tr> 
+    <td><i><font face="Georgia, Times New Roman, Times, serif" size="1">© Charles 
+      Cook, 2001-2004 All Rights Reserved. </font></i></td>
+    <td> 
+      <div align="right"><font face="Georgia, Times New Roman, Times, serif" size="1">
+      <i>22 August 2004</i></font></div>
+    </td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+<p align="center"><i></i></p>
+</body>
+</html>

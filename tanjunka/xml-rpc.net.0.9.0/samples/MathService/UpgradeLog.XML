@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?>
+<UpgradeLog>
+<Properties><Property Name="Solution" Value="MathService">
+</Property><Property Name="Solution File" Value="E:\temp\trash\xmlrpc\xml-rpc.net.0.9.0\samples\MathService\MathService.sln">
+</Property><Property Name="Date" Value="Wednesday, November 10, 2004">
+</Property><Property Name="Time" Value="23:20 PM">
+</Property></Properties><Event ErrorLevel="0" Project="MathService" Source="MathService.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="MathService" Source="MathService.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="MathService.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MathService.sln" Description="Converted">
+</Event></UpgradeLog>

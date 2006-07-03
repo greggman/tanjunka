@@ -1,0 +1,327 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50215</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7069A939-5AAE-4E30-9D1F-8FD29A2A02B4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tanjunka</RootNamespace>
+    <AssemblyName>Tanjunka</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <ApplicationIcon>gfx\tan-icons\icons\icon48.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FlickrNet, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\FlickrNet\bin\Release\FlickrNet.dll</HintPath>
+    </Reference>
+    <Reference Include="NetSpell.SpellChecker, Version=2.1.7.41329, Culture=neutral, PublicKeyToken=318b389f0db66e46">
+      <HintPath>libs\NetSpell.2.1.7\bin\NetSpell.SpellChecker.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atomizer\AtomAPI.cs" />
+    <Compile Include="BodyForm.Publish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Localize.cs" />
+    <Compile Include="PhotoActions.cs" />
+    <Compile Include="PhotoActionsPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhotoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhotoEdit.Designer.cs">
+      <DependentUpon>PhotoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PostsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestoreFormState.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="services\AtomAPIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="services\AtomAPIService.cs" />
+    <Compile Include="services\BloggerAPIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="services\bloggerAPIservice.cs" />
+    <Compile Include="services\BloggerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="services\BloggerService.cs" />
+    <Compile Include="BlogPhotoService.cs" />
+    <Compile Include="entryinfo.cs" />
+    <Compile Include="services\BlojsomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="services\BlojsomService.cs" />
+    <Compile Include="services\FlickrForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="services\FlickrService.cs" />
+    <Compile Include="services\GManForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="services\GManService.cs" />
+    <Compile Include="services\LiveJournalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="services\LiveJournalService.cs" />
+    <Compile Include="log.cs" />
+    <Compile Include="services\MovabletypeAPIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="services\MovabletypeAPIService.cs" />
+    <Compile Include="services\MovabletypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="services\MovabletypeForm.Designer.cs">
+      <DependentUpon>MovabletypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="services\MovabletypeService.cs" />
+    <Compile Include="PostInfo.cs" />
+    <Compile Include="PostSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostSetForm.Designer.cs">
+      <DependentUpon>PostSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrefsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PublishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PublishForm.Designer.cs">
+      <DependentUpon>PublishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PublishStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PublishStatusForm.Designer.cs">
+      <DependentUpon>PublishStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="services\NucleusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="services\NucleusService.cs" />
+    <Compile Include="services\TypePadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="services\TypePadService.cs" />
+    <Compile Include="services\WordPressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="services\WordPressService.cs" />
+    <Compile Include="ServiceSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceSettingsForm.designer.cs">
+      <DependentUpon>ServiceSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServicesForm.Designer.cs">
+      <DependentUpon>ServicesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceTypeForm.Designer.cs">
+      <DependentUpon>ServiceTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings_user.cs" />
+    <Compile Include="SpellCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpellOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TanBackgroundWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TanColorMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TanColorToolStripSplitButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TanHTMLForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TanHTMLForm.Designer.cs">
+      <DependentUpon>TanHTMLForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tanjunkacom.cs" />
+    <Compile Include="tantabpage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TanWebBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tjpic.cs" />
+    <Compile Include="TJService.cs" />
+    <Compile Include="UserSettings.cs" />
+    <Compile Include="util.cs" />
+    <Compile Include="BodyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BodyForm.Designer.cs">
+      <DependentUpon>BodyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GMan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="movabletypeapi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BodyForm.resx">
+      <DependentUpon>BodyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpellCheckForm.resx">
+      <DependentUpon>SpellCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpellOptionsForm.resx">
+      <DependentUpon>SpellOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xmlrpc\IHttpRequest.cs" />
+    <Compile Include="xmlrpc\IHttpRequestHandler.cs" />
+    <Compile Include="xmlrpc\IHttpResponse.cs" />
+    <Compile Include="xmlrpc\util.cs" />
+    <Compile Include="xmlrpc\XmlRpcAsyncResult.cs" />
+    <Compile Include="xmlrpc\XmlRpcBeginAttribute.cs" />
+    <Compile Include="xmlrpc\XmlRpcBoolean.cs" />
+    <Compile Include="xmlrpc\XmlRpcClientFormatterSink.cs" />
+    <Compile Include="xmlrpc\XmlRpcClientFormatterSinkProvider.cs" />
+    <Compile Include="xmlrpc\XmlRpcClientProtocol.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xmlrpc\XmlRpcDateTime.cs" />
+    <Compile Include="xmlrpc\XmlRpcDocWriter.cs" />
+    <Compile Include="xmlrpc\XmlRpcDouble.cs" />
+    <Compile Include="xmlrpc\XmlRpcEndAttribute.cs" />
+    <Compile Include="xmlrpc\XmlRpcException.cs" />
+    <Compile Include="xmlrpc\XmlRpcFaultException.cs" />
+    <Compile Include="xmlrpc\XmlRpcHttpRequest.cs" />
+    <Compile Include="xmlrpc\XmlRpcHttpResponse.cs" />
+    <Compile Include="xmlrpc\XmlRpcHttpServerProtocol.cs" />
+    <Compile Include="xmlrpc\XmlRpcInt.cs" />
+    <Compile Include="xmlrpc\XmlRpcMemberAttribute.cs" />
+    <Compile Include="xmlrpc\XmlRpcMethodAttribute.cs" />
+    <Compile Include="xmlrpc\XmlRpcMethodInfo.cs" />
+    <Compile Include="xmlrpc\XmlRpcMissingMappingAttribute.cs" />
+    <Compile Include="xmlrpc\XmlRpcParameterAttribute.cs" />
+    <Compile Include="xmlrpc\XmlRpcParameterInfo.cs" />
+    <Compile Include="xmlrpc\XmlRpcProxyCodeGen.cs" />
+    <Compile Include="xmlrpc\XmlRpcProxyGen.cs" />
+    <Compile Include="xmlrpc\XmlRpcRequest.cs" />
+    <Compile Include="xmlrpc\XmlRpcResponse.cs" />
+    <Compile Include="xmlrpc\XmlRpcReturnValueAttribute.cs" />
+    <Compile Include="xmlrpc\XmlRpcSerializer.cs" />
+    <Compile Include="xmlrpc\XmlRpcServerFormatterSink.cs" />
+    <Compile Include="xmlrpc\XmlRpcServerFormatterSinkProvider.cs" />
+    <Compile Include="xmlrpc\XmlRpcServerProtocol.cs" />
+    <Compile Include="xmlrpc\XmlRpcService.cs" />
+    <Compile Include="xmlrpc\XmlRpcServiceAttribute.cs" />
+    <Compile Include="xmlrpc\XmlRpcServiceInfo.cs" />
+    <Compile Include="xmlrpc\XmlRpcStruct.cs" />
+    <Compile Include="xmlrpc\XmlRpcUrlAttribute.cs" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="forms\bodyform.css" />
+    <Content Include="forms\calendar.htm" />
+    <Content Include="forms\optionstyles.css" />
+    <Content Include="forms\settings-BloggerAPIForm.html" />
+    <Content Include="forms\settings-BloggerForm.html" />
+    <Content Include="forms\postoptions-blogger.html" />
+    <Content Include="forms\settings-FlickrForm.html" />
+    <Content Include="forms\settings-MovabletypeForm.html" />
+    <Content Include="forms\tan-bodyform.html" />
+    <Content Include="forms\tan-edit.css" />
+    <Content Include="forms\tanjun_behaviors.htc" />
+    <Content Include="forms\tanjun_menuitem.htc" />
+    <Content Include="forms\tan-moreform.html" />
+    <Content Include="forms\tan-postoptions.html" />
+    <Content Include="forms\tan-PostSetForm.html" />
+    <Content Include="forms\tan-PublishForm.html" />
+    <Content Include="forms\tan-ServicesForm.html" />
+    <Content Include="forms\tan-ServiceTypeForm.html" />
+    <Content Include="forms\settings-LiveJournalForm.html" />
+    <Content Include="forms\postoptions-livejournal.html" />
+    <Content Include="forms\postoptions-movabletype.html" />
+    <Content Include="forms\tan-nooptions.html" />
+    <Content Include="forms\tan-picturelist.html" />
+    <Content Include="forms\tan-PrefsForm.html" />
+    <Content Include="forms\tanjunka_edit.js" />
+    <Content Include="gfx\logo.png" />
+    <None Include="gfx\tan-icons\icons\icon48.ico" />
+    <Content Include="todo-notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

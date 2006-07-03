@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>New Page 1</title>
+<link rel="stylesheet" href="optionstyles.css">
+<script language="javascript" type="text/javascript" src="tanjunka_edit.js"></script>
+<script language="javascript">
+function matchauth()
+{
+    var chk = !((proxy_useproxy.checked == true) && (proxy_useauth.checked == true));
+
+     proxy_username.disabled = chk;
+     proxy_password.disabled = chk;
+     proxy_username_label.disabled = chk;
+     proxy_password_label.disabled = chk;
+}
+function matchproxy()
+{
+    var chk = (proxy_useproxy.checked != true);
+
+     proxy_address.disabled = chk;
+     proxy_useauth.disabled = chk;
+     proxy_address_label.disabled = chk;
+     proxy_useauth_label.disabled = chk;
+
+     matchauth();
+}
+
+function initform()
+{
+   matchproxy();
+//   logPrintn("init-movabletype-form");
+//   settext("servicename","foo");
+//   settext("blogurl", gettext("blogname"));
+}
+</script>
+<link rel="stylesheet" href="optionstyles.css">
+<script language="javascript" type="text/javascript" src="tanjunka_edit.js"></script>
+</head>
+<body onload="initform()">
+
+<fieldset>
+    <legend>$PrefsImageOptions</legend>
+    <label class="labeltext" for="prefs_maxwidth">$PrefsMaxWidth</LABEL><br class="labelbr" />
+    <input class="inputtext" type="TEXT" id="prefs_maxwidth" value=""/><br class="fieldbr" />
+    <label class="labeltext" for="prefs_maxheight">$PrefsMaxHeight</LABEL><br class="labelbr" />
+    <input class="inputtext" type="TEXT" id="prefs_maxheight" value=""/><br class="fieldbr" />
+    <input class="inputchk" type="CHECKBOX" id="prefs_copylocally" value="OFF"/><label class="labelchk" for="prefs_copylocally">$PrefsCopyImagesLocal</LABEL><br class="fieldbr" />
+    <input class="inputchk" type="CHECKBOX" id="prefs_autogennames" value="ON"/><label class="labelchk" for="prefs_autogennames">$PrefsAutoImageNames</LABEL><br class="fieldbr" />
+</fieldset>
+
+<fieldset>
+    <legend>$PrefsLanguage (Language)</legend>
+    <select name="prefs_language"><option>English-US</option></select>
+</fieldset>
+
+<fieldset>
+    <legend>$PrefsOptions</legend>
+    <input class="inputchk" type="CHECKBOX" id="prefs_showhtml" value="OFF"/><label class="labelchk" for="prefs_showhtml">$PrefsShowHTML</LABEL><br class="fieldbr" />
+</fieldset>
+
+<fieldset>
+    <legend>$PrefsConnection</legend>
+    <input class="inputchk" type="CHECKBOX" onclick="matchproxy()" id="proxy_useproxy" name="useproxy" value="OFF"/><label for="useproxy">$PrefsUseProxy</LABEL><br class="fieldbr" />
+    <label class="labeltext" id="proxy_address_label" for="proxy_address">$PrefsProxyAddress</LABEL><br class="labelbr" />
+    <input class="inputtext" type="TEXT" id="proxy_address" name="proxy_address" value="server:port"/><br class="fieldbr" />
+    <input class="inputchk" type="CHECKBOX" onclick="matchauth()" id="proxy_useauth" name="proxy_useauth" value="OFF"/><label id="proxy_useauth_label" for="proxy_useauth">$PrefsUseAuthentication</LABEL><br class="fieldbr" />
+    <label class="labeltext" id="proxy_username_label" for="proxy_username">$PrefsProxyUsername</LABEL><br class="labelbr" />
+    <input class="inputtext" type="TEXT" id="proxy_username" value=""/><br class="fieldbr" />
+    <label class="labeltext" id="proxy_password_label" for="proxy_password">$PrefsProxyPassword</LABEL><br class="labelbr" />
+    <input class="inputtext" type="PASSWORD" id="proxy_password" name="proxy_password" value=""/><br class="fieldbr" />
+</fieldset>
+
+<fieldset>
+    <legend>$PrefsDebug</legend>
+    <input class="inputchk" type="CHECKBOX" id="prefs_showlog" value="OFF"/><label for="prefs_showlog">$PrefsShowLog</LABEL><br class="fieldbr" />
+    <input class="inputchk" type="CHECKBOX" id="prefs_showdebugmenu" value="OFF"/><label for="prefs_showdebugmenu">$PrefsShowDebugMenu</LABEL><br class="fieldbr" />
+</fieldset>
+
+</body>
+
+</html>
